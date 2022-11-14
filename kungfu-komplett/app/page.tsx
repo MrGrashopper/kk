@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Page = () => {
-    return (
-        <div>
-            Kung Fu Komplett
-        </div>
-    );
-};
+    return <div>Kung Fu Komplett</div>
+}
 
-export default Page;
+export default Page
