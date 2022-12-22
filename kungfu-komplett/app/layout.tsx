@@ -1,5 +1,7 @@
 import '../styles/globals.css'
-import Navbar from './Navbar'
+import Navbar from './components/navbar'
+import React from 'react'
+import Footer from './components/footer'
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
@@ -7,7 +9,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <head />
             <body>
                 <Navbar />
-                {children}
+                <div style={{height: '5rem'}}></div>
+                <div>{children}</div>
+                <Footer />
             </body>
         </html>
     )
