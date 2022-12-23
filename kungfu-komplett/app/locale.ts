@@ -18,7 +18,7 @@ export const de = {
     training: {
         jkd: {
             title1: 'Entwickle deinen eigenen Kampfstil',
-            desc1: 'Im Laufe der Zeit entwickelt man seinen eigenen Kampfstil. Dabei werden die persönlichen Voraussetzungen (Alter, Gewicht, Vorerfahrungen) genauso berücksichtigt, wie individuelle Stärken (Kraft, Schnelligkeit, Beweglichkeit) und Vorlieben (Tritte, Schläge, Hebel und Würfe). Jeet Kune Do ist ein Selbstverteidigungskonzept, bei dem der Verteidiger versucht, sich auf einfachste und effektive Weise auf der Grundlage seines Könnens und seiner Körpermerkmale optimal zu verteidigen.',
+            desc1: 'Jeet Kune Do ist ein Selbstverteidigungskonzept, bei dem der Verteidiger versucht, sich auf einfachste und effektive Weise auf der Grundlage seines Könnens und seiner Körpermerkmale optimal zu verteidigen.',
             title2: 'Bruce Lee über Jeet Kune Do',
             desc2:
                 '"Nimm die Dinge wie sie sind: schlage, wenn du schlagen musst, tritt, wenn du treten musst.”\n' +
@@ -29,7 +29,7 @@ export const de = {
                 'Nun liegt es auf der Hand, dass nicht jeder Trainierende alle Fähigkeiten zur Perfektion bringen kann. Man muss sich stets seiner Stärken und Schwächen bewusst sein und sich dementsprechend verhalten.\n' +
                 'Integriere und nutze dein Wissen und Können. JKD ist individuell, anpassungsfähig und wird ständig weiterentwickelt. Es ist wie das Wasser, welches sich jeder Gegebenheit anpasst.\n' +
                 'Zum mentalen Training im JKD gehören auch Selbstbeherrschung und die Fähigkeit zur Deeskalation in kritischen Situationen.',
-            title4: 'Dein Weg - dein Kampfstil',
+            title4: 'Erfahre mehr über das Training',
             desc4:
                 'Der Schüler lernt in der ersten Stufe zunächst Grundtechniken: die wichtigsten und häufigsten Schläge, Tritte, Blocks und einfache Kombinationen sowie Fallübungen. Hier werden ebenfalls die Grundlagen des Shaolin Kung Fu vermittelt. Traditionelle Grundstellungen sowie einfache Kombinationen. Ab der zweiten Stufe erfolgt dann eine strikte Trennung zwischen JKD und Shaolin Kung Fu, wobei jeder Schüler selbstverständlich beide Bereiche trainieren und seine Schwerpunkte selber festlegen kann.\n' +
                 'Während des Trainings der zweiten Stufe festigt der Schüler die Basistechniken bis er diese soweit beherrscht, dass er sie nahezu fehlerfrei ausführen kann.\n' +

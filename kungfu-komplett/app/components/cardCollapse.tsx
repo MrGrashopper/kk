@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, {useState} from 'react'
 import {de} from '../locale'
 
 type text = {
@@ -19,23 +20,36 @@ interface Props {
 
 const CardCollapse = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
-
+    const [active, setActive] = useState<boolean>(false)
     return (
         <div className="l">
             {props.texts.map(text => {
                 return (
-                    <div className="collapse border border-base-300 bg-base-100 rounded-box">
+                    <div
+                        className="collapse bg-accent rounded-box"
+                        onClick={() => {
+                            setActive(!active)
+                        }}>
                         <input type="checkbox" className="peer" />
-                        <div className="collapse-title text-xl font-medium">
-                            {props.hashtag && (
-                                <span className="font-bold text-secondary">
-                                    {props.hashtag}&nbsp;
-                                </span>
-                            )}
-                            {text.title}
+                        <div className="collapse-title text-xl font-medium flex flex-row">
+                            <div className="flex-1 flex flex-col lg:flex-row">
+                                {props.hashtag && (
+                                    <div className="font-bold text-base-300">
+                                        {props.hashtag}&nbsp;
+                                    </div>
+                                )}
+                                <div className="font-bold text-white">
+                                    {text.title}
+                                </div>
+                            </div>
+                            <div className="flex-none font-bold text-base-300">
+                                {!active ? '>' : 'v'}
+                            </div>
                         </div>
                         <div className="collapse-content">
-                            <p className={'mt-3'}>{text.description}</p>
+                            <p className={'mt-3 text-white'}>
+                                {text.description}
+                            </p>
                         </div>
                     </div>
                 )

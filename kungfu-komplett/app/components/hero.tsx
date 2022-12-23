@@ -17,7 +17,7 @@ const Hero = (props: HeroProps) => {
                 whileInView={{opacity: 1}}
                 viewport={{once: false}}>
                 <div className="mb-10">
-                    <h1 className="text-4xl font-bold text-white drop-shadow-lg shadow-black italic">
+                    <h1 className="text-4xl font-bold text-white drop-shadow-lg shadow-black">
                         {strings.homepage.hero.title}
                     </h1>
                     <p className="my-5 font-medium drop-shadow-lg shadow-black">
