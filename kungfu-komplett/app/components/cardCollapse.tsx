@@ -1,6 +1,7 @@
 'use client'
 import React, {useState} from 'react'
 import {de} from '../locale'
+import {permanentMarker} from '../styles'
 
 type text = {
     title: string
@@ -33,13 +34,10 @@ const CardCollapse = (props: Props) => {
                         <input type="checkbox" className="peer" />
                         <div className="collapse-title text-xl font-medium flex flex-row">
                             <div className="flex-1 flex flex-col lg:flex-row">
-                                {props.hashtag && (
-                                    <div className="font-bold text-base-300">
-                                        {props.hashtag}&nbsp;
+                                <div className={permanentMarker.className}>
+                                    <div className="text-white">
+                                        {text.title}
                                     </div>
-                                )}
-                                <div className="font-bold text-white">
-                                    {text.title}
                                 </div>
                             </div>
                             <div className="flex-none font-bold text-base-300">
@@ -47,7 +45,7 @@ const CardCollapse = (props: Props) => {
                             </div>
                         </div>
                         <div className="collapse-content">
-                            <p className={'mt-3 text-white'}>
+                            <p className={'mt-3 text-white text-xl'}>
                                 {text.description}
                             </p>
                         </div>

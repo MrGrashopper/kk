@@ -4,7 +4,7 @@ import {de} from '../../locale'
 import CardCollapse, {HashtagType} from '../../components/cardCollapse'
 import {permanentMarker} from '../../styles'
 import {motion} from 'framer-motion'
-import ProgressBar from '../../components/progressBar'
+import ProgressBar, {MaTypes} from '../../components/progressBar'
 
 interface Props {
     lang: string
@@ -14,19 +14,19 @@ const Page = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
     const images = []
 
-    for (let i = 0; i < 20; i++) {
-        if (`../galleryJKD/JKD${i}.jpeg`) {
+    for (let i = 0; i < 6; i++) {
+        if (`../galleryTaichi/taichi${i}.jpeg`) {
             images.push({
-                src: `../galleryJKD/JKD${i}.jpeg`,
-                alt: `JKD Image ${i}`,
+                src: `../galleryTaichi/taichi${i}.jpeg`,
+                alt: `Tai Chi Image ${i}`,
             })
         }
     }
 
     const text4 = [
         {
-            title: strings.training.jkd.title4,
-            description: strings.training.jkd.desc4,
+            title: strings.training.taichi.title4,
+            description: strings.training.taichi.desc4,
         },
     ]
 
@@ -41,11 +41,12 @@ const Page = (props: Props) => {
                 </div>
                 {variant && (
                     <ProgressBar
+                        martialArtsType={MaTypes.taichi}
                         steps={[
-                            'Basistechniken',
-                            'Erste Erfahrung im Kampf',
-                            'Fortgeschrittenes Training',
-                            'Deinen eigenen Stil etwickeln',
+                            'Meditation',
+                            'Qi Gong',
+                            'Bewegungsformen',
+                            'Anwendung',
                         ]}
                     />
                 )}
@@ -58,10 +59,14 @@ const Page = (props: Props) => {
         <div className="m-3 lg:m-10">
             <div className="card lg:card-side shadow-xl bg-base-100">
                 <figure>
-                    <img src="../jkd_technique_block.jpeg" alt="Album" />
+                    <img src="../taichi_stand.jpeg" alt="Album" />
                 </figure>
                 <div className="card-body">
-                    {motionTitle(strings.training.jkd.title1, undefined, true)}
+                    {motionTitle(
+                        strings.training.taichi.title1,
+                        undefined,
+                        true
+                    )}
                     <div className="card-actions justify-end"></div>
                 </div>
             </div>
@@ -80,10 +85,10 @@ const Page = (props: Props) => {
                         />
                     </svg>
                     <p className="text-2xl italic font-medium text-gray-900">
-                        {strings.training.jkd.desc1}
+                        {strings.training.taichi.desc1}
                     </p>
                 </blockquote>
-                <div className="font-light">- Shifu O. Gimm -</div>
+                <div className="font-light">- Lao Tse -</div>
             </figure>
 
             <div className="carousel h-auto rounded-box my-10">
@@ -108,8 +113,8 @@ const Page = (props: Props) => {
                 <div className="card lg:card-side bg-base-100 shadow-xl mb-10">
                     <div className="card-body">
                         {motionTitle(
-                            strings.training.jkd.title2,
-                            strings.training.jkd.desc2
+                            strings.training.taichi.title2,
+                            strings.training.taichi.desc2
                         )}
                         <div className="card-actions justify-end"></div>
                     </div>
@@ -117,16 +122,18 @@ const Page = (props: Props) => {
                 <div className="card lg:card-side bg-base-100 shadow-xl mb-10">
                     <div className="card-body">
                         {motionTitle(
-                            strings.training.jkd.title3,
-                            strings.training.jkd.desc3
+                            strings.training.taichi.title3,
+                            strings.training.taichi.desc3
                         )}
                         <div className="card-actions justify-end">
-                            <div className="avatar">
-                                <div className="w-full h-auto rounded mt-10">
-                                    <img
-                                        src="../boxing_ball.jpeg"
-                                        alt="Album"
-                                    />
+                            <div className="card-actions justify-end">
+                                <div className="avatar">
+                                    <div className="w-full h-auto rounded mt-10">
+                                        <img
+                                            src="../taichi_leg_stand.jpeg"
+                                            alt="Album"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>

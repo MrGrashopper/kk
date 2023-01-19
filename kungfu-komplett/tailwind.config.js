@@ -19,6 +19,8 @@ const kkTheme = {
     'info-content': '#ffffff',
     success: '#21CC51',
     'success-content': '#ffffff',
+    gold: '#D4AF37',
+    'gold-content': '#ffffff',
     warning: '#FF6154',
     'warning-content': '#ffffff',
     error: '#DE1C8D',
@@ -41,11 +43,12 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                h1: ['var(--anton-font)', ...fontFamily.sans],
+                sans: ['var(--font-inter)', ...fontFamily.sans],
             },
         },
     },
     plugins: [require('daisyui')],
+
     daisyui: {
         themes: [{lofi: kkTheme}],
     },
