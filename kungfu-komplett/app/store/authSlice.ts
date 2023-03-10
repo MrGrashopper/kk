@@ -9,7 +9,7 @@ export interface AuthState {
 
 // Initial state
 const initialState: AuthState = {
-    authState: false,
+    authState: false
 }
 
 // Actual Slice
@@ -29,11 +29,11 @@ export const authSlice = createSlice({
             [HYDRATE]: (state, action) => {
                 return {
                     ...state,
-                    ...action.payload.auth,
+                    ...action.payload.auth
                 }
-            },
-        },
-    },
+            }
+        }
+    }
 })
 
 export const {setAuthState} = authSlice.actions

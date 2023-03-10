@@ -10,7 +10,7 @@ type text = {
 export enum HashtagType {
     FACT = '#FACT',
     STORY = '#STORY',
-    INFO = '#GOOD2KNOW',
+    INFO = '#GOOD2KNOW'
 }
 
 interface Props {
@@ -30,7 +30,8 @@ const CardCollapse = (props: Props) => {
                         className="collapse bg-accent rounded-box"
                         onClick={() => {
                             setActive(!active)
-                        }}>
+                        }}
+                    >
                         <input type="checkbox" className="peer" />
                         <div className="collapse-title text-xl font-medium flex flex-row">
                             <div className="flex-1 flex flex-col lg:flex-row">

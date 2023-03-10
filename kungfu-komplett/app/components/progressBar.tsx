@@ -4,7 +4,7 @@ export enum MaTypes {
     jkd = 'JKD',
     shaolin = 'SHAOLIN',
     taichi = 'TAI_CHI',
-    kids = 'KIDS',
+    kids = 'KIDS'
 }
 
 interface ProgressProps {
@@ -27,7 +27,8 @@ const ProgressBar = (props: ProgressProps) => {
                                             props.steps.length === i + 1
                                                 ? 'step step-secondary mx-2'
                                                 : 'step step-accent mx-2'
-                                        }>
+                                        }
+                                    >
                                         {step}
                                     </li>
                                 )}
@@ -37,7 +38,8 @@ const ProgressBar = (props: ProgressProps) => {
                                             props.steps.length === i + 1
                                                 ? 'step step-secondary mx-2'
                                                 : 'step step-gold mx-2'
-                                        }>
+                                        }
+                                    >
                                         {step}
                                     </li>
                                 )}
@@ -47,7 +49,8 @@ const ProgressBar = (props: ProgressProps) => {
                                             props.steps.length === i + 1
                                                 ? 'step step-info mx-2'
                                                 : 'step step-accent mx-2'
-                                        }>
+                                        }
+                                    >
                                         {step}
                                     </li>
                                 )}
@@ -55,9 +58,10 @@ const ProgressBar = (props: ProgressProps) => {
                                     <li
                                         className={
                                             props.steps.length === i + 1
-                                                ? 'step step-secondary mx-2'
+                                                ? 'step step-success mx-2'
                                                 : 'step step-accent mx-2'
-                                        }>
+                                        }
+                                    >
                                         {step}
                                     </li>
                                 )}

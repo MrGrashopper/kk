@@ -5,9 +5,9 @@ import {createWrapper} from 'next-redux-wrapper'
 const makeStore = () =>
     configureStore({
         reducer: {
-            [authSlice.name]: authSlice.reducer,
+            [authSlice.name]: authSlice.reducer
         },
-        devTools: true,
+        devTools: true
     })
 
 export type AppStore = ReturnType<typeof makeStore>

@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect} from 'react'
+import React from 'react'
 import Hero from './components/hero'
 import {de} from './locale'
 import Section from './components/section'
@@ -62,7 +62,7 @@ const Page = (props: Props) => {
                             imageSrc={'./galleryKids/kids_group.jpeg'}
                             subTitle={'Früh übt sich was..'}
                             cta={'Weiter'}
-                            link={'/training/kindertraining'}
+                            link={'/training/kids'}
                         />
                     </div>
                 </div>

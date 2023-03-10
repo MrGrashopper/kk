@@ -8,7 +8,7 @@ import NavbarDrawerItems from './components/navbarDrawerItems'
 
 const inter = Inter({
     subsets: ['latin'],
-    variable: '--font-inter',
+    variable: '--font-inter'
 })
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
@@ -31,7 +31,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                     <div className="drawer-side">
                         <label
                             htmlFor="my-drawer-4"
-                            className="drawer-overlay"></label>
+                            className="drawer-overlay"
+                        ></label>
                         <NavbarDrawerItems />
                     </div>
                 </div>

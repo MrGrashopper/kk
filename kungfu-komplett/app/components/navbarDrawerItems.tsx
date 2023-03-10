@@ -6,7 +6,8 @@ const NavbarDrawerItems = () => {
             <li>
                 <label
                     htmlFor="my-drawer-4"
-                    className="btn btn-ghost btn-circle ml-auto">
+                    className="btn btn-ghost btn-circle ml-auto"
+                >
                     X
                 </label>
             </li>

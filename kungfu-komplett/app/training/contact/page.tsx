@@ -22,7 +22,8 @@ const Page = (props: Props) => {
                     <div className="w-96 rounded-xl border border-base-300">
                         <a
                             target="_blank"
-                            href="https://www.google.com/maps/place/Koryo+GYM+Berlin/@52.4840749,13.4315428,17z/data=!4m12!1m6!3m5!1s0x47a84fbab7fa81cb:0xf119814cce665bc9!2sKoryo+GYM+Berlin!8m2!3d52.4840749!4d13.4341186!3m4!1s0x47a84fbab7fa81cb:0xf119814cce665bc9!8m2!3d52.4840749!4d13.4341186">
+                            href="https://www.google.com/maps/place/Koryo+GYM+Berlin/@52.4840749,13.4315428,17z/data=!4m12!1m6!3m5!1s0x47a84fbab7fa81cb:0xf119814cce665bc9!2sKoryo+GYM+Berlin!8m2!3d52.4840749!4d13.4341186!3m4!1s0x47a84fbab7fa81cb:0xf119814cce665bc9!8m2!3d52.4840749!4d13.4341186"
+                        >
                             <img src="/map.png" alt="map" />
                         </a>
                     </div>

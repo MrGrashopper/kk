@@ -31,25 +31,25 @@ const kkTheme = {
     '--animation-btn': '0',
     '--animation-input': '0',
     '--btn-focus-scale': '1',
-    '--tab-radius': '0',
+    '--tab-radius': '0'
 }
 
 module.exports = {
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
-        './app/**/*.{js,ts,jsx,tsx}',
+        './app/**/*.{js,ts,jsx,tsx}'
     ],
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-inter)', ...fontFamily.sans],
-            },
-        },
+                sans: ['var(--font-inter)', ...fontFamily.sans]
+            }
+        }
     },
     plugins: [require('daisyui')],
 
     daisyui: {
-        themes: [{lofi: kkTheme}],
-    },
+        themes: [{lofi: kkTheme}]
+    }
 }

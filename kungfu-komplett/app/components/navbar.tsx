@@ -8,13 +8,15 @@ const Navbar = () => {
                 <div className="dropdown">
                     <label
                         htmlFor="my-drawer-4"
-                        className="btn btn-ghost btn-circle">
+                        className="btn btn-ghost btn-circle"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor">
+                            stroke="currentColor"
+                        >
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
