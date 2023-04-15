@@ -3,6 +3,12 @@ export const de = {
         fact: '#FACT',
         story: '#STORY'
     },
+    contact: {
+        ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere',
+        emailAdress: 'Schreib uns eine Email an: o_gimm@gmx.net',
+        moreInfo: 'Weitere Informationen gibt es hier:',
+        email: 'E-Mail schreiben'
+    },
     homepage: {
         hero: {
             title: 'Kampf. Kunst. Komplett.',
@@ -12,7 +18,7 @@ export const de = {
         section: {
             title: ' Trainiere verschiedene Stile',
             description:
-                'Erlerne effektive Selbstverteidigung und messe dich im Kampf. Stilvolle Bewegungen nach chinesischer Tradition. Ausgeglichenheit durch atemgesteuerte Bewegung.'
+                'Erwecke Dein inneres Kämpferherz und entwickle einen individuellen Kampfstil, der Dich jederzeit erfolgreich verteidigt. Lerne von den legendären Shaolinmönchen, Dich mit beeindruckender Härte und Schnelligkeit zu bewegen - ob mit oder ohne Waffen. Doch nicht nur der Körper wird gestärkt, auch der Geist wird beruhigt und Achtsamkeit erlernt. Lass Deine innere Kraft und Bewegungen fließen und werde zum ultimativen Kämpfer.'
         },
         section2: {
             title: ' Hier findest du uns',

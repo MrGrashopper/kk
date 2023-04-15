@@ -14,11 +14,10 @@ const Page = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
     const images = []
 
-    for (let i = 0; i < 6; i++) {
-        // eslint-disable-next-line no-constant-condition
-        if (`../galleryTaichi/taichi${i}.jpeg`) {
+    for (let i = 1; i < 4; i++) {
+        if (`../galleryShaolin/shaolin${i}.jpeg`) {
             images.push({
-                src: `../galleryTaichi/taichi${i}.jpeg`,
+                src: `../galleryShaolin/shaolin${i}.jpeg`,
                 alt: `Tai Chi Image ${i}`
             })
         }
@@ -60,7 +59,7 @@ const Page = (props: Props) => {
         <div className="m-3 lg:m-10">
             <div className="card lg:card-side shadow-xl bg-base-100">
                 <figure>
-                    <img src="../taichi_stand.jpeg" alt="Album" />
+                    <img src="../shaolin_two_stand.jpeg" alt="Album" />
                 </figure>
                 <div className="card-body">
                     {motionTitle(

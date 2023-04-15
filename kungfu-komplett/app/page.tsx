@@ -37,12 +37,12 @@ const Page = (props: Props) => {
                     <div className="flex justify-center">
                         <Card
                             title={'Shaolin Kung Fu'}
-                            imageSrc={'./shaolin_sword.jpeg'}
+                            imageSrc={'./shaolin_sword_bg.jpeg'}
                             subTitle={
                                 'Lerne, Dich zu bewegen, wie die legendären Shaolinmönche. Ob mit oder ohne Waffen – verbinde Härte und Schnelligkeit zur Perfektion.'
                             }
                             cta={'Weiter'}
-                            link={'/training/jkd'}
+                            link={'/training/shaolin'}
                         />
                     </div>
                     <div className="flex justify-center">
@@ -50,7 +50,7 @@ const Page = (props: Props) => {
                             title={'Tai Chi Chuan'}
                             imageSrc={'./shaolin_sword.jpeg'}
                             subTitle={
-                                'Lerne, Dich zu bewegen, wie die legendären Shaolinmönche. Ob mit oder ohne Waffen – verbinde Härte und Schnelligkeit zur Perfektion.'
+                                'Stärke den Körper auf sanfte Art. Beruhige den Geist. Lerne Achtsamkeit. Lass Deine innere Kraft sowie Deine Bewegungen fließen.'
                             }
                             cta={'Weiter'}
                             link={'/training/taichi'}
@@ -59,8 +59,10 @@ const Page = (props: Props) => {
                     <div className="flex justify-center">
                         <Card
                             title={'Kindertraining'}
-                            imageSrc={'./galleryKids/kids_group.jpeg'}
-                            subTitle={'Früh übt sich was..'}
+                            imageSrc={'./galleryKids/kids2.jpeg'}
+                            subTitle={
+                                'Spielerisch körperliche Fitness, Beweglichkeit und Konzentration fördern und Teil einer Gemeinschaft werden.'
+                            }
                             cta={'Weiter'}
                             link={'/training/kids'}
                         />

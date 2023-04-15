@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import {de, en} from '../locale'
 import {motion, useMotionValue, useTransform} from 'framer-motion'
+import Link from 'next/link'
 
 interface HeroProps {
     lang: string
@@ -15,8 +16,7 @@ const Hero = (props: HeroProps) => {
             <motion.div
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
-                viewport={{once: false}}
-            >
+                viewport={{once: false}}>
                 <div className="mb-10">
                     <h1 className="text-4xl font-bold text-white drop-shadow-lg shadow-black">
                         {strings.homepage.hero.title}
@@ -25,9 +25,11 @@ const Hero = (props: HeroProps) => {
                         {strings.homepage.hero.description}
                     </p>
                 </div>
-                <button className="btn btn-secondary border-white/10">
-                    {strings.homepage.hero.cta}
-                </button>
+                <Link href="/training/contact">
+                    <button className="btn btn-secondary border-white/10">
+                        {strings.homepage.hero.cta}
+                    </button>
+                </Link>
             </motion.div>
         )
     }
@@ -37,8 +39,7 @@ const Hero = (props: HeroProps) => {
             style={{
                 backgroundImage: `url("/shifu_backside.jpeg")`,
                 overflow: 'hidden'
-            }}
-        >
+            }}>
             <div className="hero-overlay bg-opacity-20"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">{motionTitle()}</div>
