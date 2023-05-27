@@ -41,12 +41,12 @@ const Page = (props: Props) => {
                 </div>
                 {variant && (
                     <ProgressBar
-                        martialArtsType={MaTypes.taichi}
+                        martialArtsType={MaTypes.jkd}
                         steps={[
-                            'Meditation',
-                            'Qi Gong',
-                            'Bewegungsformen',
-                            'Anwendung'
+                            'Beweglichkeit & Schnelligkeit',
+                            'Körperbeherrschung',
+                            'Gleichgewicht & Koordination',
+                            'Ausdruck'
                         ]}
                     />
                 )}
@@ -63,7 +63,7 @@ const Page = (props: Props) => {
                 </figure>
                 <div className="card-body">
                     {motionTitle(
-                        strings.training.taichi.title1,
+                        strings.training.shaolin.title1,
                         undefined,
                         true
                     )}
@@ -85,10 +85,10 @@ const Page = (props: Props) => {
                         />
                     </svg>
                     <p className="text-2xl italic font-medium text-gray-900">
-                        {strings.training.taichi.desc1}
+                        {strings.training.shaolin.desc1}
                     </p>
                 </blockquote>
-                <div className="font-light">- Lao Tse -</div>
+                <div className="font-light">- O. Gimm -</div>
             </figure>
 
             <div className="carousel h-auto rounded-box my-10">

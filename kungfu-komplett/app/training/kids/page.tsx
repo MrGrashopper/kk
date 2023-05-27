@@ -34,7 +34,7 @@ const Page = (props: Props) => {
                 </div>
                 {variant && (
                     <ProgressBar
-                        martialArtsType={MaTypes.kids}
+                        martialArtsType={MaTypes.jkd}
                         steps={[
                             'Beweglichkleit',
                             'Koordination',

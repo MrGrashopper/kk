@@ -21,17 +21,20 @@ interface Props {
 
 const CardCollapse = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
-    const [active, setActive] = useState<boolean>(false)
+    const [active, setActive] = useState<boolean>(true)
     return (
         <div className="l">
             {props.texts.map(text => {
                 return (
                     <div
-                        className="collapse bg-accent rounded-box"
+                        className={
+                            active
+                                ? 'collapse bg-accent rounded-box collapse-open'
+                                : 'collapse bg-accent rounded-box collapse-close'
+                        }
                         onClick={() => {
                             setActive(!active)
-                        }}
-                    >
+                        }}>
                         <input type="checkbox" className="peer" />
                         <div className="collapse-title text-xl font-medium flex flex-row">
                             <div className="flex-1 flex flex-col lg:flex-row">

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {permanentMarker} from '../styles'
+import {lalezar} from '../styles'
 
 interface CardProp {
     title: string
@@ -18,7 +18,9 @@ const Card = (props: CardProp) => {
                     <img src={props.imageSrc} alt={props.title} />
                 </figure>
                 <div className="card-body">
-                    <h2 className={permanentMarker.className}>{props.title}</h2>
+                    <div className="text-xl">
+                        <h2 className={lalezar.className}>{props.title}</h2>
+                    </div>
                     <p>{props.subTitle}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-secondary">

@@ -14,7 +14,7 @@ const NavbarDrawerItems = () => {
                 <a href={'/training/jkd'}>Jeet Kune Do</a>
             </li>
             <li>
-                <a href={''}>Shaolin Kung Fu</a>
+                <a href={'/training/shaolin'}>Shaolin Kung Fu</a>
             </li>
             <li>
                 <a href={'/training/taichi'}>Tai Chi</a>

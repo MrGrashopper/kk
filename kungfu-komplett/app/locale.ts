@@ -4,21 +4,21 @@ export const de = {
         story: '#STORY'
     },
     contact: {
-        ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere',
+        ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere uns',
         emailAdress: 'Schreib uns eine Email an: o_gimm@gmx.net',
         moreInfo: 'Weitere Informationen gibt es hier:',
         email: 'E-Mail schreiben'
     },
     homepage: {
         hero: {
-            title: 'Kampf. Kunst. Komplett.',
-            description: 'JEET KUNE DO | SHAOLIN KUNG FU | TAI CHI',
-            cta: 'kostenloses Probetraining'
+            title: 'Mache keine Komprisse',
+            description: 'Jeet Kune Do, Shaolin Kung Fu & Tai Chi Chuan',
+            cta: 'Werde Teil von Kung-Fu Komplett'
         },
         section: {
             title: ' Trainiere verschiedene Stile',
             description:
-                'Erwecke Dein inneres Kämpferherz und entwickle einen individuellen Kampfstil, der Dich jederzeit erfolgreich verteidigt. Lerne von den legendären Shaolinmönchen, Dich mit beeindruckender Härte und Schnelligkeit zu bewegen - ob mit oder ohne Waffen. Doch nicht nur der Körper wird gestärkt, auch der Geist wird beruhigt und Achtsamkeit erlernt. Lass Deine innere Kraft und Bewegungen fließen und werde zum ultimativen Kämpfer.'
+                'Erwecke Dein inneres Kämpferherz und entwickle einen individuellen Kampfstil, der Dich jederzeit erfolgreich verteidigt. Lerne wie die legendären Shaolinmönchen, Dich mit beeindruckender Härte und Schnelligkeit zu bewegen - ob mit oder ohne Waffen. Doch nicht nur der Körper wird gestärkt, auch der Geist wird beruhigt und Achtsamkeit erlernt. Lass Deine innere Kraft und Bewegungen fließen und werde zum ultimativen Kämpfer.'
         },
         section2: {
             title: ' Hier findest du uns',
@@ -46,6 +46,10 @@ export const de = {
                 ' \n' +
                 'Es werden verschieden Angriffs– und Verteidigungskombinationen erlernt und auch schon die ersten Hebeltechniken vermittelt. All dies soll dann in kampfnahen Situationen sowie im leichten Freikampf angewendet werden. Die angewendeten Techniken sollen dabei dem jeweiligen Leistungsstand entsprechen. Der Schüler soll sich an Gegnerkontakt gewöhnen, die Angst verlieren, eigene Schwächen erkennen und herausfinden, wie er erfolgreich Angriffe abwehren und selbst erfolgreich attackieren kann.\n' +
                 'In der dritten Stufe werden dann die Grundlagen des Tui Shu und des Chi Sao erlernt. Hierbei kommen verschiedene Techniken aus dem Tai Chi Chuan, Wing Chun und Aikido zur Anwendung. In diesem Zusammenhang wird das Repertoire an Hebeltechniken erweitert. Es kommen neue Schlag -, Tritt - und Konterkombinationen dazu. Die Grundlagen des Waffenkampfes werden erlernt. Hier werden individuell unterschiedliche Schwerpunkte gesetzt (v.a. spezielle Techniken für Polizisten und Security – Personal).\n'
+        },
+        shaolin: {
+            title1: 'Form in Perfektion',
+            desc1: 'Das Shaolin - Kung Fu ist das wohl bekannteste Kung Fu.'
         },
         taichi: {
             title1: 'Atmung und Bewegung im Einklang',

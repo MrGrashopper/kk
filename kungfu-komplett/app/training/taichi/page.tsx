@@ -14,8 +14,8 @@ const Page = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
     const images = []
 
-    for (let i = 0; i < 6; i++) {
-        // eslint-disable-next-line no-constant-condition
+    for (let i = 0; i < 14; i++) {
+        // eslint-disable-next-lin  e no-constant-condition
         if (`../galleryTaichi/taichi${i}.jpeg`) {
             images.push({
                 src: `../galleryTaichi/taichi${i}.jpeg`,
@@ -42,7 +42,7 @@ const Page = (props: Props) => {
                 </div>
                 {variant && (
                     <ProgressBar
-                        martialArtsType={MaTypes.taichi}
+                        martialArtsType={MaTypes.jkd}
                         steps={[
                             'Meditation',
                             'Qi Gong',
