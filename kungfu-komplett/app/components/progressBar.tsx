@@ -15,7 +15,7 @@ interface ProgressProps {
 const ProgressBar = (props: ProgressProps) => {
     return (
         <div className="flex flex-row justify-start">
-            <ul className="steps w-full steps-vertical my-5">
+            <ul className="steps w-full h-full steps-vertical">
                 {props.steps &&
                     props.steps.map((step: string, i) => {
                         return (
@@ -23,12 +23,12 @@ const ProgressBar = (props: ProgressProps) => {
                                 {(props.martialArtsType === MaTypes.jkd ||
                                     props.martialArtsType === undefined) && (
                                     <li
+                                        style={{textAlign: 'left'}}
                                         className={
                                             props.steps.length === i + 1
-                                                ? 'step step-secondary mx-2'
-                                                : 'step step-accent mx-2'
-                                        }
-                                    >
+                                                ? 'step step-secondary text-xl my-2'
+                                                : 'step step-accent text-xl my-2'
+                                        }>
                                         {step}
                                     </li>
                                 )}
@@ -36,10 +36,9 @@ const ProgressBar = (props: ProgressProps) => {
                                     <li
                                         className={
                                             props.steps.length === i + 1
-                                                ? 'step step-secondary mx-2'
-                                                : 'step step-gold mx-2'
-                                        }
-                                    >
+                                                ? 'step step-secondary text-xl'
+                                                : 'step step-gold text-xl'
+                                        }>
                                         {step}
                                     </li>
                                 )}
@@ -47,10 +46,9 @@ const ProgressBar = (props: ProgressProps) => {
                                     <li
                                         className={
                                             props.steps.length === i + 1
-                                                ? 'step step-info mx-2'
-                                                : 'step step-accent mx-2'
-                                        }
-                                    >
+                                                ? 'step step-info '
+                                                : 'step step-accent '
+                                        }>
                                         {step}
                                     </li>
                                 )}
@@ -58,10 +56,9 @@ const ProgressBar = (props: ProgressProps) => {
                                     <li
                                         className={
                                             props.steps.length === i + 1
-                                                ? 'step step-success mx-2'
-                                                : 'step step-accent mx-2'
-                                        }
-                                    >
+                                                ? 'step step-success '
+                                                : 'step step-accent '
+                                        }>
                                         {step}
                                     </li>
                                 )}

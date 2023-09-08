@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const NavbarDrawerItems = () => {
     return (
@@ -9,6 +10,9 @@ const NavbarDrawerItems = () => {
                     className="btn btn-ghost btn-circle ml-auto">
                     X
                 </label>
+            </li>
+            <li>
+                <a href={'/'}>Home</a>
             </li>
             <li>
                 <a href={'/training/jkd'}>Jeet Kune Do</a>

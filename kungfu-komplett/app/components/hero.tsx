@@ -38,12 +38,12 @@ const Hero = (props: HeroProps) => {
     }
     return (
         <div
-            className="hero min-h-screen"
+            className="hero h-[80vh]"
             style={{
                 backgroundImage: `url("/hero_image.jpeg")`,
                 overflow: 'hidden'
             }}>
-            <div className="hero-overlay bg-opacity-20"></div>
+            <div className="hero-overlay bg-opacity-30"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">{motionTitle()}</div>
             </div>

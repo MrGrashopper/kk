@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
     return (
@@ -26,16 +27,14 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center">
-                <a href={'/'}>
-                    <div>
-                        <Image
-                            src={'/KungFu-Komplett_Red.svg'}
-                            alt={'logo Kung Fu Komplett'}
-                            width={200}
-                            height={100}
-                        />
-                    </div>
-                </a>
+                <Link href="/">
+                    <Image
+                        src={'/KungFu-Komplett_Red.svg'}
+                        alt={'logo Kung Fu Komplett'}
+                        width={200}
+                        height={100}
+                    />
+                </Link>
             </div>
             <div className="navbar-end">
                 <button className="btn btn-ghost btn-circle">

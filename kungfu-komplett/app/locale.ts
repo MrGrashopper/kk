@@ -11,9 +11,9 @@ export const de = {
     },
     homepage: {
         hero: {
-            title: 'Mache keine Komprisse',
+            title: 'Keine Komprisse',
             description: 'Jeet Kune Do, Shaolin Kung Fu & Tai Chi Chuan',
-            cta: 'Werde Teil von Kung-Fu Komplett'
+            cta: 'Starte jetzt dein Training in Berlin'
         },
         section: {
             title: ' Trainiere verschiedene Stile',
@@ -28,42 +28,32 @@ export const de = {
     training: {
         jkd: {
             title1: 'Entwickle deinen eigenen Kampfstil',
-            desc1: 'Jeet Kune Do ist ein Selbstverteidigungskonzept, bei dem der Verteidiger versucht, sich auf einfachste und effektive Weise auf der Grundlage seines Könnens und seiner Körpermerkmale optimal zu verteidigen.',
+            desc1: '"Jeet Kune Do ist ein Selbstverteidigungskonzept, bei dem der Verteidiger versucht, sich auf einfachste und effektive Weise auf der Grundlage seines Könnens und seiner Körpermerkmale optimal zu verteidigen."',
             title2: 'Bruce Lee über Jeet Kune Do',
-            desc2:
-                '"Nimm die Dinge wie sie sind: schlage, wenn du schlagen musst, tritt, wenn du treten musst.”\n' +
-                'Die Techniken sind einfach, kurz, schnörkellos und somit außerordentlich effektiv. Bruce Lee verzichtete beim JKD auf jegliche Effekthascherei.\n' +
-                'Ein weiteres Zitat aus Bruce Lees Jeet Kune Do: „ Jeet Kune Do hat die Formlosigkeit zum Prinzip erhoben, und da Jeet Kune Do keinen Stil hat, passt es zu allen Kampfstilen. Als Resultat ist Jeet Kune Do an keinen speziellen Kampfstil gebunden, da es alle anwendet. Es werden alle brauchbaren Techniken einbezogen. Bei dieser Kampfkunst zählt nur die Wirkung ”.',
+            desc2: '"Nimm die Dinge wie sie sind: schlage, wenn du schlagen musst, tritt, wenn du treten musst.”',
             title3: 'Das einzig wahre JKD gibt es nicht',
             desc3:
-                'Nun liegt es auf der Hand, dass nicht jeder Trainierende alle Fähigkeiten zur Perfektion bringen kann. Man muss sich stets seiner Stärken und Schwächen bewusst sein und sich dementsprechend verhalten.\n' +
+                'Es liegt auf der Hand, dass nicht jeder Trainierende alle Fähigkeiten zur Perfektion bringen kann. Man muss sich stets seiner Stärken und Schwächen bewusst sein und sich dementsprechend verhalten.\n' +
                 'Integriere und nutze dein Wissen und Können. JKD ist individuell, anpassungsfähig und wird ständig weiterentwickelt. Es ist wie das Wasser, welches sich jeder Gegebenheit anpasst.\n' +
                 'Zum mentalen Training im JKD gehören auch Selbstbeherrschung und die Fähigkeit zur Deeskalation in kritischen Situationen.',
-            title4: 'Erfahre mehr über das Training',
-            desc4:
-                'Der Schüler lernt in der ersten Stufe zunächst Grundtechniken: die wichtigsten und häufigsten Schläge, Tritte, Blocks und einfache Kombinationen sowie Fallübungen. Hier werden ebenfalls die Grundlagen des Shaolin Kung Fu vermittelt. Traditionelle Grundstellungen sowie einfache Kombinationen. Ab der zweiten Stufe erfolgt dann eine strikte Trennung zwischen JKD und Shaolin Kung Fu, wobei jeder Schüler selbstverständlich beide Bereiche trainieren und seine Schwerpunkte selber festlegen kann.\n' +
-                'Während des Trainings der zweiten Stufe festigt der Schüler die Basistechniken bis er diese soweit beherrscht, dass er sie nahezu fehlerfrei ausführen kann.\n' +
-                ' \n' +
-                'Es werden verschieden Angriffs– und Verteidigungskombinationen erlernt und auch schon die ersten Hebeltechniken vermittelt. All dies soll dann in kampfnahen Situationen sowie im leichten Freikampf angewendet werden. Die angewendeten Techniken sollen dabei dem jeweiligen Leistungsstand entsprechen. Der Schüler soll sich an Gegnerkontakt gewöhnen, die Angst verlieren, eigene Schwächen erkennen und herausfinden, wie er erfolgreich Angriffe abwehren und selbst erfolgreich attackieren kann.\n' +
-                'In der dritten Stufe werden dann die Grundlagen des Tui Shu und des Chi Sao erlernt. Hierbei kommen verschiedene Techniken aus dem Tai Chi Chuan, Wing Chun und Aikido zur Anwendung. In diesem Zusammenhang wird das Repertoire an Hebeltechniken erweitert. Es kommen neue Schlag -, Tritt - und Konterkombinationen dazu. Die Grundlagen des Waffenkampfes werden erlernt. Hier werden individuell unterschiedliche Schwerpunkte gesetzt (v.a. spezielle Techniken für Polizisten und Security – Personal).\n'
+            title4: 'Dein Weg zum eigenen Kampf-System',
+            title5: 'Effektiv. Individuell. Realistisch.',
+            desc5: `Jeet Kune Do ist kein Stil sondern ein von Bruce Lee entdeckter Weg, auf welchem man mit Hilfe weniger Techniken und Prinzipen seinen eigenen Kampfstil entwickeln kann. Jeet Kune Do versetzt den Verteidiger in die Lage, sich auf der Grundlage gegebener Körpermerkmale (wie Größe, Alter, Geschlecht und Gewicht) optimal zu verteidigen.`,
+            desc4: 'In der ersten Stufe lernt der Schüler Grundtechniken, Schläge, Tritte, Blocks und Fallübungen sowie Grundlagen des Shaolin Kung Fu. Ab der zweiten Stufe gibt es eine Trennung zwischen JKD und Shaolin Kung Fu; der Schüler festigt Basistechniken und erlernt Angriffs- und Verteidigungskombinationen, die in kampfnahen Situationen und Freikampf angewendet werden. Er soll eigene Schwächen erkennen und erfolgreich Angriffe abwehren und attackieren. In der dritten Stufe werden die Grundlagen des Tui Shu und Chi Sao mit Techniken aus Tai Chi Chuan, Wing Chun und Aikido erlernt, sowie das Repertoire an Hebeltechniken erweitert und die Grundlagen des Waffenkampfes eingeführt, mit Schwerpunkt auf eigene Erfahrung und Präferenzen.'
         },
         shaolin: {
             title1: 'Form in Perfektion',
-            desc1: 'Das Shaolin - Kung Fu ist das wohl bekannteste Kung Fu.'
+            desc1: 'Eine fast 1500 Jahre alte Kampfkunst. Hinsichtlich der Vielfalt reicht keine andere Kampfkunst an Shaolin Kung Fu heran. Es gibt diverse Tierstile sowie verschiedenste Waffenformen. Traditionelle Übungen und moderne Trainingsmethoden ergänzen sich. Schüler finden im Laufe des Trainings heraus, welche Stile und Waffen am besten zu ihnen passen.',
+            title2: 'Trainingsumfang',
+            title3: 'Der Begriff Kung Fu',
+            desc3: 'Die chinesischen Kampfkünste werden eigentlich als Wushu bezeichnet. In der westlichen Welt hat sich allerdings der Begriff Kung Fu (=gong fu) durchgesetzt, was wörtlich „hart arbeiten“ bedeutet. Kung Fu / Wushu umfasst heutzutage wenigstens 500 verschiedene, zum Teil völlig unterschiedliche Systeme und Stile. Die verschiedenen Tai Chi Chuan Stile zählen ebenso dazu wie alle möglichen Tierstile, Waffenformen, Qi Na (Selbstverteidigung) und Sanda.',
+            desc4: '"Wahre Meisterschaft kann nur durch kontinuierliche Übung erreicht werden"'
         },
         taichi: {
-            title1: 'Atmung und Bewegung im Einklang',
-            desc1: 'Das Weiche besiegt das Harte',
-            title2: 'Im Zeichen des Wassers',
+            title1: 'Das Weiche besiegt das Harte',
+            desc1: 'Tai Chi Chuan umfasst zwei wesentliche Aspekte: Einerseits Bewegungsmeditation, welche nachgewiesenermaßen der Gesundheitsförderung dient. Andererseits handelt es sich bei Tai Chi Chuan um eine äußerst effektive Kampfkunst. Charakteristisch sind weiche, fließende Bewegungen. Bei der Selbstverteidigung lenkt man die Kraft und Aggression des Angreifers gegen diesen selbst.',
+            title2: 'Durch Atmung und Bewegung zu deinem Selbst',
             desc2:
-                '\n' +
-                'Home\n' +
-                'Training\n' +
-                'Galerie\n' +
-                'Über Uns\n' +
-                ' \n' +
-                '\n' +
-                ' \n' +
                 'Bei Tai Chi Chuan (andere Schreibweise Taiqiquan) denken viele Leute an ältere Menschen, die im Park stehen und sehr langsame Bewegungen ausführen. Dabei handelt es sich um einen Aspekt, den man als Bewegungsmeditation bezeichnen kann und der nachgewiesenermaßen der Gesundheitsförderung dient. Fakt ist aber, dass es sich bei Tai Chi Chuan um eine Kampfkunst handelt, und zwar um eine äußerst effektive.\n' +
                 'Die positiven Effekte der Übungen machen sich schon nach relativ kurzer Zeit bemerkbar. Es spielt dabei keine Rolle, in welchem Alter man mit den Übungen beginnt, über wie viel Kraft man verfügt oder ob man an die Existenz von Chi/Qi glaubt.',
             title3: 'Prinzipien',
@@ -79,11 +69,12 @@ export const de = {
                 ' \n' +
                 'In der zweiten Stufe werden die erlernten Techniken verfeinert und ergänzt. Die Atmung wird nun auch bei komplexeren Seidenübungen ungezwungen und Tempo bestimmend eingesetzt. Es erfolgen erste Partnerübungen und die Grundlagen des Tuishu werden vermittelt. Die 24er Bejing-Form (Yang-Stil) kommt aus dem Bereich Taolu dazu, wobei bereits typische Formenelemente erlernt und die Anwendungen erklärt werden. Wer auch den Chen-Stil erlernen oder sich sogar in dieser Richtung spezialisieren möchte, erlernt in dieser Stufe zudem die 13er Chen-Form.\n' +
                 ' \n' +
-                'Die dritte Stufe legt den Schwerpunkt auf Formen und Anwendungen'
+                'Die dritte Stufe legt den Schwerpunkt auf Formen und Anwendungen',
+            desc5: '"Die härteste und stärkste Energie ist weich und flexibel."'
         },
         kids: {
             title1: 'Mit Spaß zum Erfolg',
-            desc1: 'Kung-Fu macht mir super viel Spaß und ich habe ganz viele Freunde gefunden',
+            desc1: 'Das Training erfolgt altersgemäß und gleichermaßen fordernd wie fördernd. Optimales Einstiegsalter ist 6 Jahre. Jungen und Mädchen werden zusammen unterrichtet. Die körperliche Leistungsfähigkeit aber auch Willensstärke und Selbstbewusstsein werden mit der Zeit gesteigert. Es werden die Grundlagen des Shaolin-Kung Fu´s sowie der Selbstverteidigung vermittelt.',
             title2: 'Die Großen von morgen',
             desc2: 'Das Training der Kinder erfolgt altersgemäß. Es ist fordernd und fördernd gleichermaßen. Da ich ausgebildeter Sportlehrer bin und mein Wissen auch an meine Trainer weitergebe, findet das Training auch unter pädagogischen und sportwissenschaftlichen Gesichtspunkten statt. Die Kinder erlernen Grundformen aber auch bereits Grundlagen der Selbstverteidigung. Optimales Einstiegsalter ist 6 Jahre. Jungen und Mädchen werden zusammen unterrichtet. Das Training  verbessert deutlich die Koordination, die Schnelligkeit, Ausdauer, Beweglichkeit und Kraft. Auch die Willensstärke und das Selbstbewusstsein werden mit der Zeit gesteigert. All dies wirkt sich meiner Erfahrung nach auch positiv auf die schulischen Leistungen aus. Schule hat unbedingten Vorrang aber wir zeigen den Kindern, wie man Training und Schule bewältigt. Da es keine festen Prüfungstermine und keine Turniere gibt, geraten die Kinder diesbezüglich nie unter Druck. Die Teilnahme an eventuell stattfindenden Vorführungen wird mit den Eltern abgesprochen.'
         }

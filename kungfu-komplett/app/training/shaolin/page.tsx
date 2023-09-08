@@ -2,19 +2,25 @@
 import React from 'react'
 import {de} from '../../locale'
 import CardCollapse, {HashtagType} from '../../components/cardCollapse'
-import {permanentMarker} from '../../styles'
+import {lalezar, permanentMarker} from '../../styles'
 import {motion} from 'framer-motion'
 import ProgressBar, {MaTypes} from '../../components/progressBar'
+import {lazy} from 'react'
+import Section from '../../components/section'
+import ContactButton from '../../components/contactButton'
+import HighlightBox from '../../components/highlightBox'
+import HeaderCard from '../../components/headerCard'
 
 interface Props {
     lang: string
 }
 
-const Page = (props: Props) => {
+const Shaolin = (props: Props) => {
     const strings = props.lang === 'DE' ? de : de
     const images = []
 
-    for (let i = 1; i < 4; i++) {
+    for (let i = 1; i < 12; i++) {
+        // eslint-disable-next-line no-constant-condition
         if (`../galleryShaolin/shaolin${i}.jpeg`) {
             images.push({
                 src: `../galleryShaolin/shaolin${i}.jpeg`,
@@ -23,6 +29,12 @@ const Page = (props: Props) => {
         }
     }
 
+    const steps = [
+        'Der Schüler erlernt Formen, die sowohl in der Länge, als auch im Schwierigkeitsgrad steigen (div. Süd-Shaolinformen und Nord-Shaolinformen). Weiterhin werden akrobatische Elemente eingeführt (z. B. Felgrolle, Rad ohne Hände und “Xuan zi” = Schmetterlingstritt)',
+        'Wenn der Schüler seinen Körper schon relativ gut kontrollieren kann, beginnt die Ausbildung mit einer Waffe. Der Schüler macht sich mit den drei traditionell wichtigsten Waffen Stock, Säbel und Schwert vertraut, danach wird entschieden mit welcher Waffe der Schüler als erstes den Umgang erlernen möchte.',
+        'Entscheidend in den fortgeschrittenen Formen ist es, die erlernten Techniken (sowohl Basis, als auch fortgeschrittene Techniken) nicht nur einzeln, sonden in Kombinationen sauber auszuführen. Zudem sollen die Schülerinnen und Schüler zunehmend alle erlernten Bewegungen auch mit ihrer Waffe ausführen können. Letztlich entsprechen die Formen (Handformen/Waffenformen) einem sehr hohen Schwierigkeitsgrad. Akrobatik und komplexe Sprungtritte gehören zu den Pflichtelementen.'
+    ]
+
     const text4 = [
         {
             title: strings.training.taichi.title4,
@@ -30,48 +42,45 @@ const Page = (props: Props) => {
         }
     ]
 
-    const motionTitle = (title?: string, text?: string, variant?: boolean) => {
-        return (
-            <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                viewport={{once: false}}>
-                <div className={permanentMarker.className}>
-                    <div className={'card-title text-2xl'}>{title}</div>
-                </div>
-                {variant && (
-                    <ProgressBar
-                        martialArtsType={MaTypes.jkd}
-                        steps={[
-                            'Beweglichkeit & Schnelligkeit',
-                            'Körperbeherrschung',
-                            'Gleichgewicht & Koordination',
-                            'Ausdruck'
-                        ]}
-                    />
-                )}
-                {text && <p className={'text-xl mt-3'}>{text}</p>}
-            </motion.div>
-        )
-    }
-
     return (
         <div className="m-3 lg:m-10">
-            <div className="card lg:card-side shadow-xl bg-base-100">
-                <figure>
-                    <img src="../shaolin_two_stand.jpeg" alt="Album" />
-                </figure>
-                <div className="card-body">
-                    {motionTitle(
-                        strings.training.shaolin.title1,
-                        undefined,
-                        true
-                    )}
-                    <div className="card-actions justify-end"></div>
+            <HeaderCard
+                lang={props.lang}
+                title={'Shaolin Kung Fu'}
+                description={strings.training.shaolin.desc1}
+                imgSrc={'../shaolin_two_stand.jpeg'}
+            />
+            <div className="mx-3 lg:mx-10 bg-base-100 pt-12">
+                <div className=" w-full ">
+                    <div className="items-center text-center">
+                        <div className={lalezar.className}>
+                            <h3 className="text-3xl text-primary text-center">
+                                {strings.training.shaolin.title2}
+                            </h3>
+                        </div>
+                        <ProgressBar steps={steps} />
+                    </div>
                 </div>
             </div>
-
-            <figure className="mx-auto max-w-screen-md text-center my-10">
+            <div className="mx-3 lg:mx-10 pt-12 pb-6">
+                <Section
+                    lang={props.lang}
+                    title={strings.training.shaolin.title3}
+                    description={strings.training.shaolin.desc3}
+                />
+            </div>
+            <div className="mx-3 lg:mx-10 py-12 carousel xl:h-auto rounded-box">
+                {images.map((image, i) => {
+                    return (
+                        <div
+                            id={`slide${i}`}
+                            className="carousel-item w-5/6 mx-2.5 md:w-1/3">
+                            <img src={image.src} alt={image.alt} />
+                        </div>
+                    )
+                })}
+            </div>
+            <figure className="mx-auto max-w-screen-md items-center text-center py-12">
                 <blockquote>
                     <svg
                         aria-hidden="true"
@@ -81,67 +90,18 @@ const Page = (props: Props) => {
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                            fill="currentColor"
+                            fill="#ff002c"
                         />
                     </svg>
                     <p className="text-2xl italic font-medium text-gray-900">
-                        {strings.training.shaolin.desc1}
+                        {strings.training.shaolin.desc4}
                     </p>
                 </blockquote>
-                <div className="font-light">- O. Gimm -</div>
+                <div className="font-light">- Unbekannt -</div>
             </figure>
-
-            <div className="carousel h-auto rounded-box my-10">
-                {images.map(image => {
-                    return (
-                        <div className="carousel-item w-5/6 mx-2.5 xl:w-1/3">
-                            <img src={image.src} alt={image.alt} />
-                        </div>
-                    )
-                })}
-            </div>
-
-            <div className="mb-10">
-                <CardCollapse
-                    lang={'DE'}
-                    texts={text4}
-                    hashtag={HashtagType.INFO}
-                />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
-                <div className="card lg:card-side bg-base-100 shadow-xl mb-10">
-                    <div className="card-body">
-                        {motionTitle(
-                            strings.training.taichi.title2,
-                            strings.training.taichi.desc2
-                        )}
-                        <div className="card-actions justify-end"></div>
-                    </div>
-                </div>
-                <div className="card lg:card-side bg-base-100 shadow-xl mb-10">
-                    <div className="card-body">
-                        {motionTitle(
-                            strings.training.taichi.title3,
-                            strings.training.taichi.desc3
-                        )}
-                        <div className="card-actions justify-end">
-                            <div className="card-actions justify-end">
-                                <div className="avatar">
-                                    <div className="w-full h-auto rounded mt-10">
-                                        <img
-                                            src="../taichi_leg_stand.jpeg"
-                                            alt="Album"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ContactButton />
         </div>
     )
 }
 
-export default Page
+export default Shaolin
