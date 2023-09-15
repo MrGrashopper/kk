@@ -7,12 +7,8 @@ import {lalezar} from '../../styles'
 import ContactButton from '../../components/contactButton'
 import HeaderCard from '../../components/headerCard'
 
-interface Props {
-    lang: string
-}
-
-const JKD = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const JKD = () => {
+    const strings = de
     const images = []
     const steps = [
         'In der ersten Stufe lernt der Schüler Grundtechniken, Schläge, Tritte, Blocks und Fallübungen sowie Grundlagen des Shaolin Kung Fu wie Grundstellungen und eine kleine Bewegungsabläufe.',
@@ -34,7 +30,6 @@ const JKD = (props: Props) => {
     return (
         <div className="m-3 lg:m-10">
             <HeaderCard
-                lang={props.lang}
                 title={'Jeet Kune Do'}
                 description={strings.training.jkd.desc5}
                 imgSrc={'../jkd_technique_block.jpeg'}
@@ -53,7 +48,6 @@ const JKD = (props: Props) => {
             </div>
             <div className="mx-3 lg:mx-10 pt-12 pb-6">
                 <Section
-                    lang={props.lang}
                     title={strings.training.jkd.title3}
                     description={strings.training.jkd.desc3}
                 />

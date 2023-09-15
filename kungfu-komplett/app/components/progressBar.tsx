@@ -32,36 +32,6 @@ const ProgressBar = (props: ProgressProps) => {
                                         {step}
                                     </li>
                                 )}
-                                {props.martialArtsType === MaTypes.shaolin && (
-                                    <li
-                                        className={
-                                            props.steps.length === i + 1
-                                                ? 'step step-secondary text-xl'
-                                                : 'step step-gold text-xl'
-                                        }>
-                                        {step}
-                                    </li>
-                                )}
-                                {props.martialArtsType === MaTypes.taichi && (
-                                    <li
-                                        className={
-                                            props.steps.length === i + 1
-                                                ? 'step step-info '
-                                                : 'step step-accent '
-                                        }>
-                                        {step}
-                                    </li>
-                                )}
-                                {props.martialArtsType === MaTypes.kids && (
-                                    <li
-                                        className={
-                                            props.steps.length === i + 1
-                                                ? 'step step-success '
-                                                : 'step step-accent '
-                                        }>
-                                        {step}
-                                    </li>
-                                )}
                             </>
                         )
                     })}

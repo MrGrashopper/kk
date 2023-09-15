@@ -1,7 +1,6 @@
 'use client'
 import React, {useState} from 'react'
-import {de} from '../locale'
-import {lalezar, permanentMarker} from '../styles'
+import {lalezar} from '../styles'
 
 type text = {
     title: string
@@ -20,7 +19,6 @@ interface Props {
 }
 
 const CardCollapse = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
     const [active, setActive] = useState<boolean>(true)
     return (
         <div className="l">

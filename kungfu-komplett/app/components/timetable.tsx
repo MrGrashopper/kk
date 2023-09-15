@@ -1,5 +1,4 @@
 import React from 'react'
-import {lalezar} from '../styles'
 
 const Timetable = () => {
     return (

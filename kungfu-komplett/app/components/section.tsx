@@ -1,11 +1,7 @@
 import React from 'react'
-import {de} from '../locale'
-import {TypeAnimation} from 'react-type-animation'
 import {lalezar} from '../styles'
-import ContactButton from './contactButton'
 
 interface SectionProps {
-    lang: string
     title: string
     description: string
 }

@@ -7,12 +7,8 @@ import Card from './components/card'
 import Team from './components/team'
 import ContactButton from './components/contactButton'
 
-interface Props {
-    lang: string
-}
-
-const Page = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const Page = () => {
+    const strings = de
     const cardData = [
         {
             title: 'Jeet Kune Do',
@@ -50,10 +46,9 @@ const Page = (props: Props) => {
 
     return (
         <>
-            <Hero lang={props.lang} />
+            <Hero />
             <div className="mx-3 md:mx-auto md:container md:my-5">
                 <Section
-                    lang={props.lang}
                     title={strings.homepage.section.title}
                     description={strings.homepage.section.description}
                 />
@@ -74,7 +69,6 @@ const Page = (props: Props) => {
                 </div>
                 <div className="mx-3 md:mx-auto md:container md:my-5 py-6">
                     <Section
-                        lang={props.lang}
                         title={'Ausbilder'}
                         description={
                             'Für deine optimale Weiterentwicklung im Bereich der Kampfkünste wirst du mit verschiedenen Trainingsmetoden von erfahren Trainern ausgebildet, Trainingsmethodik, Didaktik und Schwerpunkt sind von der Erfahrung des Trainingsleiters unterschiedlich und werden an die sich verändernde Gegebenheiten und Erkentnisse angepasst.'

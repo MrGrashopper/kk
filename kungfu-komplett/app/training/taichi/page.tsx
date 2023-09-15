@@ -1,21 +1,14 @@
 'use client'
 import React from 'react'
 import {de} from '../../locale'
-import CardCollapse, {HashtagType} from '../../components/cardCollapse'
-import {lalezar, permanentMarker} from '../../styles'
-import {motion} from 'framer-motion'
-import ProgressBar, {MaTypes} from '../../components/progressBar'
+import {lalezar} from '../../styles'
+import ProgressBar from '../../components/progressBar'
 import ContactButton from '../../components/contactButton'
 import Section from '../../components/section'
-import HighlightBox from '../../components/highlightBox'
 import HeaderCard from '../../components/headerCard'
 
-interface Props {
-    lang: string
-}
-
-const TaiChi = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const TaiChi = () => {
+    const strings = de
     const images = []
 
     for (let i = 0; i < 14; i++) {
@@ -34,17 +27,9 @@ const TaiChi = (props: Props) => {
         'Die dritte Stufe liegt den Schwerpunkt auf Formen und Anwendungen, wobei Elemnte aus den Formen und Techniken Anwendung in der Praxis erprobt werden.'
     ]
 
-    const text4 = [
-        {
-            title: strings.training.taichi.title4,
-            description: strings.training.taichi.desc4
-        }
-    ]
-
     return (
         <div className="m-3 lg:m-10">
             <HeaderCard
-                lang={props.lang}
                 title={'Tai Chi Chuan'}
                 description={strings.training.taichi.desc1}
                 imgSrc={'../taichi_group_stand.jpeg'}
@@ -63,7 +48,6 @@ const TaiChi = (props: Props) => {
             </div>
             <div className="mx-3 lg:mx-10 pb-6">
                 <Section
-                    lang={props.lang}
                     title={strings.training.taichi.title3}
                     description={strings.training.taichi.desc3}
                 />

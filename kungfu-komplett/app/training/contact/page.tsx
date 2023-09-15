@@ -1,16 +1,12 @@
 import React from 'react'
 import Timetable from '../../components/timetable'
-import Section from '../../components/section'
 import {de} from '../../locale'
 import Link from 'next/link'
 import {lalezar} from '../../styles'
+import {MotionButton} from '../../components/motionButton'
 
-interface Props {
-    lang: string
-}
-
-const Contact = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const Contact = () => {
+    const strings = de
     return (
         <div className="m-3 lg:m-10">
             <div className={lalezar.className}>
@@ -54,18 +50,15 @@ const Contact = (props: Props) => {
                         <h2 className="card-title">Los geht's!</h2>
                         <p className="mb-5">{strings.contact.ask}</p>
                         <div className="card-actions justify-end">
-                            <Link href="mailto:o_gimm@gmx.net">
-                                <button className="btn btn-secondary">
-                                    E-Mail schreiben
-                                </button>
-                            </Link>
-                            <Link
-                                href="http://www.koryo-berlin.de"
-                                target="_blank">
-                                <button className="btn btn-ghost">
-                                    Koryo Website
-                                </button>
-                            </Link>
+                            <MotionButton
+                                text=" E-MAIL SENDEN"
+                                link="mailto:o_gimm@gmx.net"
+                            />
+                            <MotionButton
+                                inverse
+                                text=" Koryo Website"
+                                link="http://www.koryo-berlin.de"
+                            />
                         </div>
                     </div>
                 </div>

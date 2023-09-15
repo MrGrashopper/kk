@@ -16,7 +16,12 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <html>
             <head />
             <body className={`${inter.variable} font-sans`}>
-                <div className="drawer drawer-start">
+                <Navbar />
+                <div style={{height: '5rem'}} />
+                {children}
+                <Footer />
+                <CookieConsent />
+                {/* <div className="drawer drawer-start">
                     <input
                         id="my-drawer-4"
                         type="checkbox"
@@ -35,7 +40,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                             className="drawer-overlay"></label>
                         <NavbarDrawerItems />
                     </div>
-                </div>
+                </div> */}
             </body>
         </html>
     )

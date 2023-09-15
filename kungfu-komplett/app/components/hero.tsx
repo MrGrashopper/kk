@@ -1,39 +1,30 @@
 'use client'
 import React from 'react'
-import {de, en} from '../locale'
+import {de} from '../locale'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import {lalezar} from '../styles'
+import {MotionButton} from './motionButton'
 
-interface HeroProps {
-    lang: string
-}
-
-const Hero = (props: HeroProps) => {
-    const strings = props.lang === 'DE' ? de : de
+const Hero = () => {
+    const strings = de
 
     const motionTitle = () => {
         return (
-            <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                viewport={{once: false}}>
-                <div className="mb-10">
-                    <h1 className="text-5xl font-bold text-white drop-shadow-lg shadow-black">
-                        <div className={lalezar.className}>
-                            {strings.homepage.hero.title}
-                        </div>
-                    </h1>
-                    <p className="my-2.5 font-medium drop-shadow-lg shadow-black">
-                        {strings.homepage.hero.description}
-                    </p>
-                </div>
-                <Link href="/training/contact">
-                    <button className="btn btn-secondary border-white/10">
-                        {strings.homepage.hero.cta}
-                    </button>
-                </Link>
-            </motion.div>
+            <div className="mb-10">
+                <h1 className="text-5xl font-bold text-white drop-shadow-lg shadow-black">
+                    <div className={lalezar.className}>
+                        {strings.homepage.hero.title}
+                    </div>
+                </h1>
+                <p className="my-2.5 font-medium drop-shadow-lg shadow-black mb-5">
+                    {strings.homepage.hero.description}
+                </p>
+                <MotionButton
+                    link="/training/contact"
+                    text={strings.homepage.hero.cta}
+                />
+            </div>
         )
     }
     return (

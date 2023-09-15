@@ -1,22 +1,14 @@
 'use client'
 import React from 'react'
 import {de} from '../../locale'
-import CardCollapse, {HashtagType} from '../../components/cardCollapse'
-import {lalezar, permanentMarker} from '../../styles'
-import {motion} from 'framer-motion'
-import ProgressBar, {MaTypes} from '../../components/progressBar'
-import {lazy} from 'react'
+import {lalezar} from '../../styles'
+import ProgressBar from '../../components/progressBar'
 import Section from '../../components/section'
 import ContactButton from '../../components/contactButton'
-import HighlightBox from '../../components/highlightBox'
 import HeaderCard from '../../components/headerCard'
 
-interface Props {
-    lang: string
-}
-
-const Shaolin = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const Shaolin = () => {
+    const strings = de
     const images = []
 
     for (let i = 1; i < 12; i++) {
@@ -35,17 +27,9 @@ const Shaolin = (props: Props) => {
         'Entscheidend in den fortgeschrittenen Formen ist es, die erlernten Techniken (sowohl Basis, als auch fortgeschrittene Techniken) nicht nur einzeln, sonden in Kombinationen sauber auszuführen. Zudem sollen die Schülerinnen und Schüler zunehmend alle erlernten Bewegungen auch mit ihrer Waffe ausführen können. Letztlich entsprechen die Formen (Handformen/Waffenformen) einem sehr hohen Schwierigkeitsgrad. Akrobatik und komplexe Sprungtritte gehören zu den Pflichtelementen.'
     ]
 
-    const text4 = [
-        {
-            title: strings.training.taichi.title4,
-            description: strings.training.taichi.desc4
-        }
-    ]
-
     return (
         <div className="m-3 lg:m-10">
             <HeaderCard
-                lang={props.lang}
                 title={'Shaolin Kung Fu'}
                 description={strings.training.shaolin.desc1}
                 imgSrc={'../shaolin_two_stand.jpeg'}
@@ -64,7 +48,6 @@ const Shaolin = (props: Props) => {
             </div>
             <div className="mx-3 lg:mx-10 pt-12 pb-6">
                 <Section
-                    lang={props.lang}
                     title={strings.training.shaolin.title3}
                     description={strings.training.shaolin.desc3}
                 />

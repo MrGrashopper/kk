@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import {lalezar} from '../styles'
+import {MotionButton} from './motionButton'
 
 interface CardProp {
     title: string
@@ -23,9 +24,7 @@ const Card = (props: CardProp) => {
                     </div>
                     <p>{props.subTitle}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-secondary">
-                            <Link href={props.link}>{props.cta}</Link>
-                        </button>
+                        <MotionButton link={props.link} text={props.cta} />
                     </div>
                 </div>
             </div>

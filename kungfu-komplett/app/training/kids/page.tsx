@@ -1,20 +1,14 @@
 'use client'
 import React from 'react'
 import {de} from '../../locale'
-import {lalezar, permanentMarker} from '../../styles'
-import {motion} from 'framer-motion'
-import ProgressBar, {MaTypes} from '../../components/progressBar'
+import {lalezar} from '../../styles'
+import ProgressBar from '../../components/progressBar'
 import ContactButton from '../../components/contactButton'
 import Section from '../../components/section'
-import HighlightBox from '../../components/highlightBox'
 import HeaderCard from '../../components/headerCard'
 
-interface Props {
-    lang: string
-}
-
-const Kids = (props: Props) => {
-    const strings = props.lang === 'DE' ? de : de
+const Kids = () => {
+    const strings = de
     const images = []
 
     for (let i = 1; i < 13; i++) {
@@ -36,7 +30,6 @@ const Kids = (props: Props) => {
     return (
         <div className="m-3 lg:m-10">
             <HeaderCard
-                lang={props.lang}
                 title={'Kindertraining'}
                 description={strings.training.kids.desc1}
                 imgSrc={'../galleryKids/kids1.jpeg'}
@@ -55,7 +48,6 @@ const Kids = (props: Props) => {
             </div>
             <div className="mx-3 lg:mx-10 pb-6">
                 <Section
-                    lang={props.lang}
                     title={strings.training.taichi.title3}
                     description={strings.training.taichi.desc3}
                 />
