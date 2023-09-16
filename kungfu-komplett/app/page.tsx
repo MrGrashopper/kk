@@ -22,7 +22,7 @@ const Page = () => {
             title: 'Shaolin Kung Fu',
             imageSrc: './shaolin_sword_bg.jpeg',
             subTitle:
-                'Lerne, Dich zu bewegen, wie die legendären Shaolinmönche. Verbinde Härte und Schnelligkeit zur Perfektion.',
+                'Bewege Dich wie die legendären Shaolinmönche. Verbinde Härte und Schnelligkeit zur Perfektion.',
             cta: 'Erfahre mehr',
             link: '/training/shaolin'
         },
@@ -30,7 +30,7 @@ const Page = () => {
             title: 'Tai Chi Chuan',
             imageSrc: './shaolin_sword.jpeg',
             subTitle:
-                'Stärke den Körper auf sanfte Art. Beruhige den Geist. Lerne Achtsamkeit. Lass Deine innere Kraft sowie Deine Bewegungen fließen.',
+                'Trainiere Körper und Geist auf sanfte Art mit fließenden Bewegungen. Schöpfe Kraft aus deinem Inneren.',
             cta: 'Erfahre mehr',
             link: '/training/taichi'
         },
@@ -38,7 +38,7 @@ const Page = () => {
             title: 'Kindertraining',
             imageSrc: './galleryKids/kids2.jpeg',
             subTitle:
-                'Spielerisch körperliche Fitness, Beweglichkeit und Konzentration fördern und Teil einer Gemeinschaft werden.',
+                'Auf meist spielerische Art werden Fitness, Disziplin und Selbstbewusstsein geschult. Miteinander, nicht gegeneinander.',
             cta: 'Erfahre mehr',
             link: '/training/kids'
         }
@@ -71,7 +71,7 @@ const Page = () => {
                     <Section
                         title={'Ausbilder'}
                         description={
-                            'Für deine optimale Weiterentwicklung im Bereich der Kampfkünste wirst du mit verschiedenen Trainingsmetoden von erfahren Trainern ausgebildet, Trainingsmethodik, Didaktik und Schwerpunkt sind von der Erfahrung des Trainingsleiters unterschiedlich und werden an die sich verändernde Gegebenheiten und Erkentnisse angepasst.'
+                            'Für Deine optimale Entwicklung im Bereich der Kampfkünste stehen Dir verschiedene Trainer zur Verfügung. Im Laufe der Jahre hat sich jeder Trainer auf verschiedene Bereiche spezialisiert, was Dir ein abwechslungsreiches und individuelles Training ermöglicht. '
                         }
                     />
                 </div>

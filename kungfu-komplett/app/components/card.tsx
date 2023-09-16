@@ -23,7 +23,7 @@ const Card = (props: CardProp) => {
                         <h2 className={lalezar.className}>{props.title}</h2>
                     </div>
                     <p>{props.subTitle}</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-end mt-5">
                         <MotionButton link={props.link} text={props.cta} />
                     </div>
                 </div>

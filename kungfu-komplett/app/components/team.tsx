@@ -4,50 +4,40 @@ import {lalezar} from '../styles'
 const Team = () => {
     const team = [
         {
-            name: 'Shigung Oliver Gimm',
+            name: 'Großmeister Oliver Gimm',
             cv: [
                 '1971 in Berlin geboren',
-                'mit 5 Jahren im ersten Sportverein (Schwimmen)',
-                '1981 Wechsel zum Wasserball und Leichtathletik',
-                'ab 1986 außerdem Kraftsport',
+                '1976 - 1988 verschiedene Vereinsportarten',
                 '1988 - 1990 Boxen',
                 "1989 Berliner Meister im 'Kraft-Vierkampf der Junioren' und Beginn des Kung Fu-Trainings",
-                '1991 Wechsel zur Sportschule Koryo',
-                '1992 Abitur',
-                '1994 Trainerprüfung im Jeet Kune Do und Süd-Shaolin',
-                '1996 Großmeisterprüfung bei Sifu Dragoslav Radosavljevic',
+                '1994 Trainerprüfung im Jeet Kune Do und Shaolin Kung Fu',
+                '1996 Meisterprüfung bei Shifu Dragoslav Radosavljevic',
                 '1997-1999 leitender Fitness-Trainer für Männer- und Frauen-Fitness in der Sportschule Koryo',
                 '1999 - 2000 Bundeswehr',
-                '2001 1. Staatsexamen in Sportwissenschaften (Schwerpunkte: Sportmedizin, Sportpsychologie, Trainingslehre)',
-                '2002 Staatsexamen in Erziehungswissenschaften und Psychologie',
-                '2003 Staatsexamen in Biologie',
-                '2006 2. Staatsexamen in Biologie und Sport',
+                '2001 - 2003 Staatsexamen in Biologie, Sportwissenschaften und Psychologie',
                 '2007 - heute Gymnasiallehrer Sport/Bio/Ethik',
-                'Deutscher Meister 2002',
-                'Deutscher Meister 2003',
-                'Deutscher Meister 2004',
-                'Internationaler Deutscher Meister 2003',
-                'Internationaler Deutscher Meister 2004',
+                'Deutscher Meister 2002, 2003 und 2004',
+                'Internationaler Deutscher Meister 2003 und 2004',
                 'Gewinner des Deutschland-Pokals 2003',
-                'Weltmeister 2003',
+                'Weltmeister WKA 2003',
                 'Ernennung zum Bundestrainer für Kung Fu und Wushu der WKA im Dezember 2003',
                 'Ernennung zum Bundestrainer für Kung Fu, Wushu und Tai Chi des CDK',
-                '2005 Austritt aus der WKA und dem CDK',
                 'Meister:',
                 'Dragoslav Radosavljevic (Jeet Kune Do)',
                 'Chang Shan Jun (Shaolin Kung Fu)',
                 'Zhu Tiancai ( Chenjiagou Tai Chi Chuan)',
-                'Jennifer Lee (Chenjiagou Tai Chi Jian Ming [Tai Chi Schwert])'
+                'Jennifer Lee (Chenjiagou Tai Chi Jian Ming [Tai Chi Schwert])',
+                'Chen Shiyu (Wudang Schwert)'
             ],
-            img: 'gimm_tai_chi_sword.jpeg'
+            img: 'oli_profile.jpeg'
         },
         {
-            name: 'Shifu Daniel Mikolai',
+            name: 'Meister Daniel Mikolai',
             cv: [
                 '1987 in Berlin geboren',
                 '1998-1999 Judo',
                 '2001-2002 Wing Chun',
-                'Seit 2003 Schüler in der Sportschule Koryo Berlin bei Shifu Oliver Gimm',
+                'Seit 2003 Schüler in der Sportschule Koryo Berlin bei Shigung Oliver Gimm',
                 '2004 Gewonnene Meisterschaften:',
                 ' Hessenmeisterschaft',
                 ' Deutschlandpokal',
@@ -63,55 +53,34 @@ const Team = () => {
                 '2017 - 2021 Software Entwickler',
                 '2021 - heute Frontend/ App Entwickler'
             ],
-            img: 'gimm_tai_chi_sword.jpeg'
+            img: 'daniel_profile.jpeg'
         },
         {
-            name: 'Shije Inga',
+            name: 'Trainingsleiterin Inga',
             cv: [
-                '1987 in Berlin geboren',
-                '1998-1999 Judo',
-                '2001-2002 Wing Chun',
-                'Seit 2003 Schüler in der Sportschule Koryo Berlin bei Shifu Oliver Gimm',
-                '2004 Gewonnene Meisterschaften:',
-                ' Hessenmeisterschaft',
-                ' Deutschlandpokal',
-                ' Thüringenmeisterschaft',
-                ' Deutsche Meisterschaft',
-                " in den Kategorien 'Softstyle' und 'weapons no music' im Jugendbereich",
-                '2009 Trainerprüfung',
-                '2009 Abitur',
-                '2011 Beginn Studium Physikalische Technik/ Medizinphysik',
-                '2013 Selbständig als Kampfsport- & Fitnesstrainer',
-                '2014 Ernennung zum Meister (Shifu)',
-                '2016 Bachelor of Engeneering Physikalische Technik/ Medizinphysik',
-                '2017 - 2021 Software Entwickler',
-                '2021 - heute Frontend/ App Entwickler'
+                '1985 in Aachen geboren',
+                '1993 - 2003 Handball',
+                '2005 Abitur',
+                '2008 Halbmarathon',
+                '2011 Diplom Psychologie',
+                'seit 2013 Kung Fu Shaolin/Jeet Kune Do bei Meister Oliver Gimm',
+                'seit 2019 Tai Chi bei Shigung Oliver Gimm',
+                '2019 Training bei Meister Chen Shiyu in Wudang'
             ],
-            img: 'gimm_tai_chi_sword.jpeg'
+            img: 'inga_profile.jpeg'
         },
         {
-            name: 'Shihing Ano',
+            name: 'Trainingsleiter Anil',
             cv: [
-                '1987 in Berlin geboren',
-                '1998-1999 Judo',
-                '2001-2002 Wing Chun',
-                'Seit 2003 Schüler in der Sportschule Koryo Berlin bei Shifu Oliver Gimm',
-                '2004 Gewonnene Meisterschaften:',
-                ' Hessenmeisterschaft',
-                ' Deutschlandpokal',
-                ' Thüringenmeisterschaft',
-                ' Deutsche Meisterschaft',
-                " in den Kategorien 'Softstyle' und 'weapons no music' im Jugendbereich",
-                '2009 Trainerprüfung',
-                '2009 Abitur',
-                '2011 Beginn Studium Physikalische Technik/ Medizinphysik',
-                '2013 Selbständig als Kampfsport- & Fitnesstrainer',
-                '2014 Ernennung zum Meister (Shifu)',
-                '2016 Bachelor of Engeneering Physikalische Technik/ Medizinphysik',
-                '2017 - 2021 Software Entwickler',
-                '2021 - heute Frontend/ App Entwickler'
+                '1997 in Berlin geboren',
+                '2009 - 2010 Kickboxen an der Koryo Sportschule',
+                '2010 -  Wechsel zu Kung Fu',
+                '2020 -  Ausbildung abgeschlossen als Biologielaborant',
+                '2021 -  Fachgebundene Hochschulreife',
+                '2021 -  Student an der FU Berlin',
+                '2022 – Leitet mittwochs das Kinder Kung Fu Training'
             ],
-            img: 'gimm_tai_chi_sword.jpeg'
+            img: 'anil_profile.jpeg'
         }
     ]
     const [activeStates, setActiveStates] = useState(
@@ -125,7 +94,7 @@ const Team = () => {
     }
     return (
         <div className="pb-12">
-            <div className="mx-3 md:mx-auto grid grid-cols-1 md:grid-cols-4 items-start gap-6">
+            <div className="mx-3 md:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">
                 {team.map((member, index) => {
                     return (
                         <div key={member.name} className="card shadow-xl">
@@ -136,7 +105,7 @@ const Team = () => {
                                         type="checkbox"
                                         onChange={() => toggleState(index)}
                                     />
-                                    <div className="px-0 collapse-title text-xl font-medium flex items-center">
+                                    <div className="px-0 collapse-title h-5 text-xl font-medium flex items-center">
                                         <span className={lalezar.className}>
                                             {member.name}
                                         </span>
@@ -155,7 +124,7 @@ const Team = () => {
                                         </label>
                                     </div>
 
-                                    <div className="collapse-content px-0">
+                                    <div className="collapse-content px-0 mb-5">
                                         {member.cv.map(entry => {
                                             return <p>{entry}</p>
                                         })}

@@ -19,8 +19,13 @@ const PrivacyPolicy = () => {
             <h2 className="text-xl text-primary py-6">
                 Verantwortliche Stelle
             </h2>
-            <p>[Name und Adresse des Verantwortlichen]</p>
-
+            <p>Sportschule Koryo</p>
+            <p>Weichelstr. 8c 12043 Berlin</p>
+            <p>Telefon: 030-6249018 </p>
+            <p>E-Mail-Adresse: Wassim@Koryo-Berlin.de</p>
+            <p> Inh. Wassim Khalil</p>
+            <p>Umsatzsteuer-Identifikationsnummer: DE02HST00000026026</p>
+            <p>Steuernummer: 16/378/00654</p>
             <h2 className="text-xl text-primary py-6">
                 Datenerfassung und -verarbeitung
             </h2>
@@ -42,8 +47,26 @@ const PrivacyPolicy = () => {
                 jeweiligen Webseiten über den Umgang mit Ihren personenbezogenen
                 Daten.
             </p>
-
-            <h2 className="text-xl text-primary py-6">Ihre Rechte</h2>
+            <h2 className="text-xl text-primary py-6">
+                Verwendung von Scriptbibliotheken (Google Webfonts)
+            </h2>
+            <p>
+                Um unsere Inhalte browserübergreifend korrekt und grafisch
+                ansprechend darzustellen, verwenden wir auf dieser Website
+                Scriptbibliotheken und Schriftbibliotheken wie z. B. Google
+                Webfonts (https://www.google.com/webfonts/). Google Webfonts
+                werden zur Vermeidung mehrfachen Ladens in den Cache Ihres
+                Browsers übertragen. Falls der Browser die Google Webfonts nicht
+                unterstützt oder den Zugriff unterbindet, werden Inhalte in
+                einer Standardschrift angezeigt. Der Aufruf von
+                Scriptbibliotheken oder Schriftbibliotheken löst automatisch
+                eine Verbindung zum Betreiber der Bibliothek aus. Dabei ist es
+                theoretisch möglich – aktuell allerdings auch unklar ob und ggf.
+                zu welchen Zwecken – dass Betreiber entsprechender Bibliotheken
+                Daten erheben. Die Datenschutzrichtlinie des
+                Bibliothekbetreibers Google finden Sie hier:
+                https://www.google.com/policies/privacy/
+            </p>
 
             <h2 className="text-xl text-primary py-6">Auskunftsrecht</h2>
             <p>
@@ -75,13 +98,22 @@ const PrivacyPolicy = () => {
                 strukturierten, gängigen und maschinenlesbaren Format zu
                 erhalten.
             </p>
-
+            <h2 className="text-xl text-primary py-6">SSL-Verschlüsselung</h2>
+            <p>
+                Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen,
+                verwenden wir dem aktuellen Stand der Technik entsprechende
+                Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
+            </p>
             <h2 className="text-xl text-primary py-6">Kontakt</h2>
             <p>
                 Bei Fragen zur Datenschutzerklärung oder zu Ihren Rechten können
                 Sie sich jederzeit an uns wenden:
             </p>
-            <p>[Name und Kontaktinformationen des Datenschutzbeauftragten]</p>
+            <p>Sportschule Koryo</p>
+            <p>Weichelstr. 8c 12043 Berlin</p>
+            <p>Telefon: 030-6249018 </p>
+            <p>E-Mail-Adresse: Wassim@Koryo-Berlin.de</p>
+            <p> Inh. Wassim Khalil</p>
 
             <h2 className="text-xl text-primary py-6">
                 Änderungen der Datenschutzerklärung
@@ -91,7 +123,7 @@ const PrivacyPolicy = () => {
                 sie an geänderte Rechtslagen oder bei Änderungen des Dienstes
                 sowie der Datenverarbeitung anzupassen.
             </p>
-            <p>Letzte Aktualisierung: [Datum]</p>
+            <p>Letzte Aktualisierung: 17.09.2023</p>
         </div>
     )
 }

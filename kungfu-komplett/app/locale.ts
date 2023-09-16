@@ -4,21 +4,22 @@ export const de = {
         story: '#STORY'
     },
     contact: {
-        ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere uns',
+        ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere uns:',
         emailAdress: 'Schreib uns eine Email an: o_gimm@gmx.net',
         moreInfo: 'Weitere Informationen gibt es hier:',
         email: 'E-Mail schreiben'
     },
     homepage: {
         hero: {
-            title: 'Keine Komprisse',
-            description: 'Jeet Kune Do, Shaolin Kung Fu & Tai Chi Chuan',
+            title: 'Keine Kompromisse',
+            // description: 'Jeet Kune Do, Shaolin Kung Fu & Tai Chi Chuan',
+            description: 'Lass dich nicht auf einen Stil festlegen.',
             cta: 'Starte jetzt dein Training in Berlin'
         },
         section: {
             title: ' Trainiere verschiedene Stile',
             description:
-                'Erwecke Dein inneres Kämpferherz und entwickle einen individuellen Kampfstil, der Dich jederzeit erfolgreich verteidigt. Lerne wie die legendären Shaolinmönchen, Dich mit beeindruckender Härte und Schnelligkeit zu bewegen - ob mit oder ohne Waffen. Doch nicht nur der Körper wird gestärkt, auch der Geist wird beruhigt und Achtsamkeit erlernt. Lass Deine innere Kraft und Bewegungen fließen und werde zum ultimativen Kämpfer.'
+                'Lerne im Jeet Kune Do die für Dich beste Art der Selbstverteidigung. Trainiere traditionelles Shaolin Kung Fu mit und ohne Waffen. Verbinde Bewegungsmeditation und Kampfkunst im Tai Chi Chuan. Lege deinen eigenen Schwerpunkt fest.'
         },
         section2: {
             title: ' Hier findest du uns',
@@ -58,11 +59,11 @@ export const de = {
                 'Die positiven Effekte der Übungen machen sich schon nach relativ kurzer Zeit bemerkbar. Es spielt dabei keine Rolle, in welchem Alter man mit den Übungen beginnt, über wie viel Kraft man verfügt oder ob man an die Existenz von Chi/Qi glaubt.',
             title3: 'Prinzipien',
             desc3:
-                'Die Ausbildung im Tai Chi Chuan umfasst traditionell fünf miteinander verbundene Aspekte. Zunächst einmal gibt es die Formen: Taolu. Hier werden die typischen, langsam fließenden Bewegungen erlernt, deren Tempo durch die natürliche Atmung bestimmt wird.\n' +
+                'Die Ausbildung im Tai Chi Chuan umfasst traditionell fünf miteinander verbundene Aspekte. Bei den Formen (Taolu) werden die typischen, langsam fließenden Bewegungen erlernt, deren Tempo durch die natürliche Atmung bestimmt wird.\n' +
                 ' \n' +
-                'Es gibt waffenlose und Waffenformen. Neigong und Qigong beinhalten Atemübungen, aktive Entspannung, Achtsamkeitsübungen und Meditation. Das Tuishou, auch Pushing Hands genannt, beinhaltet Partnerübungen, deren Ziel es ist, sich den Bewegungen des Partners anzupassen und urplötzlich aus einem ruhigen Bewegungsfluss heraus, den Partner aus dem Gleichgewicht zu bringen.\n' +
+                'Es gibt waffenlose und Waffenformen. Das Tuishou (Stoßende Hände) beinhaltet Partnerübungen, deren Ziel es ist, sich den Bewegungen des Partners anzupassen und urplötzlich aus einem ruhigen Bewegungsfluss heraus den Partner aus dem Gleichgewicht zu bringen.\n' +
                 ' \n' +
-                'Schon beim Erlernen der Formen werden ansatzlos und explosiv aus der Ruhe heraus geführten Schläge, Stöße und Tritte geübt (Fa Jin). Sanshou schließlich ist die angewandte Selbstverteidigung. Hierbei werden Kraft und Energie des Gegners gegen ihn verwendet',
+                'Bereits beim Erlernen der Formen werden ansatzlos und explosiv geführte Schläge, Stöße und Tritte geübt (Fa Jin). Sanshou schließlich ist die angewandte Selbstverteidigung.',
             title4: 'Erfahre mehr über das Training',
             desc4:
                 'Auf  der ersten Stufe werden grundlegende Prinzipien und Techniken vermittelt. Dazu gehören die Zwerchfellatmung genauso wie das aktive Entspannen. Ein sicherer Stand, das Schonen der Gelenke und das ruhige, harmonische Ausführen einfacher Bewegungen werden durch einfache Seidenübungen (Shan Si Gong) geübt. Die Grundlagen der Meditation werden gelegt. Als erste „Form“ erlernt man die in China sehr populäre Ba Duan Jin, eine Bewegungsfolge des Qigong.\n' +
@@ -75,8 +76,9 @@ export const de = {
         kids: {
             title1: 'Mit Spaß zum Erfolg',
             desc1: 'Das Training erfolgt altersgemäß und gleichermaßen fordernd wie fördernd. Optimales Einstiegsalter ist 6 Jahre. Jungen und Mädchen werden zusammen unterrichtet. Die körperliche Leistungsfähigkeit aber auch Willensstärke und Selbstbewusstsein werden mit der Zeit gesteigert. Es werden die Grundlagen des Shaolin-Kung Fu´s sowie der Selbstverteidigung vermittelt.',
-            title2: 'Die Großen von morgen',
-            desc2: 'Das Training der Kinder erfolgt altersgemäß. Es ist fordernd und fördernd gleichermaßen. Da ich ausgebildeter Sportlehrer bin und mein Wissen auch an meine Trainer weitergebe, findet das Training auch unter pädagogischen und sportwissenschaftlichen Gesichtspunkten statt. Die Kinder erlernen Grundformen aber auch bereits Grundlagen der Selbstverteidigung. Optimales Einstiegsalter ist 6 Jahre. Jungen und Mädchen werden zusammen unterrichtet. Das Training  verbessert deutlich die Koordination, die Schnelligkeit, Ausdauer, Beweglichkeit und Kraft. Auch die Willensstärke und das Selbstbewusstsein werden mit der Zeit gesteigert. All dies wirkt sich meiner Erfahrung nach auch positiv auf die schulischen Leistungen aus. Schule hat unbedingten Vorrang aber wir zeigen den Kindern, wie man Training und Schule bewältigt. Da es keine festen Prüfungstermine und keine Turniere gibt, geraten die Kinder diesbezüglich nie unter Druck. Die Teilnahme an eventuell stattfindenden Vorführungen wird mit den Eltern abgesprochen.'
+            title2: 'Früh übt sich...',
+            desc2: ' Das Training findet unter Berücksitigung pädagogischer und sportwissenschaftlicher Erkentnisse statt. Das Training verbessert deutlich die Koordination, die Schnelligkeit, Ausdauer, Beweglichkeit und Kraft. Auch die Willensstärke und das Selbstbewusstsein werden mit der Zeit gesteigert. All dies wirkt sich erfahrungsgemäß auch positiv auf die schulischen Leistungen aus. Da gibt keine allgemeinen Prüfungstermine, sondern diese werden individuell festgelegt.',
+            title3: 'Das Training mit Kindern'
         }
     }
 }

@@ -22,9 +22,9 @@ const TaiChi = () => {
     }
 
     const steps = [
-        'Auf  der ersten Stufe werden grundlegende Prinzipien und Techniken vermittelt. Dazu gehören die Zwerchfellatmung genauso wie das aktive Entspannen. Ein sicherer Stand, das Schonen der Gelenke und das ruhige, harmonische Ausführen einfacher Bewegungen werden durch einfache Seidenübungen (Shan Si Gong) geübt. Die Grundlagen der Meditation werden gelegt. Als erste „Form“ erlernt man die in China sehr populäre Ba Duan Jin, eine Bewegungsfolge des Qigong.',
-        'In der zweiten Stufe werden die erlernten Techniken verfeinert und ergänzt. Die Atmung wird nun auch bei komplexeren Seidenübungen ungezwungen und Tempo bestimmend eingesetzt. Es erfolgen erste Partnerübungen und die Grundlagen des Tuishu werden vermittelt. Die 24er Bejing-Form (Yang-Stil) kommt aus dem Bereich Taolu dazu, wobei bereits typische Formenelemente erlernt und die Anwendungen erklärt werden. Wer auch den Chen-Stil erlernen oder sich sogar in dieser Richtung spezialisieren möchte, erlernt in dieser Stufe zudem die 13er Chen-Form.',
-        'Die dritte Stufe liegt den Schwerpunkt auf Formen und Anwendungen, wobei Elemnte aus den Formen und Techniken Anwendung in der Praxis erprobt werden.'
+        'Auf  der ersten Stufe werden grundlegende Prinzipien und Techniken vermittelt. Dazu gehören die Zwerchfellatmung genauso wie das aktive Entspannen. Ein sicherer Stand, das Schonen der Gelenke und das ruhige, harmonische Ausführen einfacher Bewegungen werden durch sogenannte Seidenübungen (Shan Si Gong) erlernt.',
+        'In der zweiten Stufe werden Techniken verfeinert und ergänzt. Es erfolgen erste Partnerübungen und die Grundlagen des Tuishu (Stoßende Hände) werden vermittelt. Populäre Tai Chi Formen können erlernt werden.',
+        'Die dritte Stufe liegt den Schwerpunkt auf Formen und Anwendungen, wobei Elemente aus den Formen in der Praxis erprobt werden. Spezialisierungen können in den Stilen Chen, Yang und Wudang erfolgen.'
     ]
 
     return (

@@ -46,7 +46,7 @@ const Timetable = () => {
 
                     <div className="stat">
                         <div className="stat-title">18:00 - 19:00</div>
-                        <div className="stat-value text-2xl">Tai Chi</div>
+                        <div className="stat-value text-2xl">Tai Chi Chuan</div>
                         <div className="stat-desc">Gemischt</div>
                     </div>
 
@@ -64,7 +64,7 @@ const Timetable = () => {
                     </h3>
                     <div className="stat">
                         <div className="stat-title">10:00 - 11:00</div>
-                        <div className="stat-value text-2xl">Tai Chi</div>
+                        <div className="stat-value text-2xl">Tai Chi Chuan</div>
                         <div className="stat-desc">Gemischt</div>
                     </div>
 

@@ -1,9 +1,26 @@
-import React from 'react'
+'use client'
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavbarDrawerItems from './navbarDrawerItems'
 
 const Navbar = () => {
+    const [windowWidth, setWindowWidth] = useState<number>(0)
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
+
+    const isMobile = windowWidth <= 768
     return (
         <div className="navbar top-0 bg-base-100 drop-shadow-xl fixed z-40 py-5 lg:px-10">
             <div className="navbar-start">
@@ -36,7 +53,7 @@ const Navbar = () => {
                             <a href={'/training/shaolin'}>Shaolin Kung Fu</a>
                         </li>
                         <li>
-                            <a href={'/training/taichi'}>Tai Chi</a>
+                            <a href={'/training/taichi'}>Tai Chi Chuan</a>
                         </li>
                         <li>
                             <a href={'/training/kids'}>Kindertraining</a>
@@ -49,25 +66,27 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            <div className="navbar-center">
-                <Link href="/">
-                    <Image
-                        src={'/KungFu-Komplett_Red.svg'}
-                        alt={'logo Kung Fu Komplett'}
-                        width={200}
-                        height={100}
-                    />
-                </Link>
-            </div>
+            <Link className="navbar-center" href="/">
+                <Image
+                    src="/KungFu-Komplett_Red.svg"
+                    alt="logo Kung Fu Komplett"
+                    width={isMobile ? 150 : 200}
+                    height={isMobile ? 50 : 100}
+                />
+            </Link>
             <div className="navbar-end">
-                <button className="btn btn-ghost btn-circle">
-                    <Image
-                        src={'/instagram_icon.svg'}
-                        alt={'instagram link'}
-                        width={24}
-                        height={24}
-                    />
-                </button>
+                <Link
+                    href="https://www.instagram.com/kungfu_komplett/?hl=de"
+                    target="_blank">
+                    <button className="btn btn-ghost btn-circle">
+                        <Image
+                            src={'/instagram_icon.svg'}
+                            alt={'instagram link'}
+                            width={24}
+                            height={24}
+                        />
+                    </button>
+                </Link>
             </div>
         </div>
     )

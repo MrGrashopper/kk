@@ -23,10 +23,17 @@ const Contact = () => {
                         </div>
                         <div className="stat-value text-2xl">
                             Koryo Gym: <br />
-                            Next Gerneration
+                            Next Generation
                         </div>
                         <div className="stat-desc text-base">
                             {strings.homepage.section2.description}
+                        </div>
+                        <div className="my-5">
+                            <MotionButton
+                                inverse
+                                text=" Koryo Website"
+                                link="http://www.koryo-berlin.de"
+                            />
                         </div>
                     </div>
 
@@ -56,8 +63,8 @@ const Contact = () => {
                             />
                             <MotionButton
                                 inverse
-                                text=" Koryo Website"
-                                link="http://www.koryo-berlin.de"
+                                text=" Telefon"
+                                link="tel:0306249018"
                             />
                         </div>
                     </div>

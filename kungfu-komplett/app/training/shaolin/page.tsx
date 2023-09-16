@@ -22,9 +22,9 @@ const Shaolin = () => {
     }
 
     const steps = [
-        'Der Schüler erlernt Formen, die sowohl in der Länge, als auch im Schwierigkeitsgrad steigen (div. Süd-Shaolinformen und Nord-Shaolinformen). Weiterhin werden akrobatische Elemente eingeführt (z. B. Felgrolle, Rad ohne Hände und “Xuan zi” = Schmetterlingstritt)',
-        'Wenn der Schüler seinen Körper schon relativ gut kontrollieren kann, beginnt die Ausbildung mit einer Waffe. Der Schüler macht sich mit den drei traditionell wichtigsten Waffen Stock, Säbel und Schwert vertraut, danach wird entschieden mit welcher Waffe der Schüler als erstes den Umgang erlernen möchte.',
-        'Entscheidend in den fortgeschrittenen Formen ist es, die erlernten Techniken (sowohl Basis, als auch fortgeschrittene Techniken) nicht nur einzeln, sonden in Kombinationen sauber auszuführen. Zudem sollen die Schülerinnen und Schüler zunehmend alle erlernten Bewegungen auch mit ihrer Waffe ausführen können. Letztlich entsprechen die Formen (Handformen/Waffenformen) einem sehr hohen Schwierigkeitsgrad. Akrobatik und komplexe Sprungtritte gehören zu den Pflichtelementen.'
+        'Der Schüler erlernt Formen, die sowohl in der Länge, als auch im Schwierigkeitsgrad steigen. Weiterhin werden formenrelevante akrobatische Elemente eingeführt (z. B. Felgrolle, Rad ohne Hände und Schmetterlingstritt).',
+        'Wenn der Schüler seine Bewegungen gut kontrollieren kann, beginnt die Ausbildung mit der ersten Waffe. Zur Auswahl stehen dabei die traditionell wichtigsten Waffen Langstock, Säbel, Speer und Schwert. ',
+        'Entscheidend in den fortgeschrittenen Formen ist es, die erlernten Techniken nicht nur einzeln, sonden in Kombinationen sauber auszuführen. Alle waffenlosen und Waffenformen umfassen komplexe Bewegungsabfolgen, Sprungtritte und erfordern ein hohes Maß an Flexibilität.'
     ]
 
     return (

@@ -11,10 +11,10 @@ const JKD = () => {
     const strings = de
     const images = []
     const steps = [
-        'In der ersten Stufe lernt der Schüler Grundtechniken, Schläge, Tritte, Blocks und Fallübungen sowie Grundlagen des Shaolin Kung Fu wie Grundstellungen und eine kleine Bewegungsabläufe.',
-        'Der Schüler festigt Basistechniken und erlernt Angriffs- und Verteidigungskombinationen, die in kampfnahen Situationen und Freikampf angewendet werden. Er soll eigene Schwächen erkennen und erfolgreich Angriffe abwehren und attackieren.',
-        'In der dritten Stufe werden die Grundlagen des Tui Shu und Chi Sao mit Techniken aus Tai Chi Chuan, Wing Chun und Aikido erlernt, sowie das Repertoire an Hebeltechniken erweitert und die Grundlagen des Waffenkampfes eingeführt, mit Schwerpunkt auf eigene Erfahrung und Präferenzen.',
-        'In der vierten Stufe kombiniert der Schüler die auf ihn zugeschnittenen Techniken frei und simuliert verschiedene Angriffe, die er erfolgreich abwehren muss. Er muss flexibel und individuell reagieren, gegen mehrere und bewaffnete Angreifer sich wehren können, und trainiert besonders die Verteidigung gegen zwei und drei Angreifer sowie Stock- und Messerangriffe.'
+        'In der ersten Stufe lernt der Schüler Grundtechniken wie Schläge, Tritte, Blocks und Fallübungen sowie Grundstellungen und einfache Bewegungskombinationen.',
+        'Der Schüler festigt Basistechniken und erlernt Angriffs- und Verteidigungskombinationen, die in kampfnahen Situationen und Freikampf angewendet werden. ',
+        'In der dritten Stufe werden Verteidigungstechniken aus dem Wing Chun und Tai Chi Chuan integriert. Zudem wird das Repertoire an Hebeltechniken sowie Würfen erweitert und in die Grundlagen des Waffen- und Bodenkampfes eingeführt.',
+        'In der vierten Stufe erprobt der Schüler verschiedene Techniken in der Anwendung. Dabei erfährt er welche Techniken und Taktiken für ihn geeignet sind. Er muss sich gegen mehrere Angreifer (auch bei Verwendung von Hieb-und Stichwaffen) wehren können.'
     ]
 
     for (let i = 0; i < 18; i++) {

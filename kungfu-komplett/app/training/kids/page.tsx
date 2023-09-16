@@ -11,7 +11,7 @@ const Kids = () => {
     const strings = de
     const images = []
 
-    for (let i = 1; i < 13; i++) {
+    for (let i = 1; i < 12; i++) {
         // eslint-disable-next-line no-constant-condition
         if (`../galleryKids/kids${i}.jpeg`) {
             images.push({
@@ -22,9 +22,10 @@ const Kids = () => {
     }
 
     const steps = [
-        'Auf  der ersten Stufe werden grundlegende Prinzipien und Techniken vermittelt. Dazu gehören die Zwerchfellatmung genauso wie das aktive Entspannen. Ein sicherer Stand, das Schonen der Gelenke und das ruhige, harmonische Ausführen einfacher Bewegungen werden durch einfache Seidenübungen (Shan Si Gong) geübt. Die Grundlagen der Meditation werden gelegt. Als erste „Form“ erlernt man die in China sehr populäre Ba Duan Jin, eine Bewegungsfolge des Qigong.',
-        'In der zweiten Stufe werden die erlernten Techniken verfeinert und ergänzt. Die Atmung wird nun auch bei komplexeren Seidenübungen ungezwungen und Tempo bestimmend eingesetzt. Es erfolgen erste Partnerübungen und die Grundlagen des Tuishu werden vermittelt. Die 24er Bejing-Form (Yang-Stil) kommt aus dem Bereich Taolu dazu, wobei bereits typische Formenelemente erlernt und die Anwendungen erklärt werden. Wer auch den Chen-Stil erlernen oder sich sogar in dieser Richtung spezialisieren möchte, erlernt in dieser Stufe zudem die 13er Chen-Form.',
-        'Die dritte Stufe liegt den Schwerpunkt auf Formen und Anwendungen, wobei Elemnte aus den Formen und Techniken Anwendung in der Praxis erprobt werden.'
+        'Das Training erfolgt altersgemäß und gleichermaßen fordernd wie fördernd. Optimales Einstiegsalter ist 6 Jahre. Jungen und Mädchen werden zusammen unterrichtet. Die körperliche Leistungsfähigkeit aber auch Willensstärke und Selbstbewusstsein werden mit der Zeit gesteigert. Es werden die Grundlagen des Shaolin-Kung Fu´s sowie der Selbstverteidigung vermittelt.',
+        'Zu Beginn ist das Training häufig spielerisch. Es werden einfache Schlag-, Tritt- und Falltechniken sowie traditionelle Grundstellungen erlernt. Durch Partnerübungen lernen die Kinder den verantwortungsbewussten und respektvollen Umgang miteinander. Gekämpft wird auf diesem Einstiegsniveau nicht.',
+        'Die nächste Stufe des Trainings beinhaltet das Erlernen von einfachen Selbstverteidigungskombinationen. Dazu gehören nun auch leicht zu erlernende Wurf- und Hebeltechniken sowie deren Abwehr. Im Bereich Shaolin Kung Fu werden komplexere Bewegungsabfolgen vermittelt. Das angemessene Verhalten in Notsituationen und eine realistische Einschätzung der eigenen Fähigkeiten werden ebenfalls geschult.',
+        'Auf der folgenden Stufe werden leichte Kampfübungen mit wechselnden Partnern durchgeführt. Die Kinder sollen durch Anwendungen erproben, welche Techniken ihnen liegen und welche nicht. Nur, was sicher beherrscht wird, kann im Notfall effektiv angewendet werden. Im Shaolin Kung Fu werden nun traditionelle Formen erlernt, wozu zum Beispiel Tierformen gehören. Je nach Könnensstand und Reifegrad der Kinder können auch die ersten Erfahrungen mit dem Langstock, dem Säbel oder dem Schwert gesammelt werden'
     ]
 
     return (
@@ -39,17 +40,17 @@ const Kids = () => {
                     <div className="items-center text-center">
                         <div className={lalezar.className}>
                             <h3 className="text-3xl text-primary text-center">
-                                {strings.training.taichi.title2}
+                                {strings.training.kids.title2}
                             </h3>
                         </div>
                         <ProgressBar steps={steps} />
                     </div>
                 </div>
             </div>
-            <div className="mx-3 lg:mx-10 pb-6">
+            <div className="mx-3 lg:mx-10 pt-12 pb-6">
                 <Section
-                    title={strings.training.taichi.title3}
-                    description={strings.training.taichi.desc3}
+                    title={strings.training.kids.title3}
+                    description={strings.training.kids.desc2}
                 />
             </div>
             <div className="mx-3 lg:mx-10 py-12 carousel xl:h-auto rounded-box">

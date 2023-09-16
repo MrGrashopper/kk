@@ -24,7 +24,7 @@ const headerCard = ({title, description, imgSrc}: CardProps) => {
     }, [controls, inView])
     return (
         <motion.div
-            className="card lg:card-side mb-12 bg-base-100 shadow-xl"
+            className="card mt-6 lg:card-side mb-12 bg-base-100 shadow-xl"
             initial={{opacity: 0.8}}
             whileInView={{opacity: 1}}
             viewport={{once: true}}>

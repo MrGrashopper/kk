@@ -5,8 +5,8 @@ export default function Head() {
             <meta
                 content="width=device-width, initial-scale=1"
                 name="viewport"
-    />
-            <link rel="ic^on" href="/favicon.ico" />
+            />
+            <link rel="ic^on" href="" />
         </>
     )
 }

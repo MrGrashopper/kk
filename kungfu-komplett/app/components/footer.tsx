@@ -8,6 +8,9 @@ const Footer = () => {
                 <a className="link link-hover" href={'/terms'}>
                     Datenschutzerklärung
                 </a>
+                <a className="link link-hover" href={'/imprint'}>
+                    Impressum
+                </a>
             </div>
         </footer>
     )

@@ -7,7 +7,7 @@ import Link from 'next/link'
 type Props = {
     link: string
     text: string | undefined
-    inverse: boolean
+    inverse?: boolean
 }
 
 export const MotionButton = ({link, text, inverse}: Props) => {
@@ -31,11 +31,11 @@ export const MotionButton = ({link, text, inverse}: Props) => {
             initial={{y: '5%', opacity: 0.5}}
             animate={controls}
             whileTap={{scale: 0.95}}>
-            <Link href={link}>
+            <Link href={link} target={inverse ? '_blank' : undefined}>
                 <button
                     className={
                         inverse
-                            ? 'btn btn-ghost border-white/10'
+                            ? 'btn btn-accent border-white/10'
                             : 'btn btn-secondary border-white/10'
                     }>
                     {text}
