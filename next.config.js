@@ -3,8 +3,7 @@ module.exports = {
     //  output: 'export',
     reactStrictMode: true,
     experimental: {
-        appDir: true,
-        output: 'export'
+        appDir: true
     },
     i18n: {
         // providing the locales supported by your application
