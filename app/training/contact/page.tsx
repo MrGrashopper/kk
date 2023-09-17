@@ -46,7 +46,7 @@ const Contact = () => {
                                 <img
                                     src="/map.png"
                                     alt="map"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover max-h-[600px]"
                                 />
                             </a>
                         </div>
