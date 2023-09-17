@@ -6,6 +6,7 @@ import ProgressBar from '../../components/progressBar'
 import ContactButton from '../../components/contactButton'
 import Section from '../../components/section'
 import HeaderCard from '../../components/headerCard'
+import { Carousel } from '../../components/carousel'
 
 const TaiChi = () => {
     const strings = de
@@ -52,17 +53,7 @@ const TaiChi = () => {
                     description={strings.training.taichi.desc3}
                 />
             </div>
-            <div className="mx-3 lg:mx-10 py-12 carousel xl:h-auto rounded-box">
-                {images.map((image, i) => {
-                    return (
-                        <div
-                            id={`slide${i}`}
-                            className="carousel-item w-5/6 mx-2.5 md:w-1/3">
-                            <img src={image.src} alt={image.alt} />
-                        </div>
-                    )
-                })}
-            </div>
+            <Carousel images={images} />
             <figure className="mx-auto max-w-screen-md items-center text-center py-12">
                 <blockquote>
                     <svg
