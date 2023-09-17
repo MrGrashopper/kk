@@ -2,17 +2,14 @@
 module.exports = {
     reactStrictMode: true,
     experimental: {
-        appDir: true
+        appDir: true,
+        output: 'export',
     },
-    output: 'export'
-    // i18n: {
-    //     // providing the locales supported by your application
-    //     // locales: ['en-US', 'de-DE'],
-    //     locales: ['de-DE'],
-    //     //  default locale used when the non-locale paths are visited
-    //     defaultLocale: 'de-DE'
-    // }
+    i18n: {
+        // providing the locales supported by your application
+        // locales: ['en-US', 'de-DE'],
+        locales: ['de-DE'],
+        //  default locale used when the non-locale paths are visited
+        defaultLocale: 'de-DE',
+    }
 }
-// const NextConfig = {
-//     output: 'export'
-// }

@@ -6,7 +6,7 @@ export default function Head() {
                 content="width=device-width, initial-scale=1"
                 name="viewport"
             />
-            <link rel="ic^on" href="" />
+            <link rel="icon" href="" />
         </>
     )
 }

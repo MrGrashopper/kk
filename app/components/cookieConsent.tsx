@@ -21,7 +21,7 @@ const CookieConsent = () => {
     }
 
     return (
-        <div className="fixed bottom-0 py-6 bg-accent text-white">
+        <div className="fixed bottom-0 w-full py-6 bg-accent text-white">
             <div className="md:mx-12 flex flex-col md:flex-row items-center justify-between">
                 <div className="text-sm mb-4 mx-6 md:mb-0">
                     Wir verwenden auf dieser Website Cookies, die für den
@@ -40,6 +40,7 @@ const CookieConsent = () => {
             </div>
         </div>
     )
+    
 }
 
 export default CookieConsent
