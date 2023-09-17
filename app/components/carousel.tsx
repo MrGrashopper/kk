@@ -27,7 +27,7 @@ export const Carousel = ({images}: CarouselProps) => {
     })
 
     return (
-        <div {...handlers} className="relative mx-3 lg:mx-10 pb-6 rounded-box">
+        <div {...handlers} className="relative -mx-3 lg:mx-10 pb-6 rounded-box">
             <img
                 key={currentIndex}
                 src={images[currentIndex].src}
