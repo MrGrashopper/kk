@@ -1,12 +1,16 @@
+import Head from 'next/head'
 import React from 'react'
 import {lalezar} from '../styles'
 
 const Imprint = () => {
     return (
         <div className="container m-3 lg:m-10">
+            <Head>
+                <meta name="robots" content="noindex" />
+            </Head>
             <div className={lalezar.className}>
                 <h1 className="text-3xl text-primary text-center pt-12">
-                    Impressum Angaben gemäß § 5 TMG
+                    Impressum
                 </h1>
             </div>
             <h2 className="text-xl text-primary py-6">

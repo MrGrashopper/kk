@@ -23,7 +23,8 @@ export const de = {
         },
         section2: {
             title: ' Hier findest du uns',
-            description: 'Fuldastraße 55, 12043 Berlin-Neukölln'
+            description: 'Fuldastraße 55, Weichselstr. 8c',
+            zip: ' 12043 Berlin-Neukölln'
         }
     },
     training: {

@@ -6,7 +6,8 @@ import ProgressBar from '../../components/progressBar'
 import ContactButton from '../../components/contactButton'
 import Section from '../../components/section'
 import HeaderCard from '../../components/headerCard'
-import { Carousel } from '../../components/carousel'
+import {Carousel} from '../../components/carousel'
+import Head from 'next/head'
 
 const TaiChi = () => {
     const strings = de
@@ -30,6 +31,17 @@ const TaiChi = () => {
 
     return (
         <div className="m-3 lg:m-10">
+            <Head>
+                <title>Tai Chi Chuan Berlin</title>
+                <meta
+                    name="description"
+                    content="Tai Chi Chuan umfasst zwei wesentliche Aspekte: Einerseits Bewegungsmeditation, welche nachgewiesenermaßen der Gesundheitsförderung dient."
+                />
+                <meta
+                    name="keywords"
+                    content="Tai Chi, Tai Chi Berlin Neukölln, Chi Gong Berlin"
+                />
+            </Head>
             <HeaderCard
                 title={'Tai Chi Chuan'}
                 description={strings.training.taichi.desc1}

@@ -28,6 +28,9 @@ const Contact = () => {
                         <div className="stat-desc text-base">
                             {strings.homepage.section2.description}
                         </div>
+                        <div className="stat-desc text-base">
+                            {strings.homepage.section2.zip}
+                        </div>
                         <div className="my-5">
                             <MotionButton
                                 inverse

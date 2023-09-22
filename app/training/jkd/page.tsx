@@ -7,6 +7,7 @@ import {lalezar} from '../../styles'
 import ContactButton from '../../components/contactButton'
 import HeaderCard from '../../components/headerCard'
 import {Carousel} from '../../components/carousel'
+import Head from 'next/head'
 
 const JKD = () => {
     const strings = de
@@ -30,6 +31,17 @@ const JKD = () => {
 
     return (
         <div className="m-3 lg:m-10">
+            <Head>
+                <title>Jeet Kune Do Berlin</title>
+                <meta
+                    name="description"
+                    content="Jeet Kune Do ist kein Stil sondern ein von Bruce Lee entdeckter Weg, auf welchem man mit Hilfe weniger Techniken und Prinzipen seinen eigenen Kampfstil entwickeln kann."
+                />
+                <meta
+                    name="keywords"
+                    content="Jeet Kune Do, Selbstverteidigung Berlin, Martial Arts Berlin, Bruce Lee"
+                />
+            </Head>
             <HeaderCard
                 title={'Jeet Kune Do'}
                 description={strings.training.jkd.desc5}

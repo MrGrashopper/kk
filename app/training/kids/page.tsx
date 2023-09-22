@@ -6,7 +6,8 @@ import ProgressBar from '../../components/progressBar'
 import ContactButton from '../../components/contactButton'
 import Section from '../../components/section'
 import HeaderCard from '../../components/headerCard'
-import { Carousel } from '../../components/carousel'
+import {Carousel} from '../../components/carousel'
+import Head from 'next/head'
 
 const Kids = () => {
     const strings = de
@@ -31,6 +32,17 @@ const Kids = () => {
 
     return (
         <div className="m-3 lg:m-10">
+            <Head>
+                <title>Kung Fu für Kinder in Berlin</title>
+                <meta
+                    name="description"
+                    content="Das Training erfolgt altersgemäß und gleichermaßen fordernd wie fördernd. Optimales Einstiegsalter ist 6 Jahre."
+                />
+                <meta
+                    name="keywords"
+                    content="Kung Fu für Kinder, Kinder Kampfsport Berlin"
+                />
+            </Head>
             <HeaderCard
                 title={'Kindertraining'}
                 description={strings.training.kids.desc1}

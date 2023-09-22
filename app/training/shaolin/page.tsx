@@ -6,7 +6,8 @@ import ProgressBar from '../../components/progressBar'
 import Section from '../../components/section'
 import ContactButton from '../../components/contactButton'
 import HeaderCard from '../../components/headerCard'
-import { Carousel } from '../../components/carousel'
+import {Carousel} from '../../components/carousel'
+import Head from 'next/head'
 
 const Shaolin = () => {
     const strings = de
@@ -30,6 +31,17 @@ const Shaolin = () => {
 
     return (
         <div className="m-3 lg:m-10">
+            <Head>
+                <title>Shaolin Kung Fu Berlin</title>
+                <meta
+                    name="description"
+                    content="Eine fast 1500 Jahre alte Kampfkunst. Hinsichtlich der Vielfalt reicht keine andere Kampfkunst an Shaolin Kung Fu heran."
+                />
+                <meta
+                    name="keywords"
+                    content="Kung Fu, Kung Fu Berlin Neukölln, Martial Arts Berlin"
+                />
+            </Head>
             <HeaderCard
                 title={'Shaolin Kung Fu'}
                 description={strings.training.shaolin.desc1}
