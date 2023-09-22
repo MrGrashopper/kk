@@ -6,6 +6,7 @@ import Section from './components/section'
 import Card from './components/card'
 import Team from './components/team'
 import ContactButton from './components/contactButton'
+import Head from 'next/head'
 
 const Page = () => {
     const strings = de
@@ -46,6 +47,19 @@ const Page = () => {
 
     return (
         <>
+            <Head>
+                <title>
+                    Jeet Kune Do, Shaolin Kung Fu und Tai Chi Cuan in Berlin
+                </title>
+                <meta
+                    name="description"
+                    content="Lerne im Jeet Kune Do die für Dich beste Art der Selbstverteidigung. Trainiere traditionelles Shaolin Kung Fu mit und ohne Waffen. Verbinde Bewegungsmeditation und Kampfkunst im Tai Chi Chuan. Lege deinen eigenen Schwerpunkt fest."
+                />
+                <meta
+                    name="keywords"
+                    content="Jeet Kune Do, Selbstverteidigung Berlin, Martial Arts Berlin, Bruce Lee, Shaolin Kung Fu Berlin, Tai Chi Chuan Berlin, Neukölln"
+                />
+            </Head>
             <Hero />
             <div className="mx-3 md:mx-auto md:container md:my-5">
                 <Section
