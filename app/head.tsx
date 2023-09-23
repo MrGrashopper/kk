@@ -9,8 +9,9 @@ export default function Head() {
             <link rel="icon" href="/images/favicon.ico" sizes="48x48" />
             <link
                 rel="apple-touch-icon"
+                type="image/png"
                 href="/images/apple-touch-icon.png"
-                sizes="48x48"
+                sizes="180x180"
             />
         </>
     )
