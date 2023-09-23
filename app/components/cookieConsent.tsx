@@ -28,7 +28,7 @@ const CookieConsent = () => {
                     grundlegenden Betrieb und die Sicherheit der Website
                     unerlässlich sind. Durch die weitere Nutzung der Website
                     stimmen Sie der Verwendung dieser essentiellen Cookies zu.{' '}
-                    <a href="#" className="underline">
+                    <a href="/terms" className="underline">
                         Mehr erfahren
                     </a>
                 </div>
@@ -40,7 +40,6 @@ const CookieConsent = () => {
             </div>
         </div>
     )
-    
 }
 
 export default CookieConsent
