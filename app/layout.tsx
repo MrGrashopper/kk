@@ -13,11 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: 'Kung Fu Komplett',
     description:
-        'Effektive Selbstverteidigung, Shaolin Kung Fu & Tai Chi Chuan in Berlin',
-    icons: {
-        icon: '/favicon.ico',
-        apple: '/apple-touch-icon.png'
-    }
+        'Effektive Selbstverteidigung, Shaolin Kung Fu & Tai Chi Chuan in Berlin'
+    // icons: {
+    //     icon: 'favicon.ico',
+    //     apple: 'apple-touch-icon.png'
+    // }
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
