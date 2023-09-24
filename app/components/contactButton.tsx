@@ -6,8 +6,8 @@ import Link from 'next/link'
 const ContactButton = () => {
     const controls = useAnimation()
     const [ref, inView] = useInView({
-        triggerOnce: true, 
-        threshold: 0.1 
+        triggerOnce: true,
+        threshold: 0.1
     })
 
     useEffect(() => {

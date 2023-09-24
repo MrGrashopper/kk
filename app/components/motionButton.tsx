@@ -21,7 +21,7 @@ export const MotionButton = ({link, text, inverse}: Props) => {
         if (inView) {
             setTimeout(() => {
                 controls.start({y: '-5%', opacity: 1})
-            }, 100)
+            }, 50)
         }
     }, [controls, inView])
 
