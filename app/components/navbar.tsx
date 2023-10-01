@@ -66,14 +66,13 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            <Link className="navbar-center" href="/">
-                <Image
+            <a className="navbar-center" href="/">
+                <img
+                    className="w-36 h-12 md:w-48 md:h-22"
                     src="/KungFu-Komplett_Red.svg"
                     alt="logo Kung Fu Komplett"
-                    width={isMobile ? 150 : 200}
-                    height={isMobile ? 50 : 100}
                 />
-            </Link>
+            </a>
             <div className="navbar-end">
                 <Link
                     href="https://www.instagram.com/kungfu_komplett/?hl=de"
