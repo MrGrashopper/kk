@@ -3,6 +3,7 @@ import ContactButton from './contactButton'
 import {motion, useAnimation} from 'framer-motion'
 import {useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
+import Image from 'next/image'
 
 interface CardProps {
     title: string
@@ -29,9 +30,8 @@ const headerCard = ({title, description, imgSrc}: CardProps) => {
             whileInView={{opacity: 1}}
             viewport={{once: true}}>
             <figure className="lg:w-4/6">
-                <img src={imgSrc} alt="Album" />
+                <img src={imgSrc} alt={`${title}-Bild`} />
             </figure>
-
             <div className="card-body lg:w-1/4">
                 <div className="bg-white mx-auto py-12">
                     <h1 className="text-3xl text-primary text-center">

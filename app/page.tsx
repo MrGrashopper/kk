@@ -29,7 +29,7 @@ const Page = () => {
         },
         {
             title: 'Tai Chi Chuan',
-            imageSrc: './shaolin_sword.jpeg',
+            imageSrc: './taichi_sword.jpeg',
             subTitle:
                 'Trainiere Körper und Geist auf sanfte Art mit fließenden Bewegungen. Schöpfe Kraft aus deinem Inneren.',
             cta: 'Erfahre mehr',
