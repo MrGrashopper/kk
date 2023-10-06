@@ -1,3 +1,5 @@
+import crypto from 'crypto'
+
 export const allTiers = [
     'black',
     'green_jkd',
@@ -45,4 +47,24 @@ export const translateBorderColor = (tier: string) => {
         default:
             return 'border-black'
     }
+}
+
+export const encrypt = text => {
+    const cipher = crypto.createCipher(
+        'aes-256-cbc',
+        'Your 32 char secret here'
+    )
+    let encrypted = cipher.update(text, 'utf8', 'hex')
+    encrypted += cipher.final('hex')
+    return encrypted
+}
+
+export const decrypt = text => {
+    const decipher = crypto.createDecipher(
+        'aes-256-cbc',
+        'Your 32 char secret here'
+    )
+    let decrypted = decipher.update(text, 'hex', 'utf8')
+    decrypted += decipher.final('utf8')
+    return decrypted
 }

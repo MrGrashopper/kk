@@ -22,7 +22,7 @@ const initializeTokenMap = () => {
             tokenToTier[process.env[key] as string] = tier
             console.log(`Token für ${tier} ist gesetzt.`)
         } else {
-            console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
+            // console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
         }
     }
 }

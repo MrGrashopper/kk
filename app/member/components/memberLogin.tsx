@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {lalezar} from '../../styles'
+import {encrypt} from '../utils'
 
 type Props = {
     setHasAccess: React.Dispatch<React.SetStateAction<boolean>>
@@ -7,6 +8,10 @@ type Props = {
 
 const EnterMemberArea = ({setHasAccess}: Props) => {
     const [tokens, setTokens] = useState('')
+    const setEncryptedCookie = (cookieName, tiers) => {
+        const encryptedTiers = encrypt(JSON.stringify(tiers))
+        localStorage.setItem(cookieName, encryptedTiers)
+    }
 
     const handleSubmit = async () => {
         const tokenArray = tokens.split(',').map(t => t.trim())
@@ -14,10 +19,7 @@ const EnterMemberArea = ({setHasAccess}: Props) => {
         if (res.status === 200) {
             const data = await res.json()
             if (data.tiers && data.tiers.length > 0) {
-                localStorage.setItem(
-                    'cookie-kk-member',
-                    JSON.stringify(data.tiers)
-                )
+                setEncryptedCookie('cookie-kk-member', data.tiers)
                 setHasAccess(true)
                 window.location.href = '/member'
             } else {

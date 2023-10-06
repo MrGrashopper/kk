@@ -5,6 +5,9 @@ module.exports = {
     experimental: {
         appDir: true,
         output: 'export'
+    },
+    env: {
+        SECRET_CRYPTO_KEY: process.env.SECRET_CRYPTO_KEY
     }
     // i18n: {
     //     // providing the locales supported by your application
