@@ -33,6 +33,30 @@ const kkTheme = {
     '--btn-focus-scale': '1',
     '--tab-radius': '0'
 }
+const kkThemeDark = {
+    'color-scheme': 'dark',
+    secondary: '#ff002c',
+    primary: '#ffffff',
+    'color-scheme': 'dark',
+    'primary-content': '#ffffff',
+    'secondary-content': '#ffffff',
+    accent: '#20252E',
+    'accent-content': '#ffffff',
+    neutral: '#191D24',
+    'neutral-focus': '#111318',
+    'neutral-content': '#A6ADBB',
+    'base-100': '#2A303C',
+    'base-200': '#242933',
+    'base-300': '#20252E',
+    'base-content': '#A6ADBB',
+    '--rounded-box': '0.25rem',
+    '--rounded-btn': '0.125rem',
+    '--rounded-badge': '0.125rem',
+    '--animation-btn': '0',
+    '--animation-input': '0',
+    '--btn-focus-scale': '1',
+    '--tab-radius': '0'
+}
 
 module.exports = {
     content: [
@@ -44,12 +68,18 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['var(--font-inter)', ...fontFamily.sans]
+            },
+            colors: {
+                green: '#21CC51',
+                blue: '#0070F3',
+                yellow: '#D4AF37',
+                black: '#0D0D0D'
             }
         }
     },
     plugins: [require('daisyui')],
 
     daisyui: {
-        themes: [{lofi: kkTheme}]
+        themes: [{dark: kkThemeDark}, {lofi: kkTheme}]
     }
 }
