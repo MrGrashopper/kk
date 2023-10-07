@@ -11,7 +11,7 @@ export const MemberProgress = ({steps}: Props) => {
                         <li
                             key={index}
                             style={{textAlign: 'left'}}
-                            className="step step-neutral text-xl">
+                            className="step step-accent text-xl text-primary">
                             {step}
                         </li>
                     )

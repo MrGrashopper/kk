@@ -22,16 +22,34 @@ const BlackArea = () => {
         }
     }
     return (
-        <div className="m-3 lg:m-10">
-            <h3 className="mt-24 mb-12 text-3xl text-primary text-center">
+        <div className="m-3 lg:mx-10">
+            <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
                 <div className={lalezar.className}>
                     Prüfungsporgramm schwarz
                 </div>
             </h3>
-            <div className="mx-3 lg:mx-10 bg-base-100 py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto">
-                    <Task title="Handkombinationen" task={task1} />
-                    <Task title="Trittkombinationen" task={task1} />
+            <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto">
+                    <Task
+                        title="Handkombinationen"
+                        task={task1}
+                        color="primary"
+                    />
+                    <Task
+                        title="Trittkombinationen"
+                        task={task1}
+                        color="primary"
+                    />
+                    <Task
+                        title="Handkantenschläge"
+                        task={task1}
+                        color="primary"
+                    />
+                    <Task
+                        title="Grundstellungen"
+                        task={task1}
+                        color="primary"
+                    />
                 </div>
             </div>
             <Carousel images={images} />

@@ -33,6 +33,7 @@ const kkTheme = {
     '--btn-focus-scale': '1',
     '--tab-radius': '0'
 }
+
 const kkThemeDark = {
     'color-scheme': 'dark',
     secondary: '#ff002c',
@@ -40,14 +41,14 @@ const kkThemeDark = {
     'color-scheme': 'dark',
     'primary-content': '#ffffff',
     'secondary-content': '#ffffff',
-    accent: '#20252E',
+    accent: '#1a1a1a',
     'accent-content': '#ffffff',
-    neutral: '#191D24',
     'neutral-focus': '#111318',
     'neutral-content': '#A6ADBB',
-    'base-100': '#2A303C',
-    'base-200': '#242933',
-    'base-300': '#20252E',
+    neutral: '#1E1E1E',
+    'base-100': '#1a1a1a',
+    'base-200': '#282828',
+    'base-300': '#242424',
     'base-content': '#A6ADBB',
     '--rounded-box': '0.25rem',
     '--rounded-btn': '0.125rem',

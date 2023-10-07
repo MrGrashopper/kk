@@ -20,8 +20,8 @@ export const Card = ({tier, link, access, color}: Props) => {
                         access ? '' : 'opacity-30'
                     }`}>
                     <div className="card-body">
-                        <h2 className="card-title">{tier}</h2>
-                        <p>
+                        <h2 className="card-title text-primary">{tier}</h2>
+                        <p className="text-primary">
                             {access
                                 ? 'Stufe freigeschaltet'
                                 : 'Stufe nicht freigeschaltet'}

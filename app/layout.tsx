@@ -1,7 +1,7 @@
 'use client'
 import '../styles/globals.css'
 import Navbar from './components/navbar'
-import React from 'react'
+import React, {useState} from 'react'
 import Footer from './components/footer'
 import {Inter} from '@next/font/google'
 import CookieConsent from './components/cookieConsent'
@@ -14,16 +14,25 @@ const inter = Inter({
     variable: '--font-inter'
 })
 
+export type Theme = 'dark' | 'lofi'
+
 export default function RootLayout({children}: {children: React.ReactNode}) {
     const currentURL = usePathname()
-    const isMemberPage = currentURL.startsWith('/member')
+    const isMemberPage = currentURL?.startsWith('/member')
+    const initialTheme = (localStorage.getItem('user-theme') as Theme) || 'dark'
+    const [theme, setTheme] = useState<Theme>(initialTheme)
+
+    const switchTheme = (newTheme: Theme) => {
+        setTheme(newTheme)
+        localStorage.setItem('user-theme', newTheme)
+    }
 
     if (isMemberPage) {
         return (
-            <html data-theme="dark">
+            <html data-theme={theme}>
                 <Head />
                 <body className={`${inter.variable} font-sans`}>
-                    <NavbarMember />
+                    <NavbarMember switchTheme={switchTheme} theme={theme} />
                     <div style={{height: '5rem'}} />
                     {children}
                 </body>
