@@ -3,7 +3,13 @@ import {useEffect, useState} from 'react'
 import {lalezar} from '../styles'
 import EnterMemberArea from './components/memberLogin'
 import {Card} from './components/card'
-import {allTiers, decrypt, translateBorderColor, translateTier} from './utils'
+import {
+    allTiers,
+    decrypt,
+    generateLink,
+    translateBorderColor,
+    translateTier
+} from './utils'
 import {NextApiRequest} from 'next'
 import {LoadingSpinner} from './components/loadingSpinner'
 
@@ -68,7 +74,7 @@ const MemberPage = () => {
                         <Card
                             tier={translateTier(tier)}
                             access={isTierAccessible(tier) || tier === 'black'}
-                            link=""
+                            link={generateLink(tier)}
                             color={translateBorderColor(tier)}
                         />
                     </div>

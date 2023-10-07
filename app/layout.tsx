@@ -16,7 +16,7 @@ const inter = Inter({
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
     const currentURL = usePathname()
-    const isMemberPage = currentURL === '/member'
+    const isMemberPage = currentURL.startsWith('/member')
 
     if (isMemberPage) {
         return (

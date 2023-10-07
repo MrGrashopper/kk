@@ -25,7 +25,6 @@ const NavbarMember = () => {
         window.location.href = '/member'
     }
 
-    const isMobile = windowWidth <= 768
     return (
         <div className="navbar top-0 bg-base-100 drop-shadow-xl fixed z-40 py-5 lg:px-10">
             <div className="navbar-start">
@@ -75,7 +74,7 @@ const NavbarMember = () => {
                     </ul>
                 </div>
             </div>
-            <a className="navbar-center" href="/">
+            <a className="navbar-center" href="/member">
                 <img
                     className="w-36 h-12 md:w-48 md:h-22"
                     src="/KungFu-Komplett_Red.svg"

@@ -1,26 +1,17 @@
 type Props = {
-    tier: string
+    steps: string[]
 }
 
-export const MemberProgress = ({tier}: Props) => {
-    const steps = ['schwarz', 'grün', 'blau', 'gelb']
-    const tierOrder = ['black', 'green', 'blue', 'yellow']
-
-    const currentTierIndex = tierOrder.indexOf(tier)
-
+export const MemberProgress = ({steps}: Props) => {
     return (
-        <div className="flex flex-row justify-center mt-6">
-            <ul className="steps">
+        <div className="flex flex-row justify-center">
+            <ul className="steps steps-vertical">
                 {steps.map((step, index) => {
-                    const isActiveStep = index <= currentTierIndex
                     return (
                         <li
+                            key={index}
                             style={{textAlign: 'left'}}
-                            className={
-                                isActiveStep
-                                    ? 'step step-secondary text-xl'
-                                    : 'step step-accent text-xl'
-                            }>
+                            className="step step-neutral text-xl">
                             {step}
                         </li>
                     )

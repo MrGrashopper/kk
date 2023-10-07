@@ -49,7 +49,7 @@ export const translateBorderColor = (tier: string) => {
     }
 }
 
-export const encrypt = text => {
+export const encrypt = (text: string) => {
     const cipher = crypto.createCipher(
         'aes-256-cbc',
         'Your 32 char secret here'
@@ -59,7 +59,7 @@ export const encrypt = text => {
     return encrypted
 }
 
-export const decrypt = text => {
+export const decrypt = (text: string) => {
     const decipher = crypto.createDecipher(
         'aes-256-cbc',
         'Your 32 char secret here'
@@ -67,4 +67,9 @@ export const decrypt = text => {
     let decrypted = decipher.update(text, 'hex', 'utf8')
     decrypted += decipher.final('utf8')
     return decrypted
+}
+
+export const generateLink = (tier: string) => {
+    const formattedTier = tier.replace('_', '-')
+    return `/member/programs/${formattedTier}`
 }
