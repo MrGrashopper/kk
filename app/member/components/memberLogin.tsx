@@ -16,7 +16,7 @@ const EnterMemberArea = ({setHasAccess}: Props) => {
     const handleSubmit = async () => {
         const tokenArray = tokens.split(',').map(t => t.trim())
         const res = await fetch(`/api/enter?tokens=${tokenArray.join(',')}`)
-        console.log(res)
+        console.log(res.status)
         if (res.status === 200) {
             const data = await res.json()
             if (data.tiers && data.tiers.length > 0) {

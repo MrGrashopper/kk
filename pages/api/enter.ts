@@ -22,7 +22,7 @@ const initializeTokenMap = () => {
             tokenToTier[process.env[key] as string] = tier
             console.log(`Token für ${tier} ist gesetzt.`)
         } else {
-            // console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
+            console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
         }
     }
 }
@@ -35,7 +35,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     const tiers = tokens
         .map(token => getTierByToken(token.trim()))
         .filter(tier => tier !== 'none')
-    console.log(tiers)
+    console.log('tiers', tiers)
     if (tiers.length > 0) {
         res.status(200).json({tiers})
     } else {
