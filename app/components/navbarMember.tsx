@@ -59,33 +59,16 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content mt-5 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <a href={'/member'}>Home</a>
+                            <a href={'/member'}>Prüfungsporgramme</a>
                         </li>
                         <li>
-                            <a href={'/member/black'}>schwarz</a>
+                            <a href={'/orkouts'}>Workouts</a>
                         </li>
                         <li>
-                            <a>grün JKD - nicht freigeschaltet</a>
+                            <a href={'/faq'}>Hilfe</a>
                         </li>
                         <li>
-                            <a>blau JKD</a>
-                        </li>
-                        <li>
-                            <a>gelb JKD</a>
-                        </li>
-                        <li>
-                            <a>grün Shaolin</a>
-                        </li>
-                        <li>
-                            <a>blau Shaolin</a>
-                        </li>
-                        <li>
-                            <a>gelb Shaolin</a>
-                        </li>
-                        <li>
-                            <button
-                                className="btn btn-accent border-white/10"
-                                onClick={handleLogout}>
+                            <button className="" onClick={handleLogout}>
                                 Logout
                             </button>
                         </li>

@@ -37,7 +37,10 @@ const EnterMemberArea = ({setHasAccess}: Props) => {
                     Login für den Mitgliederbereich
                 </h3>
             </div>
-            <p className={'md:mx-20 lg:mx-32  m-3 lg:m-10 text-primary text-2'}>
+            <p
+                className={
+                    'md:mx-20 lg:mx-32  m-3 lg:m-10 text-primary text-2 text-center'
+                }>
                 Du hast per E-Mail den Zugangscodes von uns bekommen. Falls du
                 mehrere Codes hast, einfach durch Komma trennen.
             </p>

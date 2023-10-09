@@ -49,11 +49,11 @@ export const Carousel = ({images}: CarouselProps) => {
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 justify-center items-center">
                 {images.map((_, index) => (
                     <button
+                        key={index}
                         onClick={() => {
                             setCurrentIndex(index)
                         }}>
                         <div
-                            key={index}
                             className={`w-2 h-2 rounded-full ${
                                 currentIndex === index
                                     ? 'bg-secondary'

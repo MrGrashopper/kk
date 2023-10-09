@@ -2,10 +2,6 @@
 module.exports = {
     // output: 'export',
     reactStrictMode: true,
-    experimental: {
-        appDir: true,
-        output: 'export'
-    },
     env: {
         SECRET_CRYPTO_KEY: process.env.SECRET_CRYPTO_KEY
     }

@@ -19,7 +19,7 @@ const ProgressBar = (props: ProgressProps) => {
                 {props.steps &&
                     props.steps.map((step: string, i) => {
                         return (
-                            <>
+                            <React.Fragment key={i}>
                                 {(props.martialArtsType === MaTypes.jkd ||
                                     props.martialArtsType === undefined) && (
                                     <li
@@ -32,7 +32,7 @@ const ProgressBar = (props: ProgressProps) => {
                                         {step}
                                     </li>
                                 )}
-                            </>
+                            </React.Fragment>
                         )
                     })}
             </ul>

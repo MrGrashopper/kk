@@ -19,7 +19,10 @@ export type Theme = 'dark' | 'lofi'
 export default function RootLayout({children}: {children: React.ReactNode}) {
     const currentURL = usePathname()
     const isMemberPage = currentURL?.startsWith('/member')
-    const initialTheme = (localStorage.getItem('user-theme') as Theme) || 'dark'
+    const isBrowser = typeof window !== 'undefined'
+    const initialTheme = isBrowser
+        ? (localStorage.getItem('user-theme') as Theme) || 'dark'
+        : 'dark'
     const [theme, setTheme] = useState<Theme>(initialTheme)
 
     const switchTheme = (newTheme: Theme) => {
