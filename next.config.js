@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-    // output: 'export',
+    output: 'export',
     reactStrictMode: true,
+    trailingSlash: true,
     env: {
         SECRET_CRYPTO_KEY: process.env.SECRET_CRYPTO_KEY,
         TOKEN_BLACK: process.env.TOKEN_BLACK,
