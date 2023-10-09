@@ -111,7 +111,7 @@ export const initializeTokenMap = () => {
         NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: 'blue_shaolin',
         NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: 'yellow_shaolin'
     }
-
+    console.log(process.env.NEXT_PUBLIC_TOKEN_BLACK)
     for (const [key, tier] of Object.entries(tokenMappings)) {
         const token = env[key]
         if (token) {
