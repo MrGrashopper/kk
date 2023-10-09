@@ -35,7 +35,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     const tiers = tokens
         .map(token => getTierByToken(token.trim()))
         .filter(tier => tier !== 'none')
-
+    console.log(tiers)
     if (tiers.length > 0) {
         res.status(200).json({tiers})
     } else {
