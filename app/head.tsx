@@ -1,6 +1,5 @@
 'use client'
 import {usePathname} from 'next/navigation'
-import Head from 'next/head'
 
 type Metadata = {
     title: string

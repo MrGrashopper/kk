@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-    // output: 'export',
+    output: 'export',
     reactStrictMode: true,
     env: {
         SECRET_CRYPTO_KEY: process.env.SECRET_CRYPTO_KEY

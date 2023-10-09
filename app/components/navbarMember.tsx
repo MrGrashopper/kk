@@ -8,7 +8,6 @@ type Props = {
 }
 
 const NavbarMember = ({switchTheme, theme}: Props) => {
-    const [windowWidth, setWindowWidth] = useState<number>(0)
     const [isChecked, setIsChecked] = useState(theme === 'dark' ? true : false)
 
     const toggleTheme = () => {
@@ -16,20 +15,6 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
         setIsChecked(!isChecked)
         switchTheme(newTheme)
     }
-
-    useEffect(() => {
-        setWindowWidth(window.innerWidth)
-
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth)
-        }
-
-        window.addEventListener('resize', handleResize)
-
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
 
     const handleLogout = () => {
         localStorage.removeItem('cookie-kk-member')

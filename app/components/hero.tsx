@@ -1,8 +1,6 @@
 'use client'
 import React from 'react'
 import {de} from '../locale'
-import {motion} from 'framer-motion'
-import Link from 'next/link'
 import {lalezar} from '../styles'
 import {MotionButton} from './motionButton'
 

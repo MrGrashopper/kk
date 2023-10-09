@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import {lalezar} from '../styles'
 import {MotionButton} from './motionButton'
 

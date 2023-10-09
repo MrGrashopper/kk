@@ -20,7 +20,6 @@ const Navbar = () => {
         }
     }, [])
 
-    const isMobile = windowWidth <= 768
     return (
         <div className="navbar top-0 bg-base-100 drop-shadow-xl fixed z-40 py-5 lg:px-10">
             <div className="navbar-start">

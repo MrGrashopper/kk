@@ -10,7 +10,6 @@ import {
     translateBorderColor,
     translateTier
 } from './utils'
-import {NextApiRequest} from 'next'
 import {LoadingSpinner} from './components/loadingSpinner'
 
 const MemberPage = () => {
@@ -85,33 +84,3 @@ const MemberPage = () => {
 }
 
 export default MemberPage
-
-export async function getServerProps({req}: {req: NextApiRequest}) {
-    const cookies = req.cookies
-    const tierData = cookies['cookie-kk-member'] || 'none'
-
-    let parsedTiers
-    try {
-        parsedTiers = JSON.parse(tierData)
-    } catch {
-        parsedTiers = ['none']
-    }
-
-    if (
-        Array.isArray(parsedTiers) &&
-        parsedTiers.length > 0 &&
-        parsedTiers[0] !== 'none'
-    ) {
-        return {props: {tiers: parsedTiers}}
-    } else {
-        return {
-            redirect: {
-                destination: '/no-access',
-                permanent: false
-            }
-        }
-    }
-}
-function getDecryptedCookie(tierDataEncrypted: string, encryptionKey: string) {
-    throw new Error('Function not implemented.')
-}

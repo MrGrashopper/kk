@@ -3,7 +3,6 @@ import ContactButton from './contactButton'
 import {motion, useAnimation} from 'framer-motion'
 import {useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
-import Image from 'next/image'
 
 interface CardProps {
     title: string

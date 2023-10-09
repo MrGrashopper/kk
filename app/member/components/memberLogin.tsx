@@ -8,7 +8,7 @@ type Props = {
 
 const EnterMemberArea = ({setHasAccess}: Props) => {
     const [tokens, setTokens] = useState('')
-    const setEncryptedCookie = (cookieName, tiers) => {
+    const setEncryptedCookie = (cookieName: string, tiers: string[]) => {
         const encryptedTiers = encrypt(JSON.stringify(tiers))
         localStorage.setItem(cookieName, encryptedTiers)
     }
@@ -16,6 +16,7 @@ const EnterMemberArea = ({setHasAccess}: Props) => {
     const handleSubmit = async () => {
         const tokenArray = tokens.split(',').map(t => t.trim())
         const res = await fetch(`/api/enter?tokens=${tokenArray.join(',')}`)
+
         if (res.status === 200) {
             const data = await res.json()
             if (data.tiers && data.tiers.length > 0) {
