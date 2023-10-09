@@ -73,3 +73,70 @@ export const generateLink = (tier: string) => {
     const formattedTier = tier.replace('_', '-')
     return `/member/programs/${formattedTier}`
 }
+
+// utils.ts
+type TokenMap = {[key: string]: string}
+
+const tokenToTier: TokenMap = {}
+
+type EnvType = {[key: string]: string | undefined} & {
+    NEXT_PUBLIC_TOKEN_BLACK: string | undefined
+    NEXT_PUBLIC_TOKEN_GREEN_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_BLUE_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_YELLOW_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN: string | undefined
+    NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: string | undefined
+    NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: string | undefined
+}
+
+const env: EnvType = {
+    NEXT_PUBLIC_TOKEN_BLACK: process.env.NEXT_PUBLIC_TOKEN_BLACK,
+    NEXT_PUBLIC_TOKEN_GREEN_JKD: process.env.NEXT_PUBLIC_TOKEN_GREEN_JKD,
+    NEXT_PUBLIC_TOKEN_BLUE_JKD: process.env.NEXT_PUBLIC_TOKEN_BLUE_JKD,
+    NEXT_PUBLIC_TOKEN_YELLOW_JKD: process.env.NEXT_PUBLIC_TOKEN_YELLOW_JKD,
+    NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN:
+        process.env.NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN,
+    NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: process.env.NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN,
+    NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN:
+        process.env.NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN
+}
+
+export const initializeTokenMap = () => {
+    const tokenMappings = {
+        NEXT_PUBLIC_TOKEN_BLACK: 'black',
+        NEXT_PUBLIC_TOKEN_GREEN_JKD: 'green_jkd',
+        NEXT_PUBLIC_TOKEN_BLUE_JKD: 'blue_jkd',
+        NEXT_PUBLIC_TOKEN_YELLOW_JKD: 'yellow_jkd',
+        NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN: 'green_shaolin',
+        NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: 'blue_shaolin',
+        NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: 'yellow_shaolin'
+    }
+
+    for (const [key, tier] of Object.entries(tokenMappings)) {
+        const token = env[key]
+        if (token) {
+            tokenToTier[token] = tier
+            console.log(`Token für ${tier} ist gesetzt.`)
+        } else {
+            console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
+        }
+    }
+}
+
+export const getTiers = (tokensString: string) => {
+    const tokens = tokensString ? tokensString.split(',') : []
+    const tiers = tokens
+        .map(token => getTierByToken(token.trim()))
+        .filter(tier => tier !== 'none')
+    console.log('tiers', tiers)
+    if (tiers.length > 0) {
+        return {status: 200, tiers}
+    } else {
+        return {status: 401, message: 'Ungültiger Zugang #F2'}
+    }
+}
+
+const getTierByToken = (token: string): string => {
+    console.log(tokenToTier[token])
+    return tokenToTier[token] || 'none'
+}

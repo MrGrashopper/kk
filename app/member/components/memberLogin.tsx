@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {lalezar} from '../../styles'
-import {encrypt} from '../utils'
+import {encrypt, getTiers, initializeTokenMap} from '../utils'
 
 type Props = {
     setHasAccess: React.Dispatch<React.SetStateAction<boolean>>
@@ -14,13 +14,14 @@ const EnterMemberArea = ({setHasAccess}: Props) => {
     }
 
     const handleSubmit = async () => {
+        initializeTokenMap()
         const tokenArray = tokens.split(',').map(t => t.trim())
-        const res = await fetch(`/api/enter?tokens=${tokenArray.join(',')}`)
+        const res = getTiers(tokenArray.join(','))
         console.log(res.status)
         if (res.status === 200) {
-            const data = await res.json()
-            if (data.tiers && data.tiers.length > 0) {
-                setEncryptedCookie('cookie-kk-member', data.tiers)
+            const {tiers} = res
+            if (tiers && tiers.length > 0) {
+                setEncryptedCookie('cookie-kk-member', tiers)
                 setHasAccess(true)
                 window.location.href = '/member'
             } else {
