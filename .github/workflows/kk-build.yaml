@@ -36,6 +36,7 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
+          TOKEN_BLACK: ${{ secrets.TOKEN_BLACK }}
         run: |
           npm install --global yarn
           yarn install --frozen-lockfile
