@@ -36,7 +36,13 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
-          NEXT_PUBLIC_TOKEN_BLACK: ${{ secrets.TOKEN_BLACK }}
+          NEXT_PUBLIC_TOKEN_BLACK: ${{ secrets.NEXT_PUBLIC_TOKEN_BLACK }}
+          NEXT_PUBLIC_TOKEN_GREEN_JKD: ${{ secrets.NEXT_PUBLIC_TOKEN_GREEN_JKD }}
+          NEXT_PUBLIC_TOKEN_BLUE_JKD: ${{ secrets.NEXT_PUBLIC_TOKEN_BLUE_JKD }}
+          NEXT_PUBLIC_TOKEN_YELLOW_JKD: ${{ secrets.NEXT_PUBLIC_TOKEN_YELLOW_JKD }}
+          NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN: ${{ secrets.NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN }}
+          NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: ${{ secrets.NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN }}
+          NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: ${{ secrets.NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN }}
         run: |
           npm install --global yarn
           yarn install --frozen-lockfile
