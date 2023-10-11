@@ -5,37 +5,30 @@ import {Task} from '../../components/task'
 
 const GreenArea = () => {
     const task1 = [
-        'paralleler Unterarmblock oben Mitte, oben rechts, oben links > gegen Tritte zum Kopf von entsprechender Seite',
-        'antiparalleler Unterarmblock am Körper > gegen mittelhohen Vorwärts-, Rückwärts- oder Seitwärtstritt',
-        'Kreuz-/Scherblock > gegen Halbkreistritt',
-        'Push - Down - Block > gegen Seitwärts- oder Rückwärtstritt'
+        'Unterarmblock (Unterarme parallel aneinander) gegen hohe Tritte',
+        'Scherblock gegen Körper- und Kopftritte (v.a. gegen Roundhousekick) re und li',
+        'Unterarmblock (Unterarme antiparallel aneinander) gegen mittelhohe Tritte, Arme dicht am Körper',
+        'Push-Down: mit beiden Armen von oben auf Trittbein schlagen'
     ]
 
     const task2 = [
-        'gegen Seitwärtstritt > 1) Pushdown mit beiden Händen > vordere oder hinterer Gerade 2) tiefer Außenblock (Block 3) > Gerade',
-        'gegen Halbkreistritt > Scherblock > Backfist mit oberer Hand',
-        'gegen Vorwärtstritt > leichte Körperdrehung > Bein mit Unterarm fangen > Seitwärtstritt zum Standbein',
-        'gegen Halbmondtritt (nach innen und außen) > hoher Außenblock > Schwinger mit Blockarm oder Gerade mit anderem Arm'
+        'Sidekick: Push-Down → vordere oder hintere Gerade',
+        'Roundhousekick: Scherblock → Backfist mit jeweils vorderem Arm',
+        'Front-/ Side-/ Backkick: Block Nr.3 (unten-außen) mit vorderem Arm → hintere Gerade',
+        'Front- / Side- / Backkick: aus der Körperdrehung Trittbein fangen → Sidekick zum Standbein',
+        'Halbmondtritt: hoher Außenblock (Nr.2) → hintere Gerade oder Kopfhaken mit Blockarm'
     ]
 
     const task3 = [
-        'Kipphandhebel nach außen',
-        'Kipphandhebel nach innen',
-        'Oberarmhebel (ein Arm von innen/unten der andere von außen/oben)',
-        'Handgelenk-Ellbogenhebel von oben',
-        'Handgelenk-Ellbogenhebel von unten'
+        'Lowkick zur Innenseite → Schienbeinblock → Sidekick zum Standbein → Sidekick zum Körper oder Kopf (alles mit demselben Bein)',
+        'Lowkick zur Außenseite → Schienbeinblock → Unterleibstritt → Beinwechsel: Kinntritt',
+        'Unterleibstritt mit hinterem Bein → Stopper mit Fußsohle → Sidekicks zum Körper und zum Kopf (beliebige Reihenfolge)',
+        'Unterleibstritt mit vorderem Bein → ein Bein zum Schutz des Unterleibs eindrehen → Konterschlag (Jap oder Backfist)',
+        'angelaufener oder angeglittener Side- oder Hackentritt → Vorwärtstritt als Stopper → Roundhouse zum Körper oder Unterleib → Hammertritt (Axekick)',
+        'Hackentritt → Halbmond- oder Hammertritt → Roundhouse zum Körper oder Unterleib → Sidekick zum Knie'
     ]
 
     const task4 = [
-        'gegen Lowkick zur Innenseite > Schienbeinblock ...',
-        'gegen Lowkick zur Außenseite > Schienbeinblock ...',
-        'gegen Unterleibstritt mit hinterem Bein > Stopper mit Fußsohle ...',
-        'gegen Unterleibstritt mit vorderem Bein > ein Bein zum Schutz eindrehen ..',
-        'gegen langen Side - oder Hackentritt > Vorwärtstritt als Stopper ...',
-        'gegen kurzen Hackentritt > Halbmondtritt nach außen ...'
-    ]
-
-    const task5 = [
         'Unterleib - Stampftritt - Halbkreis Mitte - Sidekick Mitte',
         'Halbkreis Mitte - Halbkreis Kopf - Sidekick Mitte - Hacken',
         'Hacken - Halbkreis Kopf - Sidekick Mitte - Rückwärtstritt',
@@ -43,13 +36,21 @@ const GreenArea = () => {
         'Seitwärtstritte: Mitte - unten - oben → Rückwärtstritt > gedrehter Halbmond - oder Hackentritt'
     ]
 
-    const task6 = [
-        'Halbkreistritt zum Bauch > Sidekick zum Knie > Backfist zum Kopf',
-        'Unterleibstritt > Stampftritt > Jap zum Kopf',
-        'Lowkick zur Bein-Rückseite > Halbkreistritt zum Bauch mit anderem Bein > Schwinger',
-        'Vorwärtstritt > Jap zum Kopf > Haken zum Körper mit anderer Faust',
-        'Sidekick zum Knie > Schwinger > Rückwärtstritt',
+    const task5 = [
+        'Halbkreistritt zum Bauch → Sidekick zum Knie → Backfist zum Kopf',
+        'Unterleibstritt → Stampftritt → Jap zum Kopf',
+        'Lowkick zur Bein-Rückseite > Halbkreistritt zum Bauch mit anderem Bein → Schwinger',
+        'Vorwärtstritt → Jap zum Kopf → Haken zum Körper mit anderer Faust',
+        'Sidekick zum Knie → Schwinger → Rückwärtstritt',
         'Knie zum Unterleib → Ellbogen-Uppercut → Ellbogen-Schwinger mit anderem Arm'
+    ]
+
+    const task6 = [
+        'Kipphandhebel nach außen',
+        'Kipphandhebel nach innen',
+        'Oberarm-Schulterhebel aus dem Scherblock',
+        'Handgelenk-Ellbogenhebel von oben',
+        'Handgelenk-Ellbogenhebel von unten'
     ]
 
     const task7 = [
@@ -77,6 +78,11 @@ const GreenArea = () => {
                     Prüfungsporgramm grün JKD
                 </div>
             </h3>
+            <p className="mx-3 text-xl text-primary my-12 md:text-center">
+                Das Programm umfasst die 3. und 4. Stufe, dafür aber mehr
+                Inhalte, längere Übungs- und Prüfungsdauer, dafür aber nur 1
+                Prüfung statt 2
+            </p>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto">
                     <Task
@@ -85,30 +91,26 @@ const GreenArea = () => {
                         color="green"
                     />
                     <Task
-                        title="Blocktechniken gegen Tritte mit einfachen Konterschlägen"
+                        title="Blocken gegen Tritte mit einfachen Konterschlägen"
                         task={task2}
                         color="green"
                     />
                     <Task
-                        title="zweihändige Hebel"
+                        title="Blocken gegen Tritte mit eigenen Beinen"
                         task={task3}
                         color="green"
                     />
                     <Task
-                        title="Blocktechniken gegen Tritte mit den Beinen"
+                        title="Trittkombinationen"
                         task={task4}
                         color="green"
                     />
                     <Task
-                        title="Trittkombinationen"
+                        title="Trit-Schlagt-Kombinationen"
                         task={task5}
                         color="green"
                     />
-                    <Task
-                        title="Schlag-Tritt-Kombinationen"
-                        task={task6}
-                        color="green"
-                    />
+                    <Task title="Armhebel" task={task6} color="green" />
                     <Task title="Freikampf" task={task7} color="green" />
                 </div>
             </div>

@@ -1,5 +1,17 @@
 import crypto from 'crypto'
 
+type TokenMap = {[key: string]: string}
+
+type EnvType = {[key: string]: string | undefined} & {
+    NEXT_PUBLIC_TOKEN_BLACK: string | undefined
+    NEXT_PUBLIC_TOKEN_GREEN_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_BLUE_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_YELLOW_JKD: string | undefined
+    NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN: string | undefined
+    NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: string | undefined
+    NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: string | undefined
+}
+
 export const allTiers = [
     'black',
     'green_jkd',
@@ -74,20 +86,7 @@ export const generateLink = (tier: string) => {
     return `/member/programs/${formattedTier}`
 }
 
-// utils.ts
-type TokenMap = {[key: string]: string}
-
 const tokenToTier: TokenMap = {}
-
-type EnvType = {[key: string]: string | undefined} & {
-    NEXT_PUBLIC_TOKEN_BLACK: string | undefined
-    NEXT_PUBLIC_TOKEN_GREEN_JKD: string | undefined
-    NEXT_PUBLIC_TOKEN_BLUE_JKD: string | undefined
-    NEXT_PUBLIC_TOKEN_YELLOW_JKD: string | undefined
-    NEXT_PUBLIC_TOKEN_GREEN_SHAOLIN: string | undefined
-    NEXT_PUBLIC_TOKEN_BLUE_SHAOLIN: string | undefined
-    NEXT_PUBLIC_TOKEN_YELLOW_SHAOLIN: string | undefined
-}
 
 const env: EnvType = {
     NEXT_PUBLIC_TOKEN_BLACK: process.env.NEXT_PUBLIC_TOKEN_BLACK,
@@ -116,9 +115,9 @@ export const initializeTokenMap = () => {
         const token = env[key]
         if (token) {
             tokenToTier[token] = tier
-            console.log(`Token für ${tier} ist gesetzt.`)
+            //console.log(`Token für ${tier} ist gesetzt.`)
         } else {
-            console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
+            //console.log(`Umweltvariable ${key} ist nicht gesetzt.`)
         }
     }
 }
@@ -128,7 +127,6 @@ export const getTiers = (tokensString: string) => {
     const tiers = tokens
         .map(token => getTierByToken(token.trim()))
         .filter(tier => tier !== 'none')
-    console.log('tiers', tiers)
     if (tiers.length > 0) {
         return {status: 200, tiers}
     } else {

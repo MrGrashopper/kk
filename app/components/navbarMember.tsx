@@ -47,7 +47,7 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
                             <a href={'/member'}>Prüfungsporgramme</a>
                         </li>
                         <li>
-                            <a href={'/orkouts'}>Workouts</a>
+                            <a>Workouts (coming soon)</a>
                         </li>
                         <li>
                             <a href={'/faq'}>Hilfe</a>
