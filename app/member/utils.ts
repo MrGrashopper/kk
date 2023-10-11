@@ -61,6 +61,11 @@ export const translateBorderColor = (tier: string) => {
     }
 }
 
+export const setEncryptedCookie = (cookieName: string, tiers: string[]) => {
+    const encryptedTiers = encrypt(JSON.stringify(tiers))
+    localStorage.setItem(cookieName, encryptedTiers)
+}
+
 export const encrypt = (text: string) => {
     const cipher = crypto.createCipher(
         'aes-256-cbc',

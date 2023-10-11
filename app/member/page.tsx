@@ -1,18 +1,25 @@
 'use client'
 import {useEffect, useState} from 'react'
 import {lalezar} from '../styles'
-import EnterMemberArea from './components/memberLogin'
+import {EnterMemberArea} from './components/memberLogin'
 import {Card} from './components/card'
 import {
     allTiers,
     decrypt,
     generateLink,
+    setEncryptedCookie,
     translateBorderColor,
     translateTier
 } from './utils'
 import {LoadingSpinner} from './components/loadingSpinner'
 import Head from 'next/head'
 import {motion} from 'framer-motion'
+import jwt_decode from 'jwt-decode'
+import {usePathname} from 'next/navigation'
+
+type DecodedToken = {
+    tiers: string[]
+}
 
 const MemberPage = () => {
     const [hasAccess, setHasAccess] = useState(false)
@@ -34,6 +41,22 @@ const MemberPage = () => {
     const sortedAllTiers = [...accessibleTiers, ...nonAccessibleTiers]
 
     useEffect(() => {
+        const jwtToken = new URLSearchParams(window.location.search).get(
+            'token'
+        )
+        if (jwtToken && !hasAccess) {
+            try {
+                const decodedToken = jwt_decode(jwtToken) as DecodedToken
+                setEncryptedCookie(
+                    'cookie-kk-member',
+                    decodedToken.tiers || ['black']
+                )
+                setHasAccess(true)
+                setTiers(decodedToken.tiers || ['black'])
+            } catch (e) {
+                console.error('Invalid JWT token')
+            }
+        }
         const tierDataEncrypted = localStorage.getItem('cookie-kk-member')
         if (tierDataEncrypted) {
             const tierDataDecrypted = decrypt(tierDataEncrypted)
@@ -45,13 +68,17 @@ const MemberPage = () => {
             ) {
                 setHasAccess(true)
                 setTiers(parsedTiers)
+                const url = new URL(window.location.toString())
+                url.searchParams.delete('token')
+                window.history.replaceState({}, document.title, url.toString())
             } else {
                 setTiers(['black'])
             }
         }
+
         setTimeout(() => {
             setIsLoading(false)
-        }, 500)
+        }, 300)
     }, [])
 
     if (isLoading) {
@@ -59,7 +86,7 @@ const MemberPage = () => {
     }
 
     if (!hasAccess) {
-        return <EnterMemberArea setHasAccess={setHasAccess} />
+        return <EnterMemberArea />
     }
 
     const calculateValue = (accessibleTiers: string[], allTiers: string[]) => {

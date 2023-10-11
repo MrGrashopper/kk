@@ -1,67 +1,10 @@
-import {useState} from 'react'
-import {lalezar} from '../../styles'
-import {encrypt, getTiers, initializeTokenMap} from '../utils'
-
-type Props = {
-    setHasAccess: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-const EnterMemberArea = ({setHasAccess}: Props) => {
-    const [tokens, setTokens] = useState('')
-    const setEncryptedCookie = (cookieName: string, tiers: string[]) => {
-        const encryptedTiers = encrypt(JSON.stringify(tiers))
-        localStorage.setItem(cookieName, encryptedTiers)
-    }
-
-    const handleSubmit = async () => {
-        initializeTokenMap()
-        const tokenArray = tokens.split(',').map(t => t.trim())
-        const res = getTiers(tokenArray.join(','))
-        console.log(res.status)
-        if (res.status === 200) {
-            const {tiers} = res
-            if (tiers && tiers.length > 0) {
-                setEncryptedCookie('cookie-kk-member', tiers)
-                setHasAccess(true)
-                window.location.href = '/member'
-            } else {
-                alert('Ungültiger Zugang')
-            }
-        } else {
-            alert('Ungültiger Zugang')
-        }
-    }
-
+export const EnterMemberArea = () => {
     return (
-        <div className="flex flex-col h-screen justify-center items-center">
-            <div className={lalezar.className}>
-                <h3 className="text-3xl text-primary text-center">
-                    Login für den Mitgliederbereich
-                </h3>
-            </div>
-            <p
-                className={
-                    'md:mx-20 lg:mx-32  m-3 lg:m-10 text-primary text-2 text-center'
-                }>
-                Du hast per E-Mail den Zugangscodes von uns bekommen. Falls du
-                mehrere Codes hast, einfach durch Komma trennen.
-            </p>
-            <div className="mx-3 md:mx-20 lg:mx-32  m-3 lg:m-10 bg-base-300 p-10 shadow-xl">
-                <input
-                    className="text-center w-full p-4 mb-4 rounded bg-base-100"
-                    type="text"
-                    value={tokens}
-                    onChange={e => setTokens(e.target.value)}
-                    placeholder="1234aaaa, 5678bbbb"
-                />
-                <button
-                    className="btn btn-secondary w-full border-white/10"
-                    onClick={handleSubmit}>
-                    Enter
-                </button>
-            </div>
+        <div className="p-3 flex flex-col h-screen justify-center items-center">
+            <h3 className="text-3xl text-primary text-center">
+                Dein Zugang ist nicht gültig oder abgelaufen. Klicke auf den
+                Link in deiner Einladungs-E-Mail
+            </h3>
         </div>
     )
 }
-
-export default EnterMemberArea

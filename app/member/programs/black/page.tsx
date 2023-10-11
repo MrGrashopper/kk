@@ -44,8 +44,7 @@ const BlackArea = () => {
                 und des Jeet Kune Do
             </p>
             <div className="divider"></div>
-            <h2
-                className={`text-xl text-center font-bold text-primary pt-6 pb-3`}>
+            <h2 className={`text-xl text-center font-bold text-primary py-6`}>
                 Bereich Jeet Kune Do
             </h2>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
@@ -80,8 +79,7 @@ const BlackArea = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <h2
-                className={`text-xl text-center font-bold text-primary pt-6 pb-3`}>
+            <h2 className={`text-xl text-center font-bold text-primary py-6`}>
                 Bereich Shaolin Kung Fu
             </h2>
         </div>
