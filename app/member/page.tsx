@@ -7,6 +7,8 @@ import {
     allTiers,
     decrypt,
     generateLink,
+    getTiersFromLocalStorage,
+    removeTokenFromUrl,
     setEncryptedCookie,
     translateBorderColor,
     translateTier
@@ -15,7 +17,6 @@ import {LoadingSpinner} from './components/loadingSpinner'
 import Head from 'next/head'
 import {motion} from 'framer-motion'
 import jwt_decode from 'jwt-decode'
-import {usePathname} from 'next/navigation'
 
 type DecodedToken = {
     tiers: string[]
@@ -40,41 +41,56 @@ const MemberPage = () => {
 
     const sortedAllTiers = [...accessibleTiers, ...nonAccessibleTiers]
 
+    const setStates = (tiers: string[], hasAccess: boolean) => {
+        setHasAccess(hasAccess)
+        setTiers(tiers)
+        setEncryptedCookie('cookie-kk-member', tiers)
+    }
+
     useEffect(() => {
-        const jwtToken = new URLSearchParams(window.location.search).get(
-            'token'
-        )
-        if (jwtToken && !hasAccess) {
+        const handleToken = (jwtToken: string | null) => {
+            if (!jwtToken) return
             try {
                 const decodedToken = jwt_decode(jwtToken) as DecodedToken
-                setEncryptedCookie(
-                    'cookie-kk-member',
-                    decodedToken.tiers || ['black']
-                )
-                setHasAccess(true)
-                setTiers(decodedToken.tiers || ['black'])
+                setStates(decodedToken.tiers || ['black'], true)
             } catch (e) {
                 console.error('Invalid JWT token')
             }
         }
-        const tierDataEncrypted = localStorage.getItem('cookie-kk-member')
-        if (tierDataEncrypted) {
-            const tierDataDecrypted = decrypt(tierDataEncrypted)
-            const parsedTiers = JSON.parse(tierDataDecrypted)
-            if (
-                Array.isArray(parsedTiers) &&
-                parsedTiers.length > 0 &&
-                parsedTiers[0] !== 'none'
-            ) {
-                setHasAccess(true)
-                setTiers(parsedTiers)
-                const url = new URL(window.location.toString())
-                url.searchParams.delete('token')
-                window.history.replaceState({}, document.title, url.toString())
-            } else {
-                setTiers(['black'])
+
+        const handleLocalStorage = () => {
+            const tierDataEncrypted = localStorage.getItem('cookie-kk-member')
+            if (tierDataEncrypted) {
+                const tierDataDecrypted = decrypt(tierDataEncrypted)
+                const parsedTiers = JSON.parse(tierDataDecrypted)
+                if (
+                    Array.isArray(parsedTiers) &&
+                    parsedTiers.length > 0 &&
+                    parsedTiers[0] !== 'none'
+                ) {
+                    setStates(parsedTiers, true)
+                    const url = new URL(window.location.toString())
+                    url.searchParams.delete('token')
+                    window.history.replaceState(
+                        {},
+                        document.title,
+                        url.toString()
+                    )
+                } else if (!jwtToken) {
+                    setStates(['black'], false)
+                }
             }
         }
+
+        const jwtToken = new URLSearchParams(window.location.search).get(
+            'token'
+        )
+
+        if (jwtToken) {
+            handleToken(jwtToken)
+        }
+
+        handleLocalStorage()
 
         setTimeout(() => {
             setIsLoading(false)

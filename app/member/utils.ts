@@ -143,3 +143,25 @@ const getTierByToken = (token: string): string => {
     console.log(tokenToTier[token])
     return tokenToTier[token] || 'none'
 }
+
+export const removeTokenFromUrl = () => {
+    const url = new URL(window.location.toString())
+    url.searchParams.delete('token')
+    window.history.replaceState({}, document.title, url.toString())
+}
+
+export const getTiersFromLocalStorage = (): string[] | null => {
+    const tierDataEncrypted = localStorage.getItem('cookie-kk-member')
+    if (tierDataEncrypted) {
+        const tierDataDecrypted = decrypt(tierDataEncrypted)
+        const parsedTiers = JSON.parse(tierDataDecrypted)
+        if (
+            Array.isArray(parsedTiers) &&
+            parsedTiers.length > 0 &&
+            parsedTiers[0] !== 'none'
+        ) {
+            return parsedTiers
+        }
+    }
+    return null
+}
