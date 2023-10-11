@@ -1,5 +1,5 @@
 'use client'
-import {CombinedTaskAndCarousel} from '../../../components/combinedTaskAndCarousel'
+import {TaskWithImage} from '../../../components/TaskWithImage'
 import {lalezar} from '../../../styles'
 import {Task} from '../../components/task'
 import {TaskDefault} from '../../components/taskDefault'
@@ -49,7 +49,7 @@ const BlackArea = () => {
             </h2>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto grid-auto-flow-dense">
-                    <CombinedTaskAndCarousel
+                    <TaskWithImage
                         title="Grundschläge"
                         task={task1}
                         color="primary"
