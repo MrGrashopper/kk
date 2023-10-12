@@ -7,8 +7,6 @@ import {
     allTiers,
     decrypt,
     generateLink,
-    getTiersFromLocalStorage,
-    removeTokenFromUrl,
     setEncryptedCookie,
     translateBorderColor,
     translateTier

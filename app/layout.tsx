@@ -24,7 +24,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         ? (localStorage.getItem('user-theme') as Theme) || 'dark'
         : 'dark'
     const [theme, setTheme] = useState<Theme>(initialTheme)
-
+    console.log(initialTheme)
     const switchTheme = (newTheme: Theme) => {
         setTheme(newTheme)
         localStorage.setItem('user-theme', newTheme)
