@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import {Theme} from '../layout'
 
 type Props = {
@@ -8,11 +8,8 @@ type Props = {
 }
 
 const NavbarMember = ({switchTheme, theme}: Props) => {
-    const [isChecked, setIsChecked] = useState(theme === 'dark' ? true : false)
-
     const toggleTheme = () => {
         const newTheme = theme === 'dark' ? 'lofi' : 'dark'
-        setIsChecked(!isChecked)
         switchTheme(newTheme)
     }
 
@@ -71,10 +68,10 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
                 <label className="btn btn-ghost btn-circle swap swap-rotate mr-3">
                     <input
                         type="checkbox"
-                        checked={isChecked}
+                        checked={theme === 'dark'}
                         onChange={toggleTheme}
                     />
-                    {isChecked ? (
+                    {theme === 'dark' ? (
                         // Moon Icon
                         <svg
                             className="fill-current h-5 w-5"

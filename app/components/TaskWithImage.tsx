@@ -42,7 +42,7 @@ export const TaskWithImage = ({title, task, images}: CombinedTaskProps) => {
                         backgroundImage: `url(${images[0]?.src})`,
                         backgroundSize: 'cover'
                     }}>
-                    <div className="hero-overlay bg-opacity-60"></div>
+                    <div className="hero-overlay bg-opacity-70"></div>
                     <div className="flex justify-between">
                         <div className="task-content flex-grow px-6 py-9">
                             <p className="text-xl text-white">{task}</p>

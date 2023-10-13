@@ -23,7 +23,6 @@ type DecodedToken = {
 const MemberPage = () => {
     const [hasAccess, setHasAccess] = useState(false)
     const [tiers, setTiers] = useState<string[]>(['black'])
-    const [isLoading, setIsLoading] = useState(true)
 
     const isTierAccessible = (tier: string) => {
         if (tier === 'black') return true
@@ -89,15 +88,7 @@ const MemberPage = () => {
         }
 
         handleLocalStorage()
-
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 300)
     }, [])
-
-    if (isLoading) {
-        return <LoadingSpinner />
-    }
 
     if (!hasAccess) {
         return <EnterMemberArea />

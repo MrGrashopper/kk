@@ -1,5 +1,4 @@
 'use client'
-import {Carousel} from '../../../components/carousel'
 import {lalezar} from '../../../styles'
 import {Task} from '../../components/task'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import Timetable from '../../components/timetable'
 import {de} from '../../locale'
-import Link from 'next/link'
 import {lalezar} from '../../styles'
 import {MotionButton} from '../../components/motionButton'
 
