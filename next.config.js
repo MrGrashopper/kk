@@ -2,7 +2,7 @@
 module.exports = {
     // output: 'export',
     reactStrictMode: true,
-    // trailingSlash: true,
+    trailingSlash: true,
     env: {
         SECRET_CRYPTO_KEY: process.env.SECRET_CRYPTO_KEY
     }
