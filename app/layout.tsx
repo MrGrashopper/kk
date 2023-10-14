@@ -72,7 +72,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 </body>
             </html>
         )
-    } else {
+    }
+    if (!isMemberPage) {
         return (
             <html data-theme="lofi">
                 <Head />
