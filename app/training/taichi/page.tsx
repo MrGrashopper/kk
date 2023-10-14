@@ -15,9 +15,9 @@ const TaiChi = () => {
 
     for (let i = 0; i < 14; i++) {
         // eslint-disable-next-line no-constant-condition
-        if (`../galleryTaichi/taichi${i}.jpeg`) {
+        if (`/galleryTaichi/taichi${i}.jpeg`) {
             images.push({
-                src: `../galleryTaichi/taichi${i}.jpeg`,
+                src: `/galleryTaichi/taichi${i}.jpeg`,
                 alt: `Tai Chi Image ${i}`
             })
         }
@@ -45,7 +45,7 @@ const TaiChi = () => {
             <HeaderCard
                 title={'Tai Chi Chuan'}
                 description={strings.training.taichi.desc1}
-                imgSrc={'../taichi_group_stand.jpeg'}
+                imgSrc={'/taichi_group_stand.jpeg'}
             />
             <div className="mx-3 lg:mx-10 bg-base-100 pt-12">
                 <div className=" w-full ">

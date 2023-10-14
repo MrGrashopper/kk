@@ -15,9 +15,9 @@ const Kids = () => {
 
     for (let i = 1; i < 12; i++) {
         // eslint-disable-next-line no-constant-condition
-        if (`../galleryKids/kids${i}.jpeg`) {
+        if (`/galleryKids/kids${i}.jpeg`) {
             images.push({
-                src: `../galleryKids/kids${i}.jpeg`,
+                src: `/galleryKids/kids${i}.jpeg`,
                 alt: `kids training Image ${i}`
             })
         }
@@ -46,7 +46,7 @@ const Kids = () => {
             <HeaderCard
                 title={'Kindertraining'}
                 description={strings.training.kids.desc1}
-                imgSrc={'../galleryKids/kids1.jpeg'}
+                imgSrc={'/galleryKids/kids1.jpeg'}
             />
             <div className="mx-3 lg:mx-10 bg-base-100 pt-12">
                 <div className=" w-full ">

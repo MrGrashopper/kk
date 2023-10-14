@@ -15,9 +15,9 @@ const Shaolin = () => {
 
     for (let i = 1; i < 12; i++) {
         // eslint-disable-next-line no-constant-condition
-        if (`../galleryShaolin/shaolin${i}.jpeg`) {
+        if (`/galleryShaolin/shaolin${i}.jpeg`) {
             images.push({
-                src: `../galleryShaolin/shaolin${i}.jpeg`,
+                src: `/galleryShaolin/shaolin${i}.jpeg`,
                 alt: `Tai Chi Image ${i}`
             })
         }
@@ -45,7 +45,7 @@ const Shaolin = () => {
             <HeaderCard
                 title={'Shaolin Kung Fu'}
                 description={strings.training.shaolin.desc1}
-                imgSrc={'../shaolin_two_stand.jpeg'}
+                imgSrc={'/shaolin_two_stand.jpeg'}
             />
             <div className="mx-3 lg:mx-10 bg-base-100 pt-12">
                 <div className=" w-full ">

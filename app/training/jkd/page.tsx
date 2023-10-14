@@ -21,9 +21,9 @@ const JKD = () => {
 
     for (let i = 0; i < 18; i++) {
         // eslint-disable-next-line no-constant-condition
-        if (`../galleryJKD/JKD${i}.jpeg`) {
+        if (`/galleryJKD/JKD${i}.jpeg`) {
             images.push({
-                src: `../galleryJKD/JKD${i}.jpeg`,
+                src: `/galleryJKD/JKD${i}.jpeg`,
                 alt: `JKD Image ${i}`
             })
         }
@@ -45,7 +45,7 @@ const JKD = () => {
             <HeaderCard
                 title={'Jeet Kune Do'}
                 description={strings.training.jkd.desc5}
-                imgSrc={'../jkd_technique_block.jpeg'}
+                imgSrc={'/jkd_technique_block.jpeg'}
             />
             <div className="mx-3 lg:mx-10 bg-base-100 pt-12">
                 <div className=" w-full ">
