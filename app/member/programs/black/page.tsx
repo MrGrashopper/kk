@@ -1,5 +1,6 @@
 'use client'
 import {TaskWithImage} from '../../../components/TaskWithImage'
+import TechnicalProgressBar from '../../../components/technicalProgressBar'
 import {lalezar} from '../../../styles'
 import {Task} from '../../components/task'
 import {TaskDefault} from '../../components/taskDefault'
@@ -49,7 +50,22 @@ const BlackArea = () => {
             </h2>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto grid-auto-flow-dense">
+                    <TaskDefault
+                        title="Handkantenschläge"
+                        task={task2}
+                        color="primary"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
+                    />
                     <TaskWithImage
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                         title="Grundschläge"
                         task={task1}
                         color="primary"
@@ -60,22 +76,36 @@ const BlackArea = () => {
                             }
                         ]}
                     />
-                    <TaskDefault
-                        title="Handkantenschläge"
-                        task={task2}
-                        color="primary"
-                    />
                     <Task
                         title="Schläge mit passenden Einhand-Blöcke"
                         task={task3}
                         color="primary"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
                     <TaskDefault
                         title="Grundtritte"
                         task={task4}
                         color="primary"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
-                    <Task title="Fallen" task={task5} color="primary" />
+                    <Task
+                        title="Fallen"
+                        task={task5}
+                        color="primary"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
+                    />
                 </div>
             </div>
             <div className="divider"></div>

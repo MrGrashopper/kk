@@ -1,12 +1,16 @@
 import {motion} from 'framer-motion'
+import TechnicalProgressBar, {
+    ProgressProps
+} from '../../components/technicalProgressBar'
 
 type Props = {
     title: string
     task: string[]
     color: string
     image?: string
+    progress: ProgressProps
 }
-export const TaskDefault = ({task, title, color, image}: Props) => {
+export const TaskDefault = ({task, title, color, image, progress}: Props) => {
     return (
         <motion.div
             initial={{y: '5%', opacity: 0.5}}
@@ -35,6 +39,13 @@ export const TaskDefault = ({task, title, color, image}: Props) => {
                                 )
                             })}
                         </ul>
+                    </div>
+                    <div className="pb-6">
+                        <TechnicalProgressBar
+                            technique={progress.technique}
+                            flexibility={progress.flexibility}
+                            strength={progress.strength}
+                        />
                     </div>
                 </div>
                 {image && (

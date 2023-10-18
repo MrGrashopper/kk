@@ -1,6 +1,7 @@
 'use client'
 import {useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
+import TechnicalProgressBar, {ProgressProps} from './technicalProgressBar'
 
 interface ImageType {
     src: string
@@ -12,9 +13,16 @@ type CombinedTaskProps = {
     task: string[]
     images: ImageType[]
     color: string
+    progress: ProgressProps
 }
 
-export const TaskWithImage = ({title, task, images}: CombinedTaskProps) => {
+export const TaskWithImage = ({
+    title,
+    task,
+    images,
+    progress,
+    color
+}: CombinedTaskProps) => {
     const [isModalOpen, setModalOpen] = useState(false)
     const [currentImage, setCurrentImage] = useState<ImageType | null>(null)
 
@@ -37,31 +45,35 @@ export const TaskWithImage = ({title, task, images}: CombinedTaskProps) => {
                     {title}
                 </h2>
                 <div
-                    className={`hero card bg-base-300 shadow-xl text-primary-content w-full rounded`}
+                    className={`hero card bg-base-300 shadow-xl text-primary-content w-full border-t border-${color}`}
                     style={{
                         backgroundImage: `url(${images[0]?.src})`,
                         backgroundSize: 'cover'
                     }}>
-                    <div className="hero-overlay bg-opacity-70"></div>
+                    <div className="hero-overlay bg-opacity-70 rounded"></div>
                     <div className="flex justify-between">
-                        <div className="task-content flex-grow px-6 py-9">
-                            <p className="text-xl text-white">{task}</p>
+                        <div className="task-content flex-grow px-6 py-9 flex flex-col">
+                            <p className="text-xl text-white mb-4">{task}</p>
+                            <TechnicalProgressBar
+                                technique={progress.technique}
+                                flexibility={progress.flexibility}
+                                strength={progress.strength}
+                                keepWhite
+                            />
                         </div>
-                        <div className="absolute bottom-2 right-2">
+                        <div className="absolute top-2 right-2">
                             <div
                                 className="relative h-[50px] w-[50px] rounded cursor-pointer"
                                 onClick={() => openModal(images[0])}>
-                                <div className="absolute inset-0 bg-opacity-20 flex items-center justify-center">
-                                    <svg
-                                        height="55px"
-                                        width="55px"
-                                        fill="#FFFFFF"
-                                        viewBox="0 0 24 24">
-                                        <g>
-                                            <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.49,18.99L19.08,20.41L14.13,15.45L13.73,15.14C12.59,15.92 11.11,16.5 9.5,16.5A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-                                        </g>
-                                    </svg>
-                                </div>
+                                <svg
+                                    height="55px"
+                                    width="55px"
+                                    fill="#FFFFFF"
+                                    viewBox="0 0 24 24">
+                                    <g>
+                                        <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.49,18.99L19.08,20.41L14.13,15.45L13.73,15.14C12.59,15.92 11.11,16.5 9.5,16.5A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                     </div>

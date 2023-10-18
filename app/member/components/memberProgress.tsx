@@ -5,7 +5,7 @@ type Props = {
 export const MemberProgress = ({steps}: Props) => {
     return (
         <div className="flex flex-row justify-center">
-            <ul className="steps steps-vertical w-full h-full  py-6">
+            <ul className="steps steps-vertical w-full h-full pt-6">
                 {steps.map((step, index) => {
                     return (
                         <li

@@ -88,29 +88,72 @@ const GreenArea = () => {
                         title="Doppelblocktechniken gegen Tritte mit zwei Armen"
                         task={task1}
                         color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
                     <Task
                         title="Blocken gegen Tritte mit einfachen Konterschlägen"
                         task={task2}
                         color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
                     <Task
                         title="Blocken gegen Tritte mit eigenen Beinen"
                         task={task3}
                         color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
                     <Task
                         title="Trittkombinationen"
                         task={task4}
                         color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
                     <Task
                         title="Trit-Schlagt-Kombinationen"
                         task={task5}
                         color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
                     />
-                    <Task title="Armhebel" task={task6} color="green" />
-                    <Task title="Freikampf" task={task7} color="green" />
+                    <Task
+                        title="Armhebel"
+                        task={task6}
+                        color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
+                    />
+                    <Task
+                        title="Freikampf"
+                        task={task7}
+                        color="green"
+                        progress={{
+                            technique: 60,
+                            flexibility: 10,
+                            strength: 20
+                        }}
+                    />
                 </div>
             </div>
             {/* <Carousel images={images} /> */}
