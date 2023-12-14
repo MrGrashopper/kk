@@ -1,6 +1,8 @@
 'use client'
 import {lalezar} from '../../../styles'
+import {NoAccess} from '../../components/noAccess'
 import {Task} from '../../components/task'
+import {isTierAccessible} from '../../utils'
 
 const GreenArea = () => {
     const task1 = [
@@ -53,10 +55,9 @@ const GreenArea = () => {
     ]
 
     const task7 = [
-        'sinnvolle Anwendung',
-        'Kombinationen',
-        'Deckung',
-        'richtige Stellung und Bewegung zum Angreifer'
+        'sinnvolle und Kombination erlernter Techniken Anwendung',
+        'dem Gegner angemessene Positionierung und Bewegung',
+        'eigene Deckung berücksichtigen, Einzeltechniken vermeiden'
     ]
 
     const images = []
@@ -70,6 +71,9 @@ const GreenArea = () => {
             })
         }
     }
+
+    if (!isTierAccessible('green_jkd')) return <NoAccess />
+
     return (
         <div className="m-3 lg:mx-10">
             <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
@@ -82,78 +86,36 @@ const GreenArea = () => {
                 Inhalte, längere Übungs- und Prüfungsdauer, dafür aber nur 1
                 Prüfung statt 2
             </p>
+            <div className="divider mx-3 lg:mx-10 mb-9"></div>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-auto">
                     <Task
                         title="Doppelblocktechniken gegen Tritte mit zwei Armen"
                         task={task1}
                         color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <Task
                         title="Blocken gegen Tritte mit einfachen Konterschlägen"
                         task={task2}
                         color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <Task
                         title="Blocken gegen Tritte mit eigenen Beinen"
                         task={task3}
                         color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <Task
                         title="Trittkombinationen"
                         task={task4}
                         color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <Task
                         title="Trit-Schlagt-Kombinationen"
                         task={task5}
                         color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
-                    <Task
-                        title="Armhebel"
-                        task={task6}
-                        color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
-                    />
-                    <Task
-                        title="Freikampf"
-                        task={task7}
-                        color="green"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
-                    />
+                    <Task title="Armhebel" task={task6} color="green" />
+                    <Task title="Freikampf" task={task7} color="green" />
                 </div>
             </div>
             {/* <Carousel images={images} /> */}

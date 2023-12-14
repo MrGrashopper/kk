@@ -1,7 +1,6 @@
 'use client'
 import {useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
-import TechnicalProgressBar, {ProgressProps} from './technicalProgressBar'
 
 interface ImageType {
     src: string
@@ -13,14 +12,12 @@ type CombinedTaskProps = {
     task: string[]
     images: ImageType[]
     color: string
-    progress: ProgressProps
 }
 
 export const TaskWithImage = ({
     title,
     task,
     images,
-    progress,
     color
 }: CombinedTaskProps) => {
     const [isModalOpen, setModalOpen] = useState(false)
@@ -48,26 +45,23 @@ export const TaskWithImage = ({
                     className={`hero card bg-base-300 shadow-xl text-primary-content w-full border-t border-${color}`}
                     style={{
                         backgroundImage: `url(${images[0]?.src})`,
-                        backgroundSize: 'cover'
+                        backgroundSize: 'cover',
+                        height: 250
                     }}>
                     <div className="hero-overlay bg-opacity-70 rounded"></div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between w-full">
                         <div className="task-content flex-grow px-6 py-9 flex flex-col">
-                            <p className="text-xl text-white mb-4">{task}</p>
-                            <TechnicalProgressBar
-                                technique={progress.technique}
-                                flexibility={progress.flexibility}
-                                strength={progress.strength}
-                                keepWhite
-                            />
+                            <p className="text-xl text-white mb-4 mr-6">
+                                {task}
+                            </p>
                         </div>
                         <div className="absolute top-2 right-2">
                             <div
-                                className="relative h-[50px] w-[50px] rounded cursor-pointer"
+                                className="relative h-[35px] w-[35px] rounded cursor-pointer"
                                 onClick={() => openModal(images[0])}>
                                 <svg
-                                    height="55px"
-                                    width="55px"
+                                    height="35px"
+                                    width="35px"
                                     fill="#FFFFFF"
                                     viewBox="0 0 24 24">
                                     <g>

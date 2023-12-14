@@ -47,9 +47,6 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
                             <a>Workouts (coming soon)</a>
                         </li>
                         <li>
-                            <a href={'/faq'}>Hilfe</a>
-                        </li>
-                        <li>
                             <button className="" onClick={handleLogout}>
                                 Logout
                             </button>

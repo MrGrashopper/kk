@@ -22,6 +22,20 @@ export const allTiers = [
     'yellow_shaolin'
 ]
 
+export const colorOrder = ['black', 'green', 'blue', 'yellow']
+
+export const sortTiersByColor = (tierA: string, tierB: string) => {
+    const getPriority = (tier: string) => {
+        const color = tier.split('_')[0] // Extrahiert die Farbe aus dem String
+        return colorOrder.indexOf(color)
+    }
+
+    const priorityA = getPriority(tierA)
+    const priorityB = getPriority(tierB)
+
+    return priorityA - priorityB
+}
+
 export const translateTier = (tier: string) => {
     switch (tier) {
         case 'black':
@@ -164,4 +178,21 @@ export const getTiersFromLocalStorage = (): string[] | null => {
         }
     }
     return null
+}
+
+export const isTierAccessible = (tier: string): boolean => {
+    const tierDataEncrypted = localStorage.getItem('cookie-kk-member')
+    if (!tierDataEncrypted) return false
+
+    try {
+        const tierDataDecrypted = decrypt(tierDataEncrypted)
+        const parsedTiers: string[] = JSON.parse(tierDataDecrypted)
+        return parsedTiers.includes(tier)
+    } catch (error) {
+        console.error(
+            'Fehler beim Entschlüsseln oder Parsen des Cookies:',
+            error
+        )
+        return false
+    }
 }

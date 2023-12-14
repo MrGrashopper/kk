@@ -8,13 +8,14 @@ import {
     decrypt,
     generateLink,
     setEncryptedCookie,
+    sortTiersByColor,
     translateBorderColor,
     translateTier
 } from './utils'
-import {LoadingSpinner} from './components/loadingSpinner'
 import Head from 'next/head'
 import {motion} from 'framer-motion'
 import jwt_decode from 'jwt-decode'
+import {log} from 'console'
 
 type DecodedToken = {
     tiers: string[]
@@ -36,7 +37,9 @@ const MemberPage = () => {
         tier => !isTierAccessible(tier) && tier !== 'black'
     )
 
-    const sortedAllTiers = [...accessibleTiers, ...nonAccessibleTiers]
+    const sortedAccessibleTiers = accessibleTiers.sort(sortTiersByColor)
+
+    const sortedAllTiers = [...sortedAccessibleTiers, ...nonAccessibleTiers]
 
     const setStates = (tiers: string[], hasAccess: boolean) => {
         setHasAccess(hasAccess)
@@ -115,7 +118,7 @@ const MemberPage = () => {
                     </div>
                 </h3>
                 <p className="text-xl text-center text-primary mb-6">
-                    Fortschritt:
+                    Fortschritt
                 </p>
                 <motion.div
                     initial={{opacity: 0, y: '-10%'}}
@@ -128,12 +131,16 @@ const MemberPage = () => {
                         transition={{duration: 0.4, delay: 0}}
                         className="radial-progress text-secondary border-2 border-primary"
                         style={
-                            {'--value': value.toString()} as React.CSSProperties
+                            {
+                                '--value': value.toString(),
+                                '--size': '6rem',
+                                '--thickness': '6px'
+                            } as React.CSSProperties
                         }>
-                        {`${value}%`}
+                        <div className="text-xl">{`${value}%`}</div>
                     </motion.div>
                 </motion.div>
-
+                <div className="divider mx-5 mb-9"></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
                     {sortedAllTiers.map((tier, index) => (
                         <div

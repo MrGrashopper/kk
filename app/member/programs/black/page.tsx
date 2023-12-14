@@ -1,9 +1,10 @@
 'use client'
 import {TaskWithImage} from '../../../components/TaskWithImage'
-import TechnicalProgressBar from '../../../components/technicalProgressBar'
 import {lalezar} from '../../../styles'
+import {NoAccess} from '../../components/noAccess'
 import {Task} from '../../components/task'
 import {TaskDefault} from '../../components/taskDefault'
+import {isTierAccessible} from '../../utils'
 
 const BlackArea = () => {
     const task1 = [
@@ -31,6 +32,12 @@ const BlackArea = () => {
         'frontal → seitlich drehen und treten'
     ]
 
+    const task6 = [
+        'Mabu → Gungbu → Xubu → Sulebu → Xiebu → Tabu → Pubu → Guibu → Ding(si)bu → Tixidulibu → Yingbu'
+    ]
+
+    if (!isTierAccessible('black')) return <NoAccess />
+
     return (
         <div className="m-3 lg:mx-10 z-0">
             <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
@@ -44,7 +51,7 @@ const BlackArea = () => {
                 ersten beiden Stufen umfassen die Grundlagen des Shaolin Kung Fu
                 und des Jeet Kune Do
             </p>
-            <div className="divider"></div>
+            <div className="divider mx-3 lg:mx-10"></div>
             <h2 className={`text-xl text-center font-bold text-primary py-6`}>
                 - Bereich Jeet Kune Do -
             </h2>
@@ -54,18 +61,8 @@ const BlackArea = () => {
                         title="Handkantenschläge"
                         task={task2}
                         color="primary"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <TaskWithImage
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                         title="Grundschläge"
                         task={task1}
                         color="primary"
@@ -78,40 +75,59 @@ const BlackArea = () => {
                     />
                     <Task
                         title="Schläge mit passenden Einhand-Blöcke"
+                        subTitle="Erweiterung: Blöcke mit Konterkombinationen"
                         task={task3}
                         color="primary"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
                     <TaskDefault
                         title="Grundtritte"
                         task={task4}
                         color="primary"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
                     />
-                    <Task
-                        title="Fallen"
-                        task={task5}
-                        color="primary"
-                        progress={{
-                            technique: 60,
-                            flexibility: 10,
-                            strength: 20
-                        }}
-                    />
+                    <Task title="Fallen" task={task5} color="primary" />
                 </div>
             </div>
-            <div className="divider"></div>
+            <div className="divider mx-3 lg:mx-10"></div>
             <h2 className={`text-xl text-center font-bold text-primary py-6`}>
                 - Bereich Shaolin Kung Fu -
             </h2>
+            <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto grid-auto-flow-dense">
+                    <TaskWithImage
+                        title="Grundstellungen"
+                        task={task6}
+                        color="primary"
+                        images={[
+                            {
+                                src: '/member/black/Grundstellungen.png',
+                                alt: 'Grundfausschläge'
+                            }
+                        ]}
+                    />
+                    <TaskWithImage
+                        title="Ji Ben Gong (Grundfaust-Zyklus)"
+                        task={['']}
+                        color="primary"
+                        images={[
+                            {
+                                src: '/member/black/Ji_Ben_Gong.jpg',
+                                alt: 'Grundfausschläge'
+                            }
+                        ]}
+                    />
+                    <TaskWithImage
+                        title="Wu Bu Chuan"
+                        task={['']}
+                        color="primary"
+                        images={[
+                            {
+                                src: '/member/black/Wu_Bu_Chuan.jpg',
+                                alt: 'Grundfausschläge'
+                            }
+                        ]}
+                    />
+                </div>
+            </div>
         </div>
     )
 }

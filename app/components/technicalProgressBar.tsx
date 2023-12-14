@@ -1,16 +1,16 @@
 import React, {useEffect, useState, useRef} from 'react'
 
 export type ProgressProps = {
-    technique: number
+    coordination: number
     flexibility: number
-    strength: number
+    speed: number
     keepWhite?: boolean
 }
 
 const TechnicalProgressBar = ({
-    technique,
+    coordination,
     flexibility,
-    strength,
+    speed,
     keepWhite = false
 }: ProgressProps) => {
     const [animatedTechnique, setAnimatedTechnique] = useState(0)
@@ -24,7 +24,7 @@ const TechnicalProgressBar = ({
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true) // Setze den Zustand auf "hat animiert"
+                    setHasAnimated(true)
                     setTimeout(() => {
                         let start: number
 
@@ -34,9 +34,9 @@ const TechnicalProgressBar = ({
 
                             const t = Math.min(elapsed / 300, 1)
 
-                            setAnimatedTechnique(Math.ceil(technique * t))
+                            setAnimatedTechnique(Math.ceil(coordination * t))
                             setAnimatedFlexibility(Math.ceil(flexibility * t))
-                            setAnimatedStrength(Math.ceil(strength * t))
+                            setAnimatedStrength(Math.ceil(speed * t))
 
                             if (t < 1) {
                                 requestAnimationFrame(animate)
@@ -44,7 +44,7 @@ const TechnicalProgressBar = ({
                         }
 
                         requestAnimationFrame(animate)
-                    }, 300)
+                    }, 200)
                 }
             },
             {
@@ -62,7 +62,7 @@ const TechnicalProgressBar = ({
                 observer.unobserve(ref.current)
             }
         }
-    }, [technique, flexibility, strength, hasAnimated])
+    }, [coordination, flexibility, speed, hasAnimated])
 
     return (
         <div ref={ref} className="flex flex-col gap-2 mt-3">
@@ -70,7 +70,7 @@ const TechnicalProgressBar = ({
                 className={`ml-1 text-label ${
                     keepWhite ? '' : 'text-primary'
                 }`}>
-                Technik
+                Koordination
             </label>
             <progress
                 className="progress bg-primary progress-secondary w-full"
@@ -81,7 +81,7 @@ const TechnicalProgressBar = ({
                 className={`ml-1 text-label ${
                     keepWhite ? '' : 'text-primary'
                 }`}>
-                Beweglichkeit
+                Schnelligkeit
             </label>
             <progress
                 className="progress bg-primary progress-secondary w-full"
@@ -92,7 +92,7 @@ const TechnicalProgressBar = ({
                 className={`ml-1 text-label ${
                     keepWhite ? '' : 'text-primary'
                 }`}>
-                Kraft
+                Beweglichkeit
             </label>
             <progress
                 className="progress bg-primary progress-secondary w-full"
