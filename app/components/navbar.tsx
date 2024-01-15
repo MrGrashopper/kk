@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
-    const [windowWidth, setWindowWidth] = useState<number>(0)
+    const [, setWindowWidth] = useState<number>(0)
 
     useEffect(() => {
         setWindowWidth(window.innerWidth)
