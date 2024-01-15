@@ -99,7 +99,7 @@ const YellowArea = () => {
                         task={task3}
                         color="yellow"
                     />
-                    <Task title="Abwehr am Boden" task={task7} color="blue" />
+                    <Task title="Abwehr am Boden" task={task7} color="yellow" />
                     <Task
                         title="Verteidigung gegen Schlag- und Stichwaffen"
                         task={task4}

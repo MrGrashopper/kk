@@ -18,18 +18,16 @@ const Timetable = () => {
 
                     <div className="stat">
                         <div className="stat-title">19:00 - 20:00</div>
-                        <div className="stat-value text-2xl">
-                            Jeet Kune Do | Shaolin
-                        </div>
-                        <div className="stat-desc">Anfänger</div>
+                        <div className="stat-value text-2xl">Tai Chi Chuan</div>
+                        <div className="stat-desc">Gemischt</div>
                     </div>
 
                     <div className="stat">
-                        <div className="stat-title">20:00 - 21:00</div>
+                        <div className="stat-title">20:00 - 21:30</div>
                         <div className="stat-value text-2xl">
                             Jeet Kune Do | Shaolin
                         </div>
-                        <div className="stat-desc">Fortgeschritten</div>
+                        <div className="stat-desc">Gemischt</div>
                     </div>
                 </div>
                 <div className="stats stats-vertical shadow-xl">
@@ -43,19 +41,12 @@ const Timetable = () => {
                         </div>
                         <div className="stat-desc">Gemischt</div>
                     </div>
-
-                    <div className="stat">
-                        <div className="stat-title">18:00 - 19:00</div>
-                        <div className="stat-value text-2xl">Tai Chi Chuan</div>
-                        <div className="stat-desc">Gemischt</div>
-                    </div>
-
                     <div className="stat">
                         <div className="stat-title">19:30 - 21:00</div>
                         <div className="stat-value text-2xl">
                             Jeet Kune Do | Shaolin
                         </div>
-                        <div className="stat-desc">Gemischt</div>
+                        <div className="stat-desc">Fortgeschritten</div>
                     </div>
                 </div>
                 <div className="stats stats-vertical shadow-xl">
