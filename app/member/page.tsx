@@ -15,7 +15,6 @@ import {
 import Head from 'next/head'
 import {motion} from 'framer-motion'
 import jwt_decode from 'jwt-decode'
-import {log} from 'console'
 
 type DecodedToken = {
     tiers: string[]
