@@ -35,6 +35,7 @@ export const TaskWithImage = ({
     return (
         <>
             <motion.div
+                className="mb-20"
                 initial={{y: '5%', opacity: 0.5}}
                 animate={{y: 0, opacity: 1}}
                 whileTap={{scale: 0.95}}>
@@ -46,7 +47,7 @@ export const TaskWithImage = ({
                     style={{
                         backgroundImage: `url(${images[0]?.src})`,
                         backgroundSize: 'cover',
-                        height: 250
+                        height: '100%'
                     }}>
                     <div className="hero-overlay bg-opacity-70 rounded"></div>
                     <div className="flex justify-between w-full">
