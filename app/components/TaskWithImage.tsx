@@ -84,7 +84,7 @@ export const TaskWithImage = ({
                                 className="object-contain h-[90vh] mx-auto"
                             />
                             <button
-                                className="absolute top-2 w-9 h-9 right-2 text-white bg-accent border border-accent rounded-full"
+                                className="absolute top-6 w-9 h-9 right-6 text-white bg-accent border border-accent rounded-full"
                                 onClick={closeModal}>
                                 X
                             </button>
