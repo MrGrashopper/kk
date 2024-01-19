@@ -60,9 +60,6 @@ const BlueArea = () => {
                 Übungs- und Prüfungsdauer, dafür aber nur 1 Prüfung statt 2.
             </p>
             <div className="divider mx-3 lg:mx-10"></div>
-            <h2 className={`text-xl text-center font-bold text-primary py-6`}>
-                - Bereich Jeet Kune Do -
-            </h2>
             <div className="mx-3 lg:mx-10 bg-base-100 mb-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto grid-auto-flow-dense">
                     <Task

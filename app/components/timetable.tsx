@@ -5,7 +5,7 @@ const Timetable = () => {
         <div className="overflow-x-auto py-6 lg:px-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 py-12">
                 <div className="stats stats-vertical shadow-xl">
-                    <h3 className="text-xl text-base-100 bg-accent text-center py-3">
+                    <h3 className="h-12 text-xl text-base-100 bg-accent text-center py-3">
                         Montags
                     </h3>
                     <div className="stat">
@@ -31,7 +31,7 @@ const Timetable = () => {
                     </div>
                 </div>
                 <div className="stats stats-vertical shadow-xl">
-                    <h3 className="text-xl text-base-100 bg-accent text-center py-3">
+                    <h3 className="h-12 text-xl text-base-100 bg-accent text-center py-3">
                         Mittwochs
                     </h3>
                     <div className="stat">
@@ -50,7 +50,7 @@ const Timetable = () => {
                     </div>
                 </div>
                 <div className="stats stats-vertical shadow-xl">
-                    <h3 className="text-xl text-base-100 bg-accent text-center py-3">
+                    <h3 className="h-12 text-xl text-base-100 bg-accent text-center py-3">
                         Samstags
                     </h3>
                     <div className="stat">
