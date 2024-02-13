@@ -7,6 +7,7 @@ import Card from './components/card'
 import Team from './components/team'
 import ContactButton from './components/contactButton'
 import Head from 'next/head'
+import {MemberShowcase} from './components/memberShowcase'
 
 const Page = () => {
     const strings = de
@@ -90,6 +91,15 @@ const Page = () => {
                     />
                 </div>
                 <Team />
+                <div className="mx-3 md:mx-auto md:container md:my-5 py-6">
+                    <Section
+                        title={'Exklusiver Mitgliederbereich'}
+                        description={
+                            'Trainiere überall deine freigeschalteten Prüfungsprogramme. Online und jederzeit in deinem Mitgliederbereich. Je nach Schwerpunkt und Erfahrungsgrad werden dir weitere Prüfungsprogramme zur Verfügung gestellt um dir dein bestmöglichstes Trainingserlebnis zu bieten.'
+                        }
+                    />
+                </div>
+                <MemberShowcase />
                 <ContactButton />
             </div>
         </>

@@ -78,7 +78,7 @@ const GreenArea = () => {
         <div className="m-3 lg:mx-10">
             <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
                 <div className={lalezar.className}>
-                    Prüfungsporgramm grün JKD
+                    Prüfungsprogramm grün JKD
                 </div>
             </h3>
             <p className="mx-3 text-xl text-primary my-12 md:text-center">

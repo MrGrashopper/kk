@@ -29,7 +29,7 @@ const GreenShaolinArea = () => {
         <div className="m-3 lg:mx-10 z-0">
             <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
                 <div className={lalezar.className}>
-                    Prüfungsporgramm grün Shaolin
+                    Prüfungsprogramm grün Shaolin
                 </div>
             </h3>
             <p className="mx-3 text-xl text-primary my-12 md:text-center">

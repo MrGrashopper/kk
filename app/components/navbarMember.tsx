@@ -41,7 +41,7 @@ const NavbarMember = ({switchTheme, theme}: Props) => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content mt-5 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
-                            <a href={'/member'}>Prüfungsporgramme</a>
+                            <a href={'/member'}>Prüfungsprogramme</a>
                         </li>
                         <li>
                             <a>Workouts (coming soon)</a>

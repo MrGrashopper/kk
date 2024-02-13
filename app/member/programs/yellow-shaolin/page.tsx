@@ -39,7 +39,7 @@ const YellowArea = () => {
         <div className="m-3 lg:mx-10 z-0">
             <h3 className="mt-20 mb-12 text-3xl text-primary text-center">
                 <div className={lalezar.className}>
-                    Prüfungsporgramm gelb Shaolin
+                    Prüfungsprogramm gelb Shaolin
                 </div>
             </h3>
             <p className="mx-3 text-xl text-primary my-12 md:text-center">
@@ -70,35 +70,24 @@ const YellowArea = () => {
                         color="yellow"
                     />
                     <TaskWithImage
-                        title="Hu Chuan"
-                        task={['Seite 1/3']}
-                        color="yellow"
+                        title="Bao Chuan"
+                        task={['Seite 1/2']}
+                        color="blue"
                         images={[
                             {
-                                src: '/member/yellow-shaolin/Hu-Chuan-1.png',
-                                alt: 'Grundfausschläge'
+                                src: '/member/blue-shaolin/Bao-Chuan-1.png',
+                                alt: 'Bao-Chuan-1'
                             }
                         ]}
                     />
                     <TaskWithImage
-                        title="Hu Chuan"
-                        task={['Seite 2/3']}
-                        color="yellow"
+                        title="Bao Chuan"
+                        task={['Seite 2/2']}
+                        color="blue"
                         images={[
                             {
-                                src: '/member/yellow-shaolin/Hu-Chuan-2.png',
-                                alt: 'Grundfausschläge'
-                            }
-                        ]}
-                    />
-                    <TaskWithImage
-                        title="Hu Chuan"
-                        task={['Seite 3/3']}
-                        color="yellow"
-                        images={[
-                            {
-                                src: '/member/yellow-shaolin/Hu-Chuan-3.png',
-                                alt: 'Grundfausschläge'
+                                src: '/member/blue-shaolin/Bao-Chuan-2.png',
+                                alt: 'Bao-Chuan-2'
                             }
                         ]}
                     />
