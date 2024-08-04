@@ -35,7 +35,7 @@ const Timetable = () => {
                         Mittwochs
                     </h3>
                     <div className="stat">
-                        <div className="stat-title">17:00 - 18:00</div>
+                        <div className="stat-title">17:30 - 18:30</div>
                         <div className="stat-value text-2xl">
                             Kindertraining
                         </div>
