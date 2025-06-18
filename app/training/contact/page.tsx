@@ -61,7 +61,7 @@ const Contact = () => {
                         <div className="card-actions justify-end">
                             <MotionButton
                                 text=" E-MAIL SENDEN"
-                                link="info@koryo-berlin.de"
+                                link="mailto:info@koryo-berlin.de"
                             />
                             <MotionButton
                                 inverse
