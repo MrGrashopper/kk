@@ -5,7 +5,7 @@ export const de = {
     },
     contact: {
         ask: 'Hast du Fragen oder möchtest du ein kostenloses Probetraining? Komm vorbei oder kontaktiere uns:',
-        emailAdress: 'Schreib uns eine Email an: o_gimm@gmx.net',
+        emailAdress: 'Schreib uns eine Email an: info@koryo-berlin.de',
         moreInfo: 'Weitere Informationen gibt es hier:',
         email: 'E-Mail schreiben'
     },

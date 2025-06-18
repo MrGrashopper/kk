@@ -7,5 +7,8 @@
     "editor.formatOnSave": true, // optional
     "editor.formatOnSaveMode": "file", // required to format on save
     "files.autoSave": "onFocusChange",
-    "editor.codeActionsOnSave": {} // optional but recommended
+    "editor.codeActionsOnSave": {},
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true // optional but recommended
 }

@@ -12,7 +12,7 @@ export enum HashtagType {
     INFO = '#GOOD2KNOW'
 }
 
-interface Props {
+type Props = {
     lang: string
     texts: Array<text>
     hashtag?: HashtagType

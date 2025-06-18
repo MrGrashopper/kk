@@ -17,7 +17,7 @@ const inter = Inter({
 
 export type Theme = 'dark' | 'lofi'
 
-export const useIsLoading = () => {
+const useIsLoading = () => {
     const [isLoading, setLoading] = useState(true)
 
     return {

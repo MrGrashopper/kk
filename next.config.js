@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     // comment out when for prod build
-    // output: 'export',
+    output: 'export',
     reactStrictMode: true,
     trailingSlash: true,
     env: {

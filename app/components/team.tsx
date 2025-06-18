@@ -32,7 +32,7 @@ const Team = () => {
             img: 'oli_profile.jpeg'
         },
         {
-            name: 'Meister Daniel Mikolai',
+            name: 'Meister Daniel M.',
             cv: [
                 '1987 in Berlin geboren',
                 '1998-1999 Judo',

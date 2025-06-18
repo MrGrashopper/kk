@@ -17,7 +17,7 @@ const Imprint = () => {
                 Ehrenamtlicher Initiator:
             </h2>
             <p>Oliver Gimm</p>
-            <p>E-Mail: o_gimm@gmx.net</p>
+            <p>E-Mail: info@koryo-berlin.de</p>
 
             <h2 className="text-xl text-primary py-6">Vertreten durch:</h2>
             <p>Sportschule Koryo</p>

@@ -3,7 +3,6 @@ import {TaskWithImage} from '../../../components/TaskWithImage'
 import {lalezar} from '../../../styles'
 import {NoAccess} from '../../components/noAccess'
 import {Task} from '../../components/task'
-import {TaskDefault} from '../../components/taskDefault'
 import {isTierAccessible} from '../../utils'
 
 const BlueArea = () => {
@@ -27,7 +26,7 @@ const BlueArea = () => {
         'Langwaffe: Qiang Shu'
     ]
 
-    if (!isTierAccessible('blue_jkd')) return <NoAccess />
+    if (!isTierAccessible('blue_shaolin')) return <NoAccess />
 
     return (
         <div className="m-3 lg:mx-10 z-0">
